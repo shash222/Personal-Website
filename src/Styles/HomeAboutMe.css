@@ -1,0 +1,64 @@
+#selfImage {
+    /* width: 30%; */
+    /* border-radius: 100%;
+    display: inline-block;
+    margin: 0; */
+}
+
+.aboutMeText {
+    font-size: larger;
+    margin: auto;
+    width: 50%;
+}
+
+/* .aboutMeTextContainer {
+    display: flex;
+    flex-direction: column;
+} */
+
+#aboutMeDescriptionContainer {
+    padding-top: 15vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#descriptionCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-basis: 20%;
+    margin: 0;
+    margin-top: 5vh;
+}
+
+.meImage {
+    overflow: hidden;
+    visibility: hidden;
+    transform: rotate(120deg);
+    width: 25vw;
+    height: 25vh;
+    /* margin-bottom: 5vh; */
+}
+
+.meImage-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+}
+
+.meImage-in2 {
+    width: 100%;
+    height: 100%;
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    background-position: 50%;
+    background-color: black;
+    background-image: url(../res/images/Me.jfif);
+    /* background-image: url(http://placekitten.com/240/240); */
+    visibility: visible;
+    transform: rotate(-60deg);
+}

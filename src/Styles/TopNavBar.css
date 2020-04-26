@@ -1,0 +1,19 @@
+#topNavBarItems {
+    padding-top: 3vh;
+    width: 60%;
+    list-style: none;
+    display: flex;
+    position: absolute;
+    right: 0;
+    justify-content: space-evenly;
+}
+
+#topNavBarItems a{
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#topNavBarItems a:hover{
+    color: red;
+}

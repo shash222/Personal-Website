@@ -1,0 +1,76 @@
+{
+    "skills": [
+        {
+            "name": "skill1",
+            "description": "description1"
+        },
+        {
+            "name": "skill2",
+            "description": "description2"
+        },
+        {
+            "name": "skill3",
+            "description": "description3"
+        },
+        {
+            "name": "skill4",
+            "description": "description4"
+        },
+        {
+            "name": "skill5",
+            "description": "description5"
+        },
+        {
+            "name": "skill6",
+            "description": "description6"
+        },
+        {
+            "name": "skill7",
+            "description": "description7"
+        },
+        {
+            "name": "skill8",
+            "description": "description8"
+        },
+        {
+            "name": "skill9",
+            "description": "description9"
+        },
+        {
+            "name": "skill10",
+            "description": "description10"
+        },
+        {
+            "name": "skill11",
+            "description": "description11"
+        },
+        {
+            "name": "skill12",
+            "description": "description12"
+        },
+        {
+            "name": "skill13",
+            "description": "description13"
+        },
+        {
+            "name": "skill14",
+            "description": "description14"
+        },
+        {
+            "name": "skill15",
+            "description": "description15"
+        },
+        {
+            "name": "skill16",
+            "description": "description16"
+        },
+        {
+            "name": "skill17",
+            "description": "description17"
+        },
+        {
+            "name": "skill18",
+            "description": "description18"
+        }
+    ]
+}

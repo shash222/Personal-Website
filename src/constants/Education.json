@@ -1,0 +1,38 @@
+[
+    {
+        "school": "Rutgers University",
+        "location": "New Brunswick, NJ",
+        "graduationDate": "May 2020",
+        "description": "Double Major in Computer Engineering and Computer Science",
+        "relevantCourses": [
+            {
+                "courseName": "course1",
+                "courseDescription": "description"
+            },
+            {
+                "courseName": "course2",
+                "courseDescription": "description"
+            },
+            {
+                "courseName": "course3",
+                "courseDescription": "description"
+            },
+            {
+                "courseName": "course4",
+                "courseDescription": "description"
+            },
+            {
+                "courseName": "course5",
+                "courseDescription": "description"
+            },
+            {
+                "courseName": "course6",
+                "courseDescription": "description"
+            },
+            {
+                "courseName": "course7",
+                "courseDescription": "description"
+            }
+        ]
+    }
+]

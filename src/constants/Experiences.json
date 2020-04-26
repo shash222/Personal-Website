@@ -1,0 +1,58 @@
+{
+    "experiences": [
+        {
+            "company": "Amazon.com, Inc.",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis aliquet rhoncus. Integer lobortis faucibus neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis dignissim mauris nec nunc porttitor lobortis. Aliquam enim neque, aliquet id vehicula eu, lobortis ut eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer facilisis purus nisi, a ultrices turpis lobortis sed.",
+            "skillsGained": [
+                "AWS: CloudFormation, CloudWatch, Lambda, Step Functions, EC2, S3, Athena",
+                "Java",
+                "Apache Velocity",
+                "Unit & Integration Testing",
+                "Mockito - Java Testing Framework",
+                "Amazon Linux",
+                "Git"
+            ],
+            "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code"
+        },
+        {
+            "company": "Amazon.com, Inc.",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis aliquet rhoncus. Integer lobortis faucibus neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis dignissim mauris nec nunc porttitor lobortis. Aliquam enim neque, aliquet id vehicula eu, lobortis ut eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer facilisis purus nisi, a ultrices turpis lobortis sed.",
+            "skillsGained": [
+                "AWS: CloudFormation, CloudWatch, Lambda, Step Functions, EC2, S3, Athena",
+                "Java",
+                "Apache Velocity",
+                "Unit & Integration Testing",
+                "Mockito - Java Testing Framework",
+                "Amazon Linux"
+            ],
+            "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code"
+        },
+        {
+            "company": "Amazon.com, Inc.",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis aliquet rhoncus. Integer lobortis faucibus neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis dignissim mauris nec nunc porttitor lobortis. Aliquam enim neque, aliquet id vehicula eu, lobortis ut eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer facilisis purus nisi, a ultrices turpis lobortis sed.",
+            "skillsGained": [
+                "AWS: CloudFormation, CloudWatch, Lambda, Step Functions, EC2, S3, Athena",
+                "Java",
+                "Apache Velocity",
+                "Unit & Integration Testing",
+                "Mockito - Java Testing Framework",
+                "Amazon Linux"
+            ],
+            "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code"
+        },
+        {
+            "company": "Amazon.com, Inc.",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis aliquet rhoncus. Integer lobortis faucibus neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis dignissim mauris nec nunc porttitor lobortis. Aliquam enim neque, aliquet id vehicula eu, lobortis ut eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer facilisis purus nisi, a ultrices turpis lobortis sed.",
+            "skillsGained": [
+                "AWS: CloudFormation, CloudWatch, Lambda, Step Functions, EC2, S3, Athena",
+                "Java",
+                "Apache Velocity",
+                "Unit & Integration Testing",
+                "Collaboration",
+                "Amazon Linux"
+            ],
+            "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code"
+        }
+    ]
+}
+

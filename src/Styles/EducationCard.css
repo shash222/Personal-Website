@@ -1,0 +1,36 @@
+.educationCardWrapper {
+    width: 100%;
+    height: 50%;
+}
+
+.educationCardContainer {
+    width: 100%;
+    height: 90%;
+}
+
+.educationContent {
+    padding: 4%;
+}
+
+.schoolName {
+    font-size: 2vw;
+}
+
+.educationContent p {
+    font-size: 1.25vw;
+    width: 100%;
+}
+
+.educationTextTitle {
+    /* float: left; */
+}
+
+.educationTextValue {
+    /* float: right; */
+}
+
+/* .educationContent {
+    width: 100%;
+    height: 100%;
+} */
+

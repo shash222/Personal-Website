@@ -1,0 +1,23 @@
+.experienceContent {
+    background-color: rgb(255, 255, 255, .3);
+    position: relative;
+    padding: 1%;
+}
+
+.experienceSkillsTitle {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.connectingLine {
+    width: 11%;
+    border-top: 2px dashed white;
+    position: absolute;
+    left: -12%;
+    top: 50%;
+}
+
+.experienceContent * {
+    text-align: justify;
+    padding: 2px 1px 2px 1px;
+}

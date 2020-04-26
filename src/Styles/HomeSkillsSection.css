@@ -1,0 +1,12 @@
+
+#skillsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    /* height: 70vh; */
+    justify-content: center;
+}
+
+#homeSkillsSection {
+}

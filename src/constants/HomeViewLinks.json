@@ -1,0 +1,28 @@
+{
+    "sections": [
+        {
+            "linkText": "",
+            "referenceId": "homeIntroSection"
+        },
+        {
+            "linkText": "About Me",
+            "referenceId": "homeAboutMeSection"
+        },
+        {
+            "linkText": "Education",
+            "referenceId": "homeEducationSection"
+        },
+        {
+            "linkText": "Experience",
+            "referenceId": "homeExperiencesSection"
+        },
+        {
+            "linkText": "Projects",
+            "referenceId": "homeProjectsSection"
+        },
+        {
+            "linkText": "Skills",
+            "referenceId": "homeSkillsSection"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+#verticalBar {
+    height: 100%;
+    border: 2px solid white;
+    position: absolute;
+    left: 0;
+}
+
+#experiencesContainer {
+    position: relative;
+    text-align: left;
+    padding-left: 12%;
+    /* border: 2px solid black; */
+}
+
+/* #experiencesContainer::after {
+    content: "";
+    margin-top: 10%;
+    height: 90%;
+    background-color: yellow;
+    border: 1px solid white;
+    width: 10px;
+} */
+
+
+.sectionContent {
+    /* border: 1px solid black; */
+}

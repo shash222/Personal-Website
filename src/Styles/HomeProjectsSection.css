@@ -1,0 +1,19 @@
+
+#projectsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    /* height: 70vh; */
+}
+
+#allProjectsLink {
+    font-size: x-large;
+    border: 1px solid white;
+    padding: 10px;
+    /* margin-bottom: 10vh; */
+}
+
+#allProjectsLinkContainer {
+    display: inline;
+}

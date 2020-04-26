@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Component } from 'react';
+import HomeView from './views/HomeView.js';
+import ProjectsView from './views/ProjectsView.js';
+import { Redirect, BrowserRouter as Router, Route } from 'react-router-dom';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <Router className="App">
+        <Route path="/" exact component={HomeView} />
+        <Route path="/projects" exact component={ProjectsView} />
+        <Route render={() => (<Redirect to="/" />)}/>
+        {/* <HomeView /> */}
+      </Router>
+    );
+  }
+
 }
-
-export default App;
