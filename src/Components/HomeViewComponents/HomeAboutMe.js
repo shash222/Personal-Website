@@ -1,8 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
-import '../styles/HomeAboutMe.css';
+import '../../styles/HomeViewStyles/HomeAboutMe.css';
 import DescriptionCard from './DescriptionCard.js'
-import descriptionWords from '../constants/DescriptionWords.json';
+import descriptionWords from '../../constants/DescriptionWords.json';
 
 export default class HomeAboutMe extends Component {
     render() {

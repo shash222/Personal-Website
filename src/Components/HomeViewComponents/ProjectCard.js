@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import '../styles/ProjectCard.css'
+import '../../styles/HomeViewStyles/ProjectCard.css'
 
 export default class ProjectCard extends Component {
     render() {
         return (
-            <div className="projectCardWrapper cardWrapper">
-                <div className="projectCard card" data-aos="flip-right" data-aos-duration="1000" data-aos-delay={this.props.delay * 150}>
+            <div className="projectCardWrapper cardWrapper" data-aos="flip-right" data-aos-duration="1000" data-aos-delay={this.props.delay * 150}>
+                <div className="projectCard card">
                     <div className="front">
                         <p className="projectName">{this.props.projectDetail.name}</p>
                     </div>

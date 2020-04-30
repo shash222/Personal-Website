@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/SkillCard.css'
+import '../../styles/HomeViewStyles/SkillCard.css'
 
 export default class SkillCard extends Component {
     render() {

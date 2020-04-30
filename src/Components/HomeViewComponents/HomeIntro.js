@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import '../styles/HomeIntro.css';
+import '../../styles/HomeViewStyles/HomeIntro.css';
 
 export default class HomeIntro extends Component {
     render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import '../styles/ExperienceItem.css'
+import '../../styles/HomeViewStyles/ExperienceItem.css'
 
 export default class ExperienceItem extends Component {
     render() {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../styles/HomeViewNavBar.css';
-import navItems from '../constants/HomeViewLinks.json'
+import '../../styles/HomeViewStyles/HomeViewNavBar.css';
+import navItems from '../../constants/HomeViewLinks.json'
 import { Link } from 'react-scroll'
 
 export default class HomeViewNavBar extends Component {

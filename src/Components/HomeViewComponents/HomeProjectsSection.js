@@ -1,9 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
 import ProjectCard from './ProjectCard.js'
-import projectDetails from '../constants/Projects.json'
+import projectDetails from '../../constants/Projects.json'
 import {NavLink} from 'react-router-dom';
-import '../styles/HomeProjectsSection.css'
+import '../../styles/HomeViewStyles/HomeProjectsSection.css'
 
 export default class HomeProjectsSection extends Component {
     render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/DescriptionCard.css'
+import '../../styles/HomeViewStyles/DescriptionCard.css'
 
 export default class DescriptionCard extends Component {
     render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/EducationCard.css'
+import '../../styles/HomeViewStyles/EducationCard.css'
 
 export default class EducationCard extends Component {
     render() {

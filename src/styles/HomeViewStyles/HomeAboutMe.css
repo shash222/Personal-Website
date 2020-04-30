@@ -57,7 +57,7 @@
     background-size: contain;
     background-position: 50%;
     background-color: black;
-    background-image: url(../res/images/Me.jfif);
+    background-image: url(../../res/images/Me.jfif);
     /* background-image: url(http://placekitten.com/240/240); */
     visibility: visible;
     transform: rotate(-60deg);

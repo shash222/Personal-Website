@@ -1,8 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
 import ExperienceItem from './ExperienceItem.js';
-import experiences from '../constants/Experiences.json';
-import '../styles/HomeExperiencesSection.css';
+import experiences from '../../constants/Experiences.json';
+import '../../styles/HomeViewStyles/HomeExperiencesSection.css';
 
 export default class HomeExperiencesSection extends Component {
     render() {

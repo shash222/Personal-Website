@@ -3,8 +3,8 @@ import { Component } from 'react';
 import EducationCard from './EducationCard.js';
 import EducationItem from './EducationItem.js';
 import CourseCard from './CourseCard.js'
-import education from '../constants/Education.json'
-import '../styles/HomeEducationSection.css'
+import education from '../../constants/Education.json'
+import '../../styles/HomeViewStyles/HomeEducationSection.css'
 
 export default class HomeEducationSection extends Component {
     render() {

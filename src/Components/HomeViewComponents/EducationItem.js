@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import EducationCard from './EducationCard.js'
 import CourseCard from './CourseCard.js'
-import '../styles/EducationItem.css'
+import '../../styles/HomeViewStyles/EducationItem.css'
 
 export default class EducationItem extends Component {
     render() {
@@ -14,7 +14,7 @@ export default class EducationItem extends Component {
                         <div className="relevantCoursesCardsContainer">
 
                             {this.props.education.relevantCourses.map((course, i) => (
-                                <CourseCard key={course} course={course} delay={i} />
+                                <CourseCard key={course.courseName} course={course} delay={i} />
                             ))}
                         </div>
                     </div>

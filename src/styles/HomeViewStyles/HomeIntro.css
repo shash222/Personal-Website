@@ -3,18 +3,18 @@
     /* background-color: white; */
     /* display: flex;
     align-items: center; */
-    background-image: url("../res/images/galaxyCompressed.jpg");
+    background-image: url("../../res/images/galaxyCompressed.jpg");
     background-size: cover;
 }
 
 @font-face {
     font-family: paladin;
-    src: url('../res/fonts/Paladins/PaladinsOutline-8PE0.otf');
+    src: url('../../res/fonts/Paladins/PaladinsOutline-8PE0.otf');
 }
 
 @font-face {
     font-family: casanova;
-    src: url('../res/fonts/Casanova\ Scotia/CasanovaScotia-Xm0K.ttf');
+    src: url('../../res/fonts/Casanova\ Scotia/CasanovaScotia-Xm0K.ttf');
 }
 
 #name {

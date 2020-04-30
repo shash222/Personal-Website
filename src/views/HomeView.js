@@ -1,14 +1,13 @@
 import React from 'react';
 import { Component } from 'react';
-import '../styles/HomeView.css'
-import HomeIntro from '../components/HomeIntro.js'
-import HomeAboutMe from '../components/HomeAboutMe.js'
-import HomeEducationSection from '../components/HomeEducationSection.js'
-import HomeExperiencesSection from '../components/HomeExperiencesSection.js'
-import HomeSkillsSection from '../components/HomeSkillsSection.js'
-import HomeProjectsSection from '../components/HomeProjectsSection.js'
-import HomeViewNavBar from '../components/HomeViewNavBar.js';
-import TopNavBar from '../components/TopNavBar.js';
+import '../styles/HomeViewStyles/HomeView.css'
+import HomeIntro from '../components/HomeViewComponents/HomeIntro.js'
+import HomeAboutMe from '../components/HomeViewComponents/HomeAboutMe.js'
+import HomeEducationSection from '../components/HomeViewComponents/HomeEducationSection.js'
+import HomeExperiencesSection from '../components/HomeViewComponents/HomeExperiencesSection.js'
+import HomeSkillsSection from '../components/HomeViewComponents/HomeSkillsSection.js'
+import HomeProjectsSection from '../components/HomeViewComponents/HomeProjectsSection.js'
+import HomeViewNavBar from '../components/HomeViewComponents/HomeViewNavBar.js';
 import homeViewSections from '../constants/HomeViewLinks.json'
 import AOS from 'aos';
 import { Link } from 'react-scroll'
@@ -83,7 +82,6 @@ export default class HomeView extends Component {
                         <div id="upArrow" className="homeViewArrow"></div>
                     </Link>
                 </div>
-                <TopNavBar />
                 <HomeViewNavBar handleSectionChange={this.handleSectionChange} currentSectionNumber={this.state.displayedSectionNumber}getCurrentSectionNumber={this.getSectionNumber} />
                 <HomeIntro />
                 <HomeAboutMe />
