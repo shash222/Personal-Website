@@ -5,13 +5,19 @@ import ProjectsView from './views/ProjectsView.js';
 import { Redirect, BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css'
 import TopNavBar from './components/HomeViewComponents/TopNavBar.js';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default class App extends Component {
+  componentDidMount() {
+    AOS.init();
+  }
+
   render() {
     return (
       <div className="App">
-        <TopNavBar />
         <Router>
+          <TopNavBar />
           <Route path="/" exact component={HomeView} />
           <Route path="/projects" exact component={ProjectsView} />
           {/* <Route render={() => (<Redirect to="/" />)}/> */}

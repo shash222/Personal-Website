@@ -1,0 +1,49 @@
+#projectsSectionContainer {
+    padding-top: 2%;
+    margin-bottom: 10%;
+    /* width: 80%; */
+    margin: auto;
+}
+
+#tagSearchBar {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 30%;
+}
+
+#projectsSectionContainer>h2 {
+    font-size: xx-large;
+}
+
+#allTagsContainer {
+    margin: auto;
+    width: 60%;
+}
+
+.tagsContainer {
+    padding-top: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tagTitle {
+    padding:2px;
+    font-weight: bold;
+}
+
+.tag {
+    padding: 2px;
+    border: 1px solid white;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.tag.selectedTag {
+    background-color: red;
+}
+
+.tag:hover {
+    cursor: pointer;
+    background-color: red;
+}

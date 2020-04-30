@@ -9,10 +9,7 @@ import HomeSkillsSection from '../components/HomeViewComponents/HomeSkillsSectio
 import HomeProjectsSection from '../components/HomeViewComponents/HomeProjectsSection.js'
 import HomeViewNavBar from '../components/HomeViewComponents/HomeViewNavBar.js';
 import homeViewSections from '../constants/HomeViewLinks.json'
-import AOS from 'aos';
 import { Link } from 'react-scroll'
-
-import 'aos/dist/aos.css';
 
 export default class HomeView extends Component {
     constructor(props) {
@@ -27,7 +24,6 @@ export default class HomeView extends Component {
     }
 
     componentDidMount() {
-        AOS.init();
         this.handleSectionChange(0)
     }
 

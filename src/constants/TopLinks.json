@@ -1,0 +1,22 @@
+[
+    {
+        "linkText": "Home",
+        "referenceId": "",
+        "path": "/"
+    },
+    {
+        "linkText": "Projects",
+        "referenceId": "",
+        "path": "/projects"
+    },
+    {
+        "linkText": "Experiences",
+        "referenceId": "",
+        "path": "/experiences"
+    },
+    {
+        "linkText": "Contact Me",
+        "referenceId": "",
+        "path": "/contactMe"
+    }
+]
