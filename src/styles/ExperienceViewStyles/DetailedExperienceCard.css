@@ -1,0 +1,57 @@
+.detailedExperienceCardContainer {
+    background-color: rgba(9, 146, 170, 0.8);
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* padding: 2%; */
+    margin-bottom: 5%;
+}
+
+.detailedExperienceCardHeader, .detailedExperienceCardFooter {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.detailedExperienceCardHeader {
+    border-bottom: .5px solid gray;
+    /* justify-content: space-evenly; */
+}
+
+.detailedExperienceCardBody {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    border-bottom: .5px solid gray;
+    /* justify-content: space-evenly; */
+}
+
+.detailedExperienceCardFooter {
+    border-top: .5px solid gray;
+    /* justify-content: space-evenly; */
+}
+
+.detailedExperienceCardHeader > .detailedExperienceCardCompanyLogo{
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+.detailedExperienceCardHeader > .detailedExperienceCardCompanyName{
+    margin: auto;
+}
+
+.detailedExperienceCardHeader > .detailedExperienceCardCompanyRole{
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.detailedExperienceCardFooter > .detailedExperienceCardCompanyWorkDuration{
+    margin-left: 2.5%;
+    /* margin-right: auto; */
+}
+
+.detailedExperienceCardFooter > .detailedExperienceCardCompanyWorkLocation{
+    margin-left: auto;
+    margin-right: 2.5%;
+}

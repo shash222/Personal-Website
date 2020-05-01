@@ -5,7 +5,7 @@ import '../../styles/ProjectsViewStyles/ProjectsSection.css'
 import skills from '../../constants/Skills.json'
 import experiences from '../../constants/Experiences.json'
 
-export default class ProjectsView extends Component {
+export default class ProjectsSection extends Component {
     constructor(props) {
         super(props)
         this.handleTagSelection = this.handleTagSelection.bind(this)

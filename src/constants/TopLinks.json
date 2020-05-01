@@ -5,18 +5,18 @@
         "path": "/"
     },
     {
+        "linkText": "Experience",
+        "referenceId": "",
+        "path": "/experience"
+    },
+    {
         "linkText": "Projects",
         "referenceId": "",
         "path": "/projects"
     },
     {
-        "linkText": "Experiences",
-        "referenceId": "",
-        "path": "/experiences"
-    },
-    {
         "linkText": "Contact Me",
         "referenceId": "",
-        "path": "/contactMe"
+        "path": "/contact"
     }
 ]
