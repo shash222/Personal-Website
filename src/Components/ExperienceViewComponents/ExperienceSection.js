@@ -3,7 +3,7 @@ import DetailedExperienceCard from './DetailedExperienceCard.js'
 import '../../styles/ExperienceViewStyles/ExperienceSection.css'
 import experience from '../../constants/Experiences.json'
 
-export default class ExperienceView extends Component {
+export default class ExperienceSection extends Component {
     render() {
         return (
             <section id="experienceSectionContainer" className="experienceViewSection">

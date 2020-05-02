@@ -1,0 +1,17 @@
+#contactSectionContainer {
+    /* width: 80%; */
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+}
+
+#contactCardContainer {
+    display: flex;
+    height: 65vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#contactSectionContainer  h2 {
+    padding-top: 5%;
+}

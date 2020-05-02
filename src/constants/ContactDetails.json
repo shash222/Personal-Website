@@ -1,0 +1,20 @@
+[
+    {
+        "contactMethod": "Email",
+        "imgSrc": "res/images/emailLogo.webp",
+        "link": "mailto:hashmi.salman.a@gmail.com",
+        "value": "hashmi.salman.a@gmail.com" 
+    },
+    {
+        "contactMethod": "GitHub",
+        "imgSrc": "res/images/githubLogo.png",
+        "link": "https://github.com/shash222",
+        "value": "github.com/shash222" 
+    },
+    {
+        "contactMethod": "LinkedIn",
+        "imgSrc": "res/images/linkedinLogo.png",
+        "link": "https://linkedin.com/in/salman-a-hashmi",
+        "value": "linkedin.com/in/salman-a-hashmi" 
+    }
+]

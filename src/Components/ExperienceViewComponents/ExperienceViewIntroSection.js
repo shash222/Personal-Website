@@ -7,7 +7,7 @@ export default class ExperienceViewIntroSection extends Component {
         return(
             <section id="experienceViewIntroSection">
                 <h1 data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500">Experience</h1>
-                <div className="projectArrowContainer down">
+                <div className="experienceArrowContainer down">
                     <Link
                         activeClass="active"
                         to="experienceSectionContainer"
