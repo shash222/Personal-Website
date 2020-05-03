@@ -105,7 +105,7 @@ h2 {
 
 @keyframes arrowDefaultPositionTransition {
     0% {
-        margin-left: -7.5vw;
+        margin-left: -5vw;
     }
     100% {
         margin-left: 0;
@@ -117,6 +117,6 @@ h2 {
         margin-left: 0;
     }
     100% {
-        margin-left: -7.5vw;
+        margin-left: -5vw;
     }
 }

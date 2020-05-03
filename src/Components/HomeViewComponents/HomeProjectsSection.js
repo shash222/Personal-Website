@@ -9,7 +9,7 @@ export default class HomeProjectsSection extends Component {
     render() {
         return (
             <section id="homeProjectsSection" className="homePageSectionContainer">
-                <div className="sectionContent" id="projectsSectionContent" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center">
+                <div className="sectionContent" id="projectsSectionContent">
                     <h2>Projects</h2>
                     <div id="projectsContainer">
                         {projectDetails.projects.map((project, i) => (

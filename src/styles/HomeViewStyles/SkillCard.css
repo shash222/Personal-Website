@@ -41,6 +41,9 @@
     height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .skillLink {

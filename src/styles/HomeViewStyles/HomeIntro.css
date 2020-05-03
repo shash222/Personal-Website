@@ -7,7 +7,7 @@
     background-size: cover;
 }
 
-@font-face {
+/* @font-face {
     font-family: paladin;
     src: url('../../res/fonts/Paladins/PaladinsOutline-8PE0.otf');
 }
@@ -16,17 +16,17 @@
     font-family: casanova;
     src: url('../../res/fonts/Casanova\ Scotia/CasanovaScotia-Xm0K.ttf');
 }
-
+ */
 #name {
     font-size: 4vw;
-    font-family: casanova;
+    /* font-family: casanova; */
     /* margin-top: 20vh; */
     margin-bottom: 5vh;
 }
 
 #title {
     font-size: 2vw;
-    font-family: casanova;
+    /* font-family: casanova; */
 }
 
 @keyframes pulse {

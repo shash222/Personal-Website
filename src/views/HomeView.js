@@ -35,6 +35,7 @@ export default class HomeView extends Component {
 
     handleSectionChange(incrementValue) {
         var newSectionNumber = this.state.displayedSectionNumber + incrementValue
+        console.log(newSectionNumber)
         var prevSection = homeViewSections.sections[newSectionNumber - 1];
         var nextSection = homeViewSections.sections[newSectionNumber + 1];
         var nextSectionId = "";

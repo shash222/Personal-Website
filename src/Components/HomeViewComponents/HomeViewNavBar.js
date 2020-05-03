@@ -47,7 +47,7 @@ export default class HomeViewNavBar extends Component {
         return (
             <nav id="homeViewNavBarContainer" >
                 <ul id="homeViewNavBarItems">
-                    {navItems.sections.map(item => (
+                    {navItems.sections.slice(1).map(item => (
                         <li key={item.referenceId + "Link"} className="navItem">
                             <Link
                                 activeClass="active"

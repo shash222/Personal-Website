@@ -4,7 +4,7 @@ import HomeView from './views/HomeView.js';
 import ProjectsView from './views/ProjectsView.js';
 import ExperienceView from  './views/ExperienceView.js'
 import ContactView from  './views/ContactView.js'
-import { Redirect, BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css'
 import TopNavBar from './components/HomeViewComponents/TopNavBar.js';
 import AOS from 'aos';
