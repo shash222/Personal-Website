@@ -3,8 +3,10 @@
     /* background-color: white; */
     /* display: flex;
     align-items: center; */
-    background-image: url("../../res/images/galaxyCompressed.jpg");
+    background-image: url("../../res/images/mountain3.jpg");
     background-size: cover;
+    background-position: 10%;
+    /* backg */
 }
 
 /* @font-face {
@@ -17,16 +19,68 @@
     src: url('../../res/fonts/Casanova\ Scotia/CasanovaScotia-Xm0K.ttf');
 }
  */
+
+#introSection {
+    width: 50%;
+}
+
 #name {
     font-size: 4vw;
     /* font-family: casanova; */
     /* margin-top: 20vh; */
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
 }
 
 #title {
-    font-size: 2vw;
+    font-size: 3vw;
+    margin-bottom: 3vh;
     /* font-family: casanova; */
+}
+
+#homeResourcesContainer {
+    all: initial;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.homeResource {
+    padding: 1%;
+    width: 20%;
+    display: flex;
+    text-decoration: none;
+    animation: removeBackgroundAnimation .5s forwards;
+}
+
+.homeResource + .homeResource {
+    margin-left: 5%;
+}
+
+.homeResource > p {
+    font-size: 25px;
+}
+
+.homeResource:hover {
+    animation: addBackgroundAnimation .5s forwards;
+}
+
+.homeResource > p {
+    margin-right: auto;
+}
+
+.homeResource > svg{
+    margin-left: auto;
+}
+
+.homeResource > p, .homeResource > svg{
+    animation: revertResourceAnimation .5s forwards;
+    /* animation-fill-mode: ; */
+}
+
+.homeResource:hover > p, .homeResource:hover > svg{
+    animation: invertResourceAnimation .5s both;
+    /* filter: invert(100%); */
 }
 
 @keyframes pulse {
@@ -41,3 +95,41 @@
         /* transition */
     }
 }
+
+@keyframes invertResourceAnimation {
+    0% {        
+        filter: invert(0%);
+    }
+    100% {
+        filter: invert(100%);
+    }
+}
+
+@keyframes revertResourceAnimation {
+    0% {        
+        filter: invert(100%);
+    }
+    100% {
+        filter: invert(0%);
+    }
+}
+
+@keyframes addBackgroundAnimation {
+    0% {        
+        background-color: transparent;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+
+@keyframes removeBackgroundAnimation {
+    0% {        
+        background-color: white;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+

@@ -10,6 +10,8 @@ import HomeProjectsSection from '../components/HomeViewComponents/HomeProjectsSe
 import HomeViewNavBar from '../components/HomeViewComponents/HomeViewNavBar.js';
 import homeViewSections from '../constants/HomeViewLinks.json'
 import { Link } from 'react-scroll'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 export default class HomeView extends Component {
     constructor(props) {
@@ -55,7 +57,7 @@ export default class HomeView extends Component {
             nextSectionId = nextSection.referenceId;
             document.querySelector('.navigationArrowContainer.down').style.visibility = "initial"
         } else {
-            document.querySelector('.navigationArrowContainer.down').style.visibility = "hidden"            
+            document.querySelector('.navigationArrowContainer.down').style.visibility = "hidden"
         }
         this.setState({
             displayedSectionNumber: newSectionNumber,
@@ -79,7 +81,7 @@ export default class HomeView extends Component {
                         <div id="upArrow" className="homeViewArrow"></div>
                     </Link>
                 </div>
-                <HomeViewNavBar handleSectionChange={this.handleSectionChange} currentSectionNumber={this.state.displayedSectionNumber}getCurrentSectionNumber={this.getSectionNumber} />
+                <HomeViewNavBar handleSectionChange={this.handleSectionChange} currentSectionNumber={this.state.displayedSectionNumber} getCurrentSectionNumber={this.getSectionNumber} />
                 <HomeIntro />
                 <HomeAboutMe />
                 <HomeEducationSection />

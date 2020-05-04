@@ -2,3 +2,31 @@ body {
     background-color: #282c34;
     overflow-y: scroll;
 }
+
+#scrollToTopButtonWrapper {
+    position: fixed;
+    bottom: 3%;
+    right: 5%;
+    animation: displayScrollToTopButtonAnimation 1s forwards;
+}
+
+#scrollToTopButtonWrapper > button{
+    all: unset;
+}
+
+#scrollToTopButtonWrapper > button:hover {
+    cursor: pointer;
+}
+
+[data-icon="arrow-circle-up"] {
+    color: white;
+}
+
+@keyframes displayScrollToTopButtonAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
