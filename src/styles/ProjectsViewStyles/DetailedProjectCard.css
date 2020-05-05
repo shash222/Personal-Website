@@ -15,37 +15,58 @@
     border-radius: 10px;
 }
 
-.detailedProjectCard>button {
+.detailedProjectCardProjectName {
+    font-size: 2vw;
+}
+
+.detailedProjectCard>p {
+    font-size: 1vw;
+}
+
+.detailedProjectCardClickablesContainer {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    /* transform: translateX(-50%); */
+    display: flex;
+}
+
+.detailedProjectCard button, .detailedProjectCard a {
     all: initial;
     width: 20%;
     text-align: center;
     font-size: x-large;
-    position: absolute;
-    bottom: 25px;
-    transform: translateX(-50%);
     color: white;
     border: 2px solid white;
     padding: 1%;
+    vertical-align: middle;
 }
 
-.detailedProjectCard>button:hover {
+.detailedProjectCard button {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.detailedProjectCard a {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.detailedProjectCard button:hover, .detailedProjectCard a:hover {
     cursor: pointer;
     background-color: green;
 }
 
-.detailedProjectCard>button:active {
-    background-color: green;
-}
-
-.detailedProjectCard>button.active {
+.detailedProjectCard button:active {
     background-color: green;
 }
 
 .sample {
     position: relative;
+    /* width: 100vw; */
     width: 30vw;
     height: 0;
-    background-color: red;
+    background-color: white;
     margin-top: 5%;
     opacity: 0;
 }

@@ -2,36 +2,88 @@
     {
         "school": "Rutgers University",
         "location": "New Brunswick, NJ",
+        "startDate": "September 2016",
         "graduationDate": "May 2020",
-        "description": "Double Major in Computer Engineering and Computer Science",
+        "description": "B.S. in Computer Engineering and Computer Science",
         "relevantCourses": [
             {
-                "courseName": "course1",
-                "courseDescription": "description"
+                "courseName": "Design and Analysis of Computer Algorithms",
+                "courseDescription": "Analyzed numerous strategies including divide-and-conquer, greedy algorithms and dynamic programming, to determine time complexity and effectiveness in a variety of problems."
             },
             {
-                "courseName": "course2",
-                "courseDescription": "description"
+                "courseName": "Software Methodology",
+                "courseDescription": "Gained an understanding of software development principals and practices including version control, object-oriented programming, software design, documentation, GUI, mobile app development and multithreading.",
+                "technologies": [
+                    "Java",
+                    "JavaFX",
+                    "Android"
+                ]
             },
             {
-                "courseName": "course3",
-                "courseDescription": "description"
+                "courseName": "Principles of Information and Data Management",
+                "courseDescription": "Presented topics in data management to effectively store and query data from relational databases.",
+                "technologies": [
+                    "SQL"
+                ]
             },
             {
-                "courseName": "course4",
-                "courseDescription": "description"
+                "courseName": "Data Structures",
+                "courseDescription": "Investigated and implemented a variety of data structures and algorithms to understand application of each in Java.",
+                "technologies": [
+                    "Java"
+                ]
             },
             {
-                "courseName": "course5",
-                "courseDescription": "description"
+                "courseName": "Systems Programming",
+                "courseDescription": "Utilized C programming to introduce concepts in Unix, memory management, multi-threading, debugging, system calls and more.",
+                "technologies": [
+                    "C",
+                    "Linux"
+                ]
             },
             {
-                "courseName": "course6",
-                "courseDescription": "description"
+                "courseName": "Software Engineering",
+                "courseDescription": "Explored software development lifecycle, documentation, system specification, software design patterns and testing through semester-long team project.",
+                "technologies": [
+                    "React Native"
+                ]
             },
             {
-                "courseName": "course7",
-                "courseDescription": "description"
+                "courseName": "Intro to Artificial Intelligence ",
+                "courseDescription": "Introduced fundamental concepts of artificial intelligence including knowledge representation and reasoning, machine learning, and natural language.",
+                "technologies": [
+                    "Python"
+                ]
+            },
+            {
+                "courseName": "Intro to Computer Systems",
+                "courseDescription": "Investigated and implemented Operating System concepts including mutlicore architecture, CPU management, thread synchronization, CPU scheduling and more through C programming.",
+                "technologies": [
+                    "C",
+                    "Linux"
+                ]
+            },
+            {
+                "courseName": "Intro to Computer Science",
+                "courseDescription": "Gained fundamental understanding in programming concepts including, but not limited to, problem  analysis and  design, object oriented programming, recursion and runtime complexity in Java.",
+                "technologies": [
+                    "Java"
+                ]
+            },
+            {
+                "courseName": "Intro to Computers for Engineers",
+                "courseDescription": "Introductory-level course to programming in MATLAB illustrated through class projects and assignments.",
+                "technologies": [
+                    "MATLAB"
+                ]
+            },
+            {
+                "courseName": "Computer Architecture and Assembly Language",
+                "courseDescription": "Presented topics on computer architecture to highlight lifecycle of the processor by exploring computer arithmetic hardware, memory hierarchy, microprocessor pipeline and MIPS Assembly Language",
+                "technologies": [
+                    "C",
+                    "MIPS Assembly"
+                ]
             }
         ]
     }

@@ -1,24 +1,22 @@
-{
-    "words": [
-        {
-            "word": "Adaptive",
-            "description": "Quickly and easily acclimate to different environments"
-        },
-        {
-            "word": "Quick Learner",
-            "description": "Able to pick up new skills and technologies on the fly"
-        },
-        {
-            "word": "Passionate",
-            "description": "Once I get excited about something it's hard to slow me down"
-        },
-        {
-            "word": "Coachable",
-            "description": "Receptive to feedback and constructive criticisms"
-        },
-        {
-            "word": "Analytical",
-            "description": "Break down problem at hand to come up with most effective solution"
-        }
-    ]
-}
+[
+    {
+        "word": "Adaptive",
+        "description": "Quickly and easily acclimate to different environments"
+    },
+    {
+        "word": "Quick Learner",
+        "description": "Able to pick up new skills and technologies on the fly"
+    },
+    {
+        "word": "Passionate",
+        "description": "Once I get excited about something it's hard to slow me down"
+    },
+    {
+        "word": "Coachable",
+        "description": "Receptive to feedback and constructive criticisms"
+    },
+    {
+        "word": "Analytical",
+        "description": "Break down problem at hand to come up with most effective solution"
+    }
+]

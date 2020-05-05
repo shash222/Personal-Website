@@ -12,7 +12,7 @@ export default class HomeAboutMe extends Component {
                     <h2>About Me</h2>
                     <div id="aboutContainer">
                         <div id="descriptionCards">
-                            {descriptionWords.words.map((word) => (
+                            {descriptionWords.map((word) => (
                                 <DescriptionCard key={word.word} word={word} />
                             ))}
                         </div>

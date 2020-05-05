@@ -9,6 +9,8 @@
     margin-top: 25px;
     margin-bottom: 25px;
     width: 30%;
+    height: 1.5vw;
+    font-size: 1.2vw;
 }
 
 #projectsSectionContainer>h2 {
@@ -28,7 +30,7 @@
 }
 
 .tagTitle {
-    padding:2px;
+    padding: 2px;
     font-weight: bold;
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import ProjectCard from './ProjectCard.js'
 import projectDetails from '../../constants/Projects.json'
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../../styles/HomeViewStyles/HomeProjectsSection.css'
 
 export default class HomeProjectsSection extends Component {
@@ -12,8 +12,10 @@ export default class HomeProjectsSection extends Component {
                 <div className="sectionContent" id="projectsSectionContent">
                     <h2>Projects</h2>
                     <div id="projectsContainer">
-                        {projectDetails.projects.map((project, i) => (
-                            <ProjectCard key={project.name} projectDetail={project} delay={i + 1}/>
+                        {projectDetails.filter((project) => {
+                            return project.featured;
+                        }).map((project, i) => (
+                            <ProjectCard key={project.name} projectDetail={project} delay={i + 1} />
                         ))}
                     </div>
                     <div id="allProjectsLinkContainer">

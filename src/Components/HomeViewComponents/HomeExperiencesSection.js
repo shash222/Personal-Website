@@ -8,11 +8,13 @@ export default class HomeExperiencesSection extends Component {
     render() {
         return (
             <section id="homeExperiencesSection" className="homePageSectionContainer">
-                <div className="sectionContent" data-aos="zoom-in" data-aos-duration="2000" data-aos-anchor-placement="top-center">
+                <div id="homeExperienceSectionContent" className="sectionContent" data-aos="zoom-in" data-aos-duration="2000" data-aos-anchor-placement="top-center">
                     <h2>Experience</h2>
                     <div id="experiencesContainer">
                         <div id="verticalBar"></div>
-                        {experiences.experiences.map((exp, i) => (
+                        {experiences.filter((exp) => {
+                            return exp.relevant;
+                        }).map((exp, i) => (
                             <ExperienceItem key={exp.company + i} experience={exp} />
                         ))}
                     </div>

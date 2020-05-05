@@ -1,5 +1,5 @@
 .relevantCoursesContainer {
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
 }
 
 .relevantCoursesCardsContainer {
@@ -13,6 +13,7 @@
 
 .relevantCoursesHeading {
     font-size: x-large;
+    text-decoration: underline;
 }
 
 .educationItemWrapper {

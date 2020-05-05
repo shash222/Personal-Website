@@ -6,7 +6,16 @@
 }
 
 .courseCardWrapper {
-    width: 20%;
-    height: 10vh;
-    margin: 2%;
+    width: 24%;
+    height: 14vh;
+    margin: .5%;
+}
+
+.courseCard > .front {
+    font-size: 1vw;
+}
+
+.courseCard > .back {
+    /* font-size: .8vw;  */
+    font-size: 1.5vh;
 }

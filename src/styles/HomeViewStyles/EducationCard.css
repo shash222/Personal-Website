@@ -8,29 +8,37 @@
     height: 90%;
 }
 
-.educationContent {
-    padding: 4%;
+
+.schoolHeader {
+    display: flex;
 }
 
 .schoolName {
+    display: inline-block;
     font-size: 2vw;
+    text-decoration: underline;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.educationContent p {
+.educationContent {
+    padding: 1%;
+}
+
+.educationDescription {
+    text-align: left;
     font-size: 1.25vw;
-    width: 100%;
 }
 
-.educationTextTitle {
-    /* float: left; */
+.enrolledDates {
+    font-size: 1.5vw;
+    margin-right: 0;
+    margin-left: auto;
 }
 
-.educationTextValue {
-    /* float: right; */
+.schoolLocation { 
+    margin-left: 0;
+    margin-right: auto;
+    text-decoration: none;
+    font-size: 1.5vw;
 }
-
-/* .educationContent {
-    width: 100%;
-    height: 100%;
-} */
-

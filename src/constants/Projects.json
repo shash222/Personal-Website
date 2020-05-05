@@ -1,58 +1,321 @@
-{
-    "projects": [
-        {
-            "name": "project1",
-            "description": "description1",
-            "status": "",
-            "technologies": [
-
-            ],
-            "href": "#"
-        },
-        {
-            "name": "project2",
-            "description": "description2",
-            "status": "",
-            "technologies": [
-
-            ],
-            "href": "#"
-        },
-        {
-            "name": "project3",
-            "description": "description3",
-            "status": "",
-            "technologies": [
-
-            ],
-            "href": "#"
-        },
-        {
-            "name": "project4",
-            "description": "description4",
-            "status": "",
-            "technologies": [
-
-            ],
-            "href": "#"
-        },
-        {
-            "name": "project5",
-            "description": "description5",
-            "status": "",
-            "technologies": [
-
-            ],
-            "href": "#"
-        },
-        {
-            "name": "project6",
-            "description": "description6",
-            "status": "",
-            "technologies": [
-
-            ],
-            "href": "#"
-        }
-    ]
-}
+[
+    {
+        "name": "salman.hashmi.site",
+        "description": "My portfolio website showcasing my experience in work, class and personal projects. Devloped using ReactJS and Node.js with custom JavaScript and Animation on Scroll library animations. ",
+        "status": "In Progress",
+        "technologies": [
+            "ReactJS",
+            "Node.js"
+        ],
+        "type": "Personal",
+        "featured": false,
+        "course": "",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/Personal-Website",
+        "href": "#"
+    },
+    {
+        "name": "naymah.hashmi.site ",
+        "description": "Portfolio website for architecture professional showcasing work performed by the individual. Developed using HTML, CSS, JavaScript, PHP. ",
+        "status": "Completed",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "jQuery"
+        ],
+        "type": "Personal",
+        "featured": false,
+        "course": "",
+        "sample": true,
+        "sampleLink": "https://naymah.hashmi.site",
+        "githubLink": "https://github.com/shash222/Naymah_Portfolio_Site",
+        "href": "#"
+    },
+    {
+        "name": "anas-anoshia.hashmi.site",
+        "description": "Responsive website designed to handle RSVPs for wedding. Developed using HTML, CSS, JavaScript, PHP and SQL. ",
+        "status": "Completed",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "SQL"
+        ],
+        "type": "Personal",
+        "featured": false,
+        "course": "",
+        "sample": true,
+        "sampleLink": "https://anas-anoshia.hashmi.site",
+        "githubLink": "https://github.com/shash222/Wedding_RSVP_Website",
+        "href": "#"
+    },
+    {
+        "name": "wedding.hashmi.site ",
+        "description": "Responsive website designed to handle RSVPs for wedding. Developed using ReactJS, Node.js and SQL using industry practices.",
+        "status": "Completed",
+        "technologies": [
+            "ReactJS",
+            "Node.js",
+            "SQL"
+        ],
+        "type": "Personal",
+        "featured": true,
+        "course": "",
+        "sample": true,
+        "sampleLink": "https://wedding.hashmi.site",
+        "githubLink": "https://github.com/shash222/Wedding_RSVP_React",
+        "href": "#"
+    },
+    {
+        "name": "durbah.org",
+        "description": "Responsive website designed to provide students relevant information information about upcoming seminars for the organization. Created functional admin panel which updates seminar information. Developed using ReactJS and Node.js.",
+        "extendedDescription": "Responsive website designed to provide students relevant information information about upcoming seminars for the organization. Created functional admin panel which updates seminar information. Seminar information is exposed as REST API and fetched on the front-end. Developed using ReactJS and Node.js.",
+        "status": "Completed",
+        "technologies": [
+            "ReactJS",
+            "Node.js"
+        ],
+        "type": "Personal",
+        "featured": true,
+        "course": "",
+        "sample": true,
+        "sampleLink": "https://durbah.org",
+        "githubLink": "https://github.com/shash222/Durbah-Website",
+        "href": "#"
+    },
+    {
+        "name": "RUDestination",
+        "description": "Mobile application used to provide students walking- and bus-directions to get from one building on campus to another. Currently developing Android app written in Java and Google Maps and TransLoc APIs, with plans to rebuild app in Flutter and Dart.",
+        "extendedDescription": "Mobile application used to provide students walking- and bus-directions to get from one building on campus to another. Rutgers University has 5 sub-campuses within it's New Brunswick campus, making it overwhelming for new and transfer students to find their way between classes. This application strives to reduce the stress and make it easier for students to find their way around the University. Currently developing Android app written in Java with use of Google Maps and TransLoc APIs. Plans to rebuild app in Flutter and Dart in order to take advantage of cross-platform functionality and learning opportunity.",
+        "status": "In Progress",
+        "technologies": [
+            "Java"
+        ],
+        "type": "Personal",
+        "featured": true,
+        "course": "",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "",
+        "href": "#"
+    },
+    {
+        "name": "Spellcheck and Autocomplete",
+        "description": "Performs real-time spellcheck and autocomplete operations against existing dictionary on text input. Sample can be seen on the projects page by searching for projects with certain tags. Developed in Java.",
+        "status": "Completed",
+        "technologies": [
+            "Java"
+        ],
+        "type": "Personal",
+        "featured": true,
+        "course": "",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "",
+        "href": "#"
+    },
+    {
+        "name": "Reverse Words Sorter",
+        "description": "Tokenizes an input string by any non-alphabetic delimiter and prints out all of the words in reverse order. Implemented in C for Systems Programming course.",
+        "status": "Completed",
+        "technologies": [
+            "C"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Systems Programming",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/Reverse_Word_Sorter",
+        "href": "#"
+    },
+    {
+        "name": "Malloc and Free Implementation",
+        "description": "Reproduced malloc and free to serve as proof-of-concept replacements of the original library functions. Simulated memory using a static array of 4096 bytes and implemented using metadata that stored content starting address and length to be accessed or freed later.",
+        "status": "Completed",
+        "technologies": [
+            "C"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Systems Programming",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/Malloc_and_Free_Implementation",
+        "href": "#"
+    },
+    {
+        "name": "File Compressor",
+        "description": "Developed a system that would implement the lossless Huffman Coding algorithm to compress, decompress or build a codebook based on any number of files recursively by descending through the directory structure.",
+        "status": "Completed",
+        "technologies": [
+            "C"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Systems Programming",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/File_Compressor",
+        "href": "#"
+    },
+    {
+        "name": "Where's the File - Git Clone",
+        "description": "Implemented version control system with client and server repositories and history (log), roll back (revert), commit, push, checkout and update (fetch) functionalities. Implementation makes use of multithreading and mutex locks in order to prevent race conditions and inconsistent data.",
+        "status": "Completed",
+        "technologies": [
+            "C"
+        ],
+        "type": "Course",
+        "featured": true,
+        "course": "Systems Programming",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/Wheres_The_File",
+        "href": "#"
+    },
+    {
+        "name": "Song Library",
+        "description": "Java application that manages a library of songs. Application can add to, remove from, edit and display song details in the library. ",
+        "status": "Completed",
+        "technologies": [
+            "Java",
+            "JavaFX"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Software Methodology",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/Song_Library",
+        "href": "#"
+    },
+    {
+        "name": "Photos Library",
+        "description": "Java application that stores and manages libraries of photos for multiple users. Application has admin and non-admin subsystems. Admin subsystems provides account creation, deletion and viewing of all users. Non-admin (typical user) subsystem allows user to add, remove, edit and search for photos by tag, as well as create and edit albums",
+        "status": "Completed",
+        "technologies": [
+            "Java",
+            "JavaFX"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Software Methodology",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/Photos_Library",
+        "href": "#"
+    },
+    {
+        "name": "Chess",
+        "description": "Terminal-based 2-player chess game. Users are able to play in chess with move-legality checks implemented, including basic valid piece moves, enpassant, check and checkmate detections.",
+        "status": "Completed",
+        "technologies": [
+            "Java"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Software Methodology",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/Chess",
+        "href": "#"
+    },
+    {
+        "name": "Photos Library - Android",
+        "description": "Simplified version of Photos Library Java application, but this time developed as an Android application. Application has the functionality of adding, removing and editing photos and albums for a single user. User can also search for photo by tag.",
+        "status": "In Progress",
+        "technologies": [
+            "Java",
+            "Android"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Software Methodology",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/Photos_Library_Android",
+        "href": "#"
+    },
+    {
+        "name": "Expression Evaluation",
+        "description": "Java application that performs arithmetic and evaluation operations on input string(s).",
+        "status": "Completed",
+        "technologies": [
+            "Java"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Software Methodology",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/DataStructures_Assignments/tree/master/Expression%20Evaluation",
+        "href": "#"
+    },
+    {
+        "name": "Little Search Engine",
+        "description": "Reads in strings from provided text file and sorts strings in terms of frequency. Implemented binary search in order to determine placement of a each string.",
+        "status": "Completed",
+        "technologies": [
+            "Java"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Software Methodology",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/DataStructures_Assignments/tree/master/Little%20Search%20Engine",
+        "href": "#"
+    },
+    {
+        "name": "Polynomial Calculator",
+        "description": "Interprets polynomials from provided files and performs arithmetic and evaluation operations on them.",
+        "status": "Completed",
+        "technologies": [
+            "Java"
+        ],
+        "type": "Course",
+        "featured": false,
+        "course": "Software Methodology",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/DataStructures_Assignments/tree/master/Polynomial",
+        "href": "#"
+    },
+    {
+        "name": "DOM Tree Modifier",
+        "description": "Modifies DOM tree interpreted from file to add, remove or modify HTML tags.",
+        "status": "In Progress",
+        "technologies": [
+            "Java"
+        ],
+        "type": "",
+        "featured": false,
+        "course": "",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "https://github.com/shash222/DataStructures_Assignments/tree/master/DOM%20Tree",
+        "href": "#"
+    },
+    {
+        "name": "ClassHub",
+        "description": "Application designed to increase interactivity between students and instructors in otherwise impersonal in-class- and in-lecture- settings. Features include geolocation, chat to ask and upvote questions to instructor, in-app polls and quizzes in order to reduce interruptions throughout the lecture.",
+        "status": "Completed",
+        "technologies": [
+            "React Native",
+            "MongoDB",
+            "Node.js"
+        ],
+        "type": "Course",
+        "featured": true,
+        "course": "Software Engineering",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "",
+        "href": "#"
+    }
+]

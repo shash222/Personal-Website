@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../styles/ProjectsViewStyles/DetailedProjectCard.css'
 
 
+
 export default class DetailedProjectCard extends Component {
 
     constructor(props) {
@@ -20,7 +21,7 @@ export default class DetailedProjectCard extends Component {
         var buttons = document.getElementsByTagName("button")
         var openSampleNode = undefined
         for (let button of buttons) {
-            var sampleNode = this.getSampleNode(button.parentNode)
+            var sampleNode = this.getSampleNode(button.parentNode.parentNode)
             if (button !== e.target) {
                 if (button.classList.contains("active")) {
                     button.classList.remove("active")
@@ -51,6 +52,7 @@ export default class DetailedProjectCard extends Component {
 
     getSampleNode(parentNode) {
         var siblings = this.getSiblings(parentNode)
+        console.log(siblings)
         for (let sib of siblings) {
             if (sib.classList.contains("sample")) {
                 return sib
@@ -59,30 +61,50 @@ export default class DetailedProjectCard extends Component {
     }
 
     handleViewButtonClick(e, sampleNode) {
+        console.log(this.props.project.sampleLink)
         if (e.target.classList.contains("active")) {
             e.target.classList.remove("active")
             sampleNode.classList.remove("selected")
             sampleNode.classList.add("unselected")
             window.setTimeout(() => {
                 if (e.targetNode)
-                    e.target.parentNode.scrollIntoView({block: "center"})
+                    e.target.parentNode.scrollIntoView({ block: "center" })
             }, 500)
         } else {
             e.target.classList.add("active")
             sampleNode.classList.add("selected")
             sampleNode.classList.remove("unselected")
-            window.setTimeout(() => {sampleNode.scrollIntoView({block: "center"})}, 500);
+            window.setTimeout(() => { sampleNode.scrollIntoView({ block: "center" }) }, 500);
         }
-        // console.log(e.target.parentNode.siblingNodes)
     }
 
     render() {
         return (
-            <div className="detailedProjectCardContainer" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay={100 * this.props.delay}>
+            <div className="detailedProjectCardContainer" data-aos="zoom-in" data-aos-duration="1200" >
                 <div className="detailedProjectCard">
-                    <button onClick={this.handleClick}>View</button>
+                    <h3 className="detailedProjectCardProjectName">{this.props.project.name}</h3>
+                    <p className="detailedProjectCardProjectDescription">{
+                        this.props.project.description
+                    }</p>
+                    <p className="skills"><b>Skills: </b>{this.props.project.technologies.join(", ")}</p>
+                    <div className="detailedProjectCardClickablesContainer">
+                        {this.props.project.sample
+                            ? (
+                                [<a target="_blank" rel="noopener noreferrer"
+                                    href={this.props.project.sampleLink}>Visit Website</a>,
+                                <button onClick={this.handleClick}>View Sample</button>]
+                            )
+                            : null}
+                        {this.props.project.githubLink
+                            ? <a target="_blank" rel="noopener noreferrer"
+                                href={this.props.project.githubLink}>View on GitHub</a>
+                            : null}
+                    </div>
                 </div>
-                <div className="sample"></div>
+                {console.log(this.props.project.sampleLink)}
+                <iframe className="sample" src={this.props.project.sampleLink}></iframe>
+                
+                {/* <div className="sample"></div> */}
             </div>
         )
     }

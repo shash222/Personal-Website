@@ -20,7 +20,9 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    AOS.init();
+    AOS.init({
+      once: true
+    });
     window.addEventListener('scroll', this.handleScroll)
     this.handleScroll()
   }

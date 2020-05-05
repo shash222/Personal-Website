@@ -1,5 +1,5 @@
 html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
 }
 
@@ -18,7 +18,7 @@ html {
 .homePageSectionContainer * {
     color: white;
     margin: auto;
-    padding:0;
+    padding: 0;
 }
 
 .sectionContent:not(#introSection) {
@@ -30,7 +30,7 @@ html {
     top: 20%;
 }
 
-.navItem > a {
+.navItem>a {
     cursor: pointer;
 }
 
@@ -43,7 +43,7 @@ h2 {
     position: relative;
 }
 
-.sectionContent > div {
+.sectionContent>div {
     display: flex;
     flex-direction: column;
     padding-top: 5vh;
@@ -53,6 +53,7 @@ h2 {
 .navigationArrowContainer {
     position: fixed;
     left: 50%;
+    z-index: 4;
 }
 
 .homeViewArrow {

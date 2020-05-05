@@ -10,7 +10,12 @@ export default class ExperienceItem extends Component {
                 <div className="experienceContent">
                     <div className="connectingLine"></div>
                     {/* <p style={{float:"right"}}>tests</p> */}
-                    <h3 className="companyName">{this.props.experience.company}</h3>
+                    <h3>{this.props.experience.position}
+                        {(this.props.experience.company.length > 0) 
+                            ?<span className="companyName"> @ {this.props.experience.company}</span>
+                            : null
+                        }
+                    </h3>
                     {/* <ul className="experienceDescription">
                         {this.props.experience.description.map((desc) => (
                             <li>{desc}</li>

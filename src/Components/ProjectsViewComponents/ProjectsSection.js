@@ -27,13 +27,13 @@ export default class ProjectsSection extends Component {
                     <div id="allTagsContainer">
                         <div className="tagsContainer">
                             <span className="tagTitle">Skills:</span>
-                            {skills.skills.map((skill) => (
+                            {skills.map((skill) => (
                                 <span className="skillTag tag" key={skill.name} data-tag-value={skill.name} onClick={this.handleTagSelection}>{skill.name}</span>
                             ))}
                         </div>
                         <div className="tagsContainer">
                             <span className="tagTitle">Experiences:</span>
-                            {experiences.experiences.map((experience) => (
+                            {experiences.map((experience) => (
                                 <span className="experienceTag tag" key={experience.company} data-tag-value={experience.company} onClick={this.handleTagSelection}>{experience.company}</span>
                             ))}
                         </div>
@@ -45,7 +45,7 @@ export default class ProjectsSection extends Component {
                         <input type="text" id="tagSearchBar" name="tagSearch" placeholder="Enter Skill, Experience or Status" />
                     </div>
                     <div id="detailedProjectCardsContainer">
-                        {projectDetails.projects.map((project, i) => (
+                        {projectDetails.map((project, i) => (
                             <DetailedProjectCard key={project.name} delay={i} project={project} />
                         ))}
 

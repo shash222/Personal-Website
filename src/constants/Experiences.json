@@ -1,101 +1,287 @@
-{
-    "experiences": [
-        {
-            "company": "company1",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis aliquet rhoncus. Integer lobortis faucibus neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis dignissim mauris nec nunc porttitor lobortis. Aliquam enim neque, aliquet id vehicula eu, lobortis ut eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer facilisis purus nisi, a ultrices turpis lobortis sed.",
-            "bullets": [
-                "bullet1",
-                "bullet2",
-                "bullet3",
-                "bullet4",
-                "bullet5"
-            ],
-            "skillsGained": [
-                "skill1",
-                "skill2",
-                "skill3",
-                "skill4",
-                "skill5",
-                "skill6"
-            ],
-            "position": "position",
-            "startDate": "06/2019",
-            "endDate": "08/2019",
-            "location": "location",
-            "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code"
-        },
-        {
-            "company": "company2",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis aliquet rhoncus. Integer lobortis faucibus neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis dignissim mauris nec nunc porttitor lobortis. Aliquam enim neque, aliquet id vehicula eu, lobortis ut eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer facilisis purus nisi, a ultrices turpis lobortis sed.",
-            "bullets": [
-                "bullet1",
-                "bullet2",
-                "bullet3",
-                "bullet4",
-                "bullet5"
-            ],
-            "skillsGained": [
-                "skill1",
-                "skill2",
-                "skill3",
-                "skill4",
-                "skill5",
-                "skill6"
-            ],
-            "position": "position",
-            "startDate": "06/2019",
-            "endDate": "08/2019",
-            "location": "location",
-            "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code"
-        },
-        {
-            "company": "company3",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis aliquet rhoncus. Integer lobortis faucibus neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis dignissim mauris nec nunc porttitor lobortis. Aliquam enim neque, aliquet id vehicula eu, lobortis ut eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer facilisis purus nisi, a ultrices turpis lobortis sed.",
-            "bullets": [
-                "bullet1",
-                "bullet2",
-                "bullet3",
-                "bullet4",
-                "bullet5"
-            ],
-            "skillsGained": [
-                "skill1",
-                "skill2",
-                "skill3",
-                "skill4",
-                "skill5",
-                "skill6"
-            ],
-            "position": "position",
-            "startDate": "06/2019",
-            "endDate": "08/2019",
-            "location": "location",
-            "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code"
-        },
-        {
-            "company": "company",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis aliquet rhoncus. Integer lobortis faucibus neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis dignissim mauris nec nunc porttitor lobortis. Aliquam enim neque, aliquet id vehicula eu, lobortis ut eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer facilisis purus nisi, a ultrices turpis lobortis sed.",
-            "bullets": [
-                "bullet1",
-                "bullet2",
-                "bullet3",
-                "bullet4",
-                "bullet5"
-            ],
-            "skillsGained": [
-                "skill1",
-                "skill2",
-                "skill3",
-                "skill4",
-                "skill5",
-                "skill6"
-            ],
-            "position": "position",
-            "startDate": "06/2019",
-            "endDate": "08/2019",
-            "location": "location",
-            "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code"
-        }
-    ]
-}
-
+[
+    {
+        "company": "Amazon.com, Inc",
+        "description": "Worked as part of an internal team in the Alexa Organization. Developed an email reminder system that followed up with developers on a consistent basis to update outdated feature launch status information using AWS and Java",
+        "bullets": [
+            "Designed and implemented reminder system that ensures thousands of feature launch statuses are up to date by alerting developers of outdated data on a weekly cadence, saving the Project Management team hours of manual labor a week.",
+            "Reminder system aggregates all outdated data into a single spreadsheet and persists it to Amazon S3 for consumption by the Project Management team.",
+            "Provided an economic and scalable solution by utilizing Step Functions, Lambdas and other serverless AWStechnologies.",
+            "Presented project design to senior engineers and stakeholders for their sign off on implementation strategy and fulfillment of requirements."
+        ],
+        "skillsGained": [
+            "AWS",
+            "Java",
+            "Unit & Integration Testing",
+            "Collaboration",
+            "SQL",
+            "Linux",
+            "Agile",
+            "Communication",
+            "Documentation",
+            "Leadership"
+        ],
+        "position": "Software Engineering Intern",
+        "startDate": "06/2019",
+        "endDate": "08/2019",
+        "location": "Seattle, WA",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": true
+    },
+    {
+        "company": "Rutgers University",
+        "description": "Worked alongside supervisors and fellow consultants to provide excellent customer service by assisting patrons in troubleshooting and configuring personal devices to comply with Rutgers University network and usage policies.",
+        "bullets": [
+            "Configure patrons’ devices to comply with Rutgers University network and usage policies",
+            "Diagnose, troubleshoot and resolve a variety of network-related issues for thousands of students campus-wide",
+            "Ensure Rutgers network in residential buildings is up to standards by performing network surveys"
+        ],
+        "skillsGained": [
+            "Troubleshooting",
+            "Customer Service",
+            "Collaboration",
+            "Communication"
+        ],
+        "position": "OIT Residential Network Consultant",
+        "startDate": "08/2018",
+        "endDate": "Present",
+        "location": "Piscataway, NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": true
+    },
+    {
+        "company": "",
+        "description": "Instructed students in software development concepts including basic algorithms, object-oriented programming and data structures. Advised on career hunts, project ideas, relevant technologies and resources to take advantage of to develop deeper understanding of the sector.",
+        "bullets": [
+            "Conduct one on one tutoring sessions for multiple students in order to increase competency in programming and succeed in intense computer science courses",
+            "Instruct students in basic algorithms, object oriented programming and data structures"
+        ],
+        "skillsGained": [
+            "Teaching",
+            "Analysis",
+            "Java",
+            "Problem Solving",
+            "Mentorship",
+            "Communication"
+        ],
+        "position": "Software Development Mentor",
+        "startDate": "09/2017",
+        "endDate": "Present",
+        "location": "Piscataway, NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": true
+    },
+    {
+        "company": "Raritan Inc.",
+        "description": "Worked alongside team of IT professionals to improve staff productivity by troubleshooting, maintaining and upgrading corporate hardware and software in accordance with company policy.",
+        "bullets": [
+            "Performed, tested and upgraded over 70% of corporate software and devices to increase work efficiency for all staff",
+            "Resolved technical difficulties quickly and thoroughly for all staff to prevent further delays in productivity",
+            "Utilized Docker to set up Apache HTTP web server container"
+        ],
+        "skillsGained": [
+            "Collaboration",
+            "Troubleshooting",
+            "Communication"
+        ],
+        "position": "IT Summer Intern",
+        "startDate": "06/2018",
+        "endDate": "08/2018",
+        "location": "location",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    },
+    {
+        "company": "Best Buy",
+        "description": "",
+        "bullets": [
+            "Provided exceptional customer service to clients by assessing their computer- and network-related needs in order to suggest the perfect product for them",
+            "Tracked product inventory and organized products to drive up sales"
+        ],
+        "skillsGained": [
+            "Sales",
+            "Communication",
+            "Collaboration"
+        ],
+        "position": "Computer Sales Associate",
+        "startDate": "06/2017",
+        "endDate": "12/2017",
+        "location": "Iselin, NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    },
+    {
+        "company": "Rutgers University",
+        "description": "Worked as part of IT team to prepare and repair facility devices by reimaging hard drives and replacing hardware components and assuring computers met facility software standards .",
+        "bullets": [
+            "Imaged hard drives and performed low-level formats on flash drives and minor hardware repairs on facility computers",
+            "Assured computers were up to date to meet facility software standards and tested them for optimal performance"
+        ],
+        "skillsGained": [
+            "Troubleshooting",
+            "Collaboration",
+            "Communication"
+        ],
+        "position": "Student Help Desk Assistant",
+        "startDate": "09/2016",
+        "endDate": "05/2017",
+        "location": "Piscataway, NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    },
+    {
+        "company": "Young Muslims",
+        "description": "Work alongside seasoned leadership to establish quality control framework in order to maintain consistency and quality of local chapters, regional events and leadership development.",
+        "bullets": [
+            "Established team of experienced and qualified leadership to spearhead quality control and development efforts in the region",
+            "Visit different chapters on a weekly basis with other members of Quality Control team in order to review operational status and quality and discuss findings amongst each other",
+            "Discuss strategies to improve different aspects of local chapter meetings and ",
+            "Advise local leadership on strengths, weaknesses and strategies to grow local chapter or improve events",
+            "Organize leadership training and development workshops to pipeline leadership into various roles"
+        ],
+        "skillsGained": [
+            "Collaboration",
+            "Communication",
+            "Leadership",
+            "Management",
+            "Project Management",
+            "Problem Solving",
+            "Decision Making",
+            "Analysis",
+            "Mentorship",
+            "Delegation"
+        ],
+        "position": "Quality Control Coordinator",
+        "startDate": "10/2019",
+        "endDate": "Present",
+        "location": "NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    },
+    {
+        "company": "Young Muslims",
+        "description": "Work closely with members nationwide in order to coordinate and document conversations with prior national-council leaderships to understand the decisions made to grow the organization to where it is today.",
+        "bullets": [
+            "Coordinate conversations with prior national-counil leaderships in order to develop a deeper understanding of the issues, discussions and decisions of their terms that helped shape the course of the organization",
+            "Document conversations to be used as a point of reference for current and future leadership in order to assist in making future decisions or appeals."
+        ],
+        "skillsGained": [
+            "Collaboration",
+            "Communication",
+            "Leadership",
+            "Management",
+            "Project Management",
+            "Problem Solving",
+            "Decision Making",
+            "Analysis",
+            "Mentorship",
+            "Delegation"
+        ],
+        "position": "Research Team Member",
+        "startDate": "02/2019",
+        "endDate": "Present",
+        "location": "NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    },
+    {
+        "company": "Young Muslims",
+        "description": "Coordinated team of cross-functional leaders to facilitate regional events and maintain and grow individual chapters through weekly status updates and quality control.",
+        "bullets": [
+            "Supervised 5 chapters and oversee weekly operations",
+            "Pipelined upcoming coordinators through online and in person workshops for various chapters",
+            "Facilitated community events to enhance sense of unity on regional level"
+        ],
+        "skillsGained": [
+            "Collaboration",
+            "Communication",
+            "Leadership",
+            "Management",
+            "Project Management",
+            "Problem Solving",
+            "Decision Making",
+            "Analysis",
+            "Mentorship",
+            "Delegation"
+        ],
+        "position": "Regional Coordinator",
+        "startDate": "12/2017",
+        "endDate": "12/2018",
+        "location": "NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": true
+    },
+    {
+        "company": "Young Muslims",
+        "description": "Managed team of 4-5 to coordinate weekly meetings and events for local youth group and provide a platform for mentorship and communal growth.",
+        "bullets": [
+            "Planned weekly meetings and events tailored to building today’s youth into tomorrow’s leaders",
+            "Created a sense of community for high school and college students"
+        ],
+        "skillsGained": [
+            "Collaboration",
+            "Communication",
+            "Leadership",
+            "Management",
+            "Project Management",
+            "Problem Solving",
+            "Decision Making",
+            "Analysis",
+            "Mentorship",
+            "Delegation"
+        ],
+        "position": "Chapter Coordinator",
+        "startDate": "1/2016",
+        "endDate": "01/2017",
+        "location": "Old Bridge, NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    },
+    {
+        "company": "MIST",
+        "description": "Spearheaded high-school recruitment efforts to increase number of competitors in annual tournament. Students were able to compete in sports, spoken word, art and other secular and religious categories.",
+        "bullets": [
+            "Coordinated recruitment events among various high schools throughout New Jersey.",
+            "Ensured presenters are well-equipped with presentation skills to promote the organization effectively.",
+            "Managed communications between two national organizations YM and MIST on a regional level.",
+            "Coordinated recruitment events for MIST."
+        ],
+        "skillsGained": [
+            "Collaboration",
+            "Communication",
+            "Leadership",
+            "Management",
+            "Problem Solving",
+            "Decision Making",
+            "Analysis",
+            "Mentorship",
+            "Delegation"
+        ],
+        "position": "Recruitment Chair",
+        "startDate": "1/2016",
+        "endDate": "01/2017",
+        "location": "NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    },
+    {
+        "company": "Sayreville EMS",
+        "description": "Received CPR and EMT certifications in the state of New Jersey to volunteer for local emergency squad and give back to the community.",
+        "bullets": [
+            "Provided excellent patient care while consoling them and their families.",
+            "Came up with solutions in unique situations where typical equipment would not suffice.",
+            "Received CPR and EMT certifications after a rigorous training class that spanned over three months."
+        ],
+        "skillsGained": [
+            "Customer Service",
+            "Analysis",
+            "Patient Care",
+            "Collaboration"
+        ],
+        "position": "Volunteer EMT",
+        "startDate": "08/2015",
+        "endDate": "04/2017",
+        "location": "Sayreville, NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    }
+]
