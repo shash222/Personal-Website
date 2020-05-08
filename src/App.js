@@ -33,7 +33,6 @@ export default class App extends Component {
 
   handleScroll() {
     var scrollToTopButtonWrapper = document.getElementById("scrollToTopButtonWrapper")
-    console.log(window.scrollY, window.innerHeight)
     if (window.scrollY < window.innerHeight * .1) {
       scrollToTopButtonWrapper.style.display = "none"
     } else {

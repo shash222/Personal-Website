@@ -134,7 +134,7 @@
         "href": "#"
     },
     {
-        "name": "Malloc and Free Implementation",
+        "name": "Malloc and Free",
         "description": "Reproduced malloc and free to serve as proof-of-concept replacements of the original library functions. Simulated memory using a static array of 4096 bytes and implemented using metadata that stored content starting address and length to be accessed or freed later.",
         "status": "Completed",
         "technologies": [

@@ -3,6 +3,16 @@ body {
     overflow-y: scroll;
 }
 
+html {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+}
+
 #scrollToTopButtonWrapper {
     position: fixed;
     bottom: 3%;
@@ -10,11 +20,11 @@ body {
     animation: displayScrollToTopButtonAnimation 1s forwards;
 }
 
-#scrollToTopButtonWrapper > button{
+#scrollToTopButtonWrapper>button {
     all: unset;
 }
 
-#scrollToTopButtonWrapper > button:hover {
+#scrollToTopButtonWrapper>button:hover {
     cursor: pointer;
 }
 

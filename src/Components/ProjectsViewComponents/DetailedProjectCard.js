@@ -10,7 +10,7 @@ export default class DetailedProjectCard extends Component {
         this.handleViewButtonClick = this.handleViewButtonClick.bind(this)
         this.handleClick = this.handleClick.bind(this)
         this.getChildren = this.getChildren.bind(this)
-        this.getChildren = this.getChildren.bind(this)
+        this.handleSampleDivs = this.handleSampleDivs.bind(this)
     }
 
     componentDidMount() {
@@ -18,24 +18,28 @@ export default class DetailedProjectCard extends Component {
     }
 
     handleClick(e) {
+        this.handleSampleDivs(e)
+    }
+
+    handleSampleDivs(e) {
         var buttons = document.getElementsByTagName("button")
-        var openSampleNode = undefined
+        var openSampleNode = document.getElementsByClassName("iframeContainer")[0];
+        console.log(openSampleNode)
+        // var openSampleNode = undefined
         for (let button of buttons) {
-            var sampleNode = this.getSampleNode(button.parentNode.parentNode)
-            if (button !== e.target) {
-                if (button.classList.contains("active")) {
-                    button.classList.remove("active")
-                    sampleNode.classList.remove("selected")
-                    sampleNode.classList.add("unselected")
-                }
-            } else {
-                openSampleNode = sampleNode
-                // e.target.scrollIntoView({block: "end"})
+            // var sampleNode = this.getSampleNode(button.parentNode.parentNode)
+            // if (button !== e.target) {
+            if (button.classList.contains("active")) {
+                button.classList.remove("active")
+                openSampleNode.classList.remove("selected")
+                openSampleNode.classList.add("unselected")
             }
+            // }
         }
         if (e.target.tagName.toLowerCase() === "button") {
             this.handleViewButtonClick(e, openSampleNode)
         }
+
     }
 
     getChildren(n, skipMe) {
@@ -52,18 +56,19 @@ export default class DetailedProjectCard extends Component {
 
     getSampleNode(parentNode) {
         var siblings = this.getSiblings(parentNode)
-        console.log(siblings)
         for (let sib of siblings) {
-            if (sib.classList.contains("sample")) {
+            if (sib.classList.contains("iframeContainer")) {
                 return sib
             }
         }
     }
 
     handleViewButtonClick(e, sampleNode) {
-        console.log(this.props.project.sampleLink)
+        var iframeContainer = document.getElementsByClassName("iframeContainer")[0];
         if (e.target.classList.contains("active")) {
             e.target.classList.remove("active")
+            // iframeContainer.classList.remove("selected")
+            // iframeContainer.classList.add("unselected")
             sampleNode.classList.remove("selected")
             sampleNode.classList.add("unselected")
             window.setTimeout(() => {
@@ -72,10 +77,14 @@ export default class DetailedProjectCard extends Component {
             }, 500)
         } else {
             e.target.classList.add("active")
+            // iframeContainer.classList.add("selected")
+            // iframeContainer.classList.remove("unselected")
             sampleNode.classList.add("selected")
             sampleNode.classList.remove("unselected")
             window.setTimeout(() => { sampleNode.scrollIntoView({ block: "center" }) }, 500);
         }
+        iframeContainer.classList.add("selected");
+        document.getElementsByClassName("sample")[0].src = e.target.getAttribute("data-sample-url")
     }
 
     render() {
@@ -92,7 +101,7 @@ export default class DetailedProjectCard extends Component {
                             ? (
                                 [<a target="_blank" rel="noopener noreferrer"
                                     href={this.props.project.sampleLink}>Visit Website</a>,
-                                <button onClick={this.handleClick}>View Sample</button>]
+                                <button onClick={this.handleClick} data-sample-url={this.props.project.sampleLink}>View Sample</button>]
                             )
                             : null}
                         {this.props.project.githubLink
@@ -101,9 +110,7 @@ export default class DetailedProjectCard extends Component {
                             : null}
                     </div>
                 </div>
-                {console.log(this.props.project.sampleLink)}
-                <iframe className="sample" src={this.props.project.sampleLink}></iframe>
-                
+
                 {/* <div className="sample"></div> */}
             </div>
         )
