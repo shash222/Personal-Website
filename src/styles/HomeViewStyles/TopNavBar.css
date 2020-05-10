@@ -1,23 +1,23 @@
 #topNavBarContainer {
     padding-top: 3vh;
-    width: 60%;
-    position: absolute;
+    width: 50%;
+    position: fixed;
     right: 0;
+    z-index: 5;
 }
 
 #topNavBarItems {
-
     list-style: none;
     display: flex;
     justify-content: space-evenly;
 }
 
-#topNavBarItems a{
+#topNavBarItems a {
     color: white;
     text-decoration: none;
     font-size: larger;
 }
 
-#topNavBarItems a:hover{
+#topNavBarItems a:hover {
     color: red;
 }

@@ -10,8 +10,8 @@ import HomeProjectsSection from '../components/HomeViewComponents/HomeProjectsSe
 import HomeViewNavBar from '../components/HomeViewComponents/HomeViewNavBar.js';
 import homeViewSections from '../constants/HomeViewLinks.json'
 import { Link } from 'react-scroll'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 export default class HomeView extends Component {
     constructor(props) {
@@ -37,13 +37,12 @@ export default class HomeView extends Component {
 
     handleSectionChange(incrementValue) {
         var newSectionNumber = this.state.displayedSectionNumber + incrementValue
-        console.log(newSectionNumber)
         var prevSection = homeViewSections.sections[newSectionNumber - 1];
         var nextSection = homeViewSections.sections[newSectionNumber + 1];
         var nextSectionId = "";
         var prevSectionId = "";
         if (newSectionNumber === 0) {
-            document.querySelector('.navigationArrowContainer.down').classList.add("homeIntroPosition")
+            // document.querySelector('.navigationArrowContainer.down').classList.add("homeIntroPosition")
         } else {
             document.querySelector('.navigationArrowContainer.down').classList.remove("homeIntroPosition")
         }
@@ -70,15 +69,16 @@ export default class HomeView extends Component {
 
     render() {
         return (
-            <div id="homeView">
-                <div className="navigationArrowContainer up">
+            <div id="homeView" className="view">
+                <div className="navigationArrowContainer viewNavigationArrowContainer up fixed">
                     <Link
                         activeClass="active"
                         to={this.state.prevSectionId}
                         spy={true}
                         onSetActive={() => this.handleSectionChange(-1)}
                         duration={1000}>
-                        <div id="upArrow" className="homeViewArrow"></div>
+                        <FontAwesomeIcon icon={faChevronUp} size="lg" />
+                        {/* <div id="upArrow" className="homeViewArrow"></div> */}
                     </Link>
                 </div>
                 <HomeViewNavBar handleSectionChange={this.handleSectionChange} currentSectionNumber={this.state.displayedSectionNumber} getCurrentSectionNumber={this.getSectionNumber} />
@@ -88,16 +88,16 @@ export default class HomeView extends Component {
                 <HomeExperiencesSection />
                 <HomeProjectsSection />
                 <HomeSkillsSection />
-                <div className="navigationArrowContainer down">
+                <div className="navigationArrowContainer viewNavigationArrowContainer down fixed">
                     <Link
                         activeClass="active"
                         to={this.state.nextSectionId}
                         spy={true}
                         onSetActive={() => this.handleSectionChange(1)}
                         duration={1000}>
-                        <div id="downArrow" className="homeViewArrow"></div>
+                        <FontAwesomeIcon icon={faChevronDown} size="lg" />
+                        {/* <div id="downArrow" className="homeViewArrow"></div> */}
                     </Link>
-
                 </div>
             </div>
         );

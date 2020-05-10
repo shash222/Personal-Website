@@ -24,7 +24,6 @@ export default class DetailedProjectCard extends Component {
     handleSampleDivs(e) {
         var buttons = document.getElementsByTagName("button")
         var openSampleNode = document.getElementsByClassName("iframeContainer")[0];
-        console.log(openSampleNode)
         // var openSampleNode = undefined
         for (let button of buttons) {
             // var sampleNode = this.getSampleNode(button.parentNode.parentNode)
@@ -92,16 +91,18 @@ export default class DetailedProjectCard extends Component {
             <div className="detailedProjectCardContainer" data-aos="zoom-in" data-aos-duration="1200" >
                 <div className="detailedProjectCard">
                     <h3 className="detailedProjectCardProjectName">{this.props.project.name}</h3>
-                    <p className="detailedProjectCardProjectDescription">{
-                        this.props.project.description
-                    }</p>
+                    <p className="detailedProjectCardProjectDescription">
+                        {
+                            this.props.project.description
+                        }
+                    </p>
                     <p className="skills"><b>Skills: </b>{this.props.project.technologies.join(", ")}</p>
                     <div className="detailedProjectCardClickablesContainer">
                         {this.props.project.sample
                             ? (
-                                [<a target="_blank" rel="noopener noreferrer"
+                                [<a key={this.props.project.name + "SiteLink"} target="_blank" rel="noopener noreferrer"
                                     href={this.props.project.sampleLink}>Visit Website</a>,
-                                <button onClick={this.handleClick} data-sample-url={this.props.project.sampleLink}>View Sample</button>]
+                                <button key={this.props.project.name + "SampleButton"} onClick={this.handleClick} data-sample-url={this.props.project.sampleLink}>View Sample</button>]
                             )
                             : null}
                         {this.props.project.githubLink

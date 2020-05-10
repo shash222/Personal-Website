@@ -10,8 +10,8 @@ export default class ExperienceSection extends Component {
                 <div id="detailedExperienceContainer">
                     <h2>Experience</h2>
                     <div id="detailedExperienceCardsContainer">
-                        {experience.map((experience) => (
-                            <DetailedExperienceCard experience={experience} />
+                        {experience.map((experience, i) => (
+                            <DetailedExperienceCard key={experience.company + i} experience={experience} />
                         ))}
                     </div>
                 </div>

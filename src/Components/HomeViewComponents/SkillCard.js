@@ -11,8 +11,8 @@ export default class SkillCard extends Component {
                     </div>
                     <div className="back">
                         {/* <p className="skillDescription">{this.props.skillDetail.description}</p> */}
-                        {Object.keys(this.props.skillSources).map((source) => (
-                            <p className="skillDescription"><b>{source}:</b> <span>{Array.from(this.props.skillSources[source]).join(", ")}</span></p>
+                        {Object.keys(this.props.skillSources).map((source, i) => (
+                            <p key={source + i} className="skillDescription"><b>{source}:</b> <span>{Array.from(this.props.skillSources[source]).join(", ")}</span></p>
                         ))}
                     </div>
                 </div>

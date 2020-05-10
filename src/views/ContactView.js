@@ -6,7 +6,7 @@ import '../styles/ContactViewStyles/ContactView.css'
 export default class ContactView extends Component {
     render() {
         return(
-            <div id="contactView">
+            <div id="contactView" className="view">
                 <ContactViewIntroSection />
                 <ContactSection />
             </div>

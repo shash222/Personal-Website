@@ -6,7 +6,7 @@ import '../styles/ProjectsViewStyles/ProjectsView.css'
 export default class ProjectsView extends Component {
     render() {
         return (
-            <div id="projectsView">
+            <div id="projectsView" className="view">
                 <ProjectsIntroSection />
                 <ProjectsSection />
             </div>

@@ -30,7 +30,7 @@
     border-width: 4px 0 0 4px;
 }
 
-@keyframes arrowPulse {
+/* @keyframes arrowPulse {
     0% {
         opacity: 0;
         transform: scale(1) rotate(-135deg);
@@ -43,4 +43,4 @@
         opacity: 0;
         transform: scale(1) rotate(-135deg);
     }
-}
+} */

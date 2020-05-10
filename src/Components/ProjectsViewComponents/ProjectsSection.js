@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import projectDetails from '../../constants/Projects.json'
 import DetailedProjectCard from './/DetailedProjectCard.js'
 import '../../styles/ProjectsViewStyles/ProjectsSection.css'
-import skills from '../../constants/Skills.json'
-import experiences from '../../constants/Experiences.json'
+// import skills from '../../constants/Skills.json'
+// import experiences from '../../constants/Experiences.json'
 
 export default class ProjectsSection extends Component {
     constructor(props) {
@@ -47,17 +47,14 @@ export default class ProjectsSection extends Component {
     }
 
     updateDisplayedProjects() {
-        console.log("Updating")
         var selectedTags = document.getElementsByClassName("selectedTag")
         var detailedProjectCardContainers = document.getElementsByClassName("detailedProjectCardContainer");
-        console.log(selectedTags.length)
         if (selectedTags.length === 0)
             this.displayAllProjects()
         else {
             var projectNamesOfProjectsToDisplay = new Set()
             for (let selectedTag of selectedTags) {
                 var selectedTagValue = selectedTag.getAttribute('data-tag-value')
-                console.log(selectedTagValue)
                 var projectNamesCorrespondingToTag = this.state.skillMapping[selectedTagValue]
                 projectNamesCorrespondingToTag.forEach((projectName) => {
                     projectNamesOfProjectsToDisplay.add(projectName)
@@ -110,7 +107,7 @@ export default class ProjectsSection extends Component {
             <section id="projectsSectionContainer" className="projectsViewSection">
                 <div className="iframeContainer">
                     <div className="x">X</div>
-                    <iframe className="sample" ></iframe>
+                    <iframe className="sample" title="sample"></iframe>
                 </div>
                 <div id="detailedProjectsContainer">
                     <h2>All Projects</h2>

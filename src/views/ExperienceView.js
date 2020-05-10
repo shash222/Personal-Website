@@ -6,7 +6,7 @@ import '../styles/ExperienceViewStyles/ExperienceView.css'
 export default class ExperienceView extends Component {
     render() {
         return(
-            <div id="experienceView">
+            <div id="experienceView" className="view">
                 <ExperienceViewIntroSection />
                 <ExperienceSection />
             </div>

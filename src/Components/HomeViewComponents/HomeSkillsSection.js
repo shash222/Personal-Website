@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import SkillCard from './SkillCard.js'
-import skillDetails from '../../constants/Skills.json'
+// import skillDetails from '../../constants/Skills.json'
 import '../../styles/HomeViewStyles/HomeSkillsSection.css'
 import experiences from '../../constants/Experiences.json'
 import projects from '../../constants/Projects.json'
@@ -104,7 +104,7 @@ export default class HomeSkillsSection extends Component {
                             <SkillCard key={skill.name} skillDetail={skill} delay={i + 1} />
                         ))} */}
                         {Object.keys(this.state.skillMapping).map((skill, i) => (
-                            <SkillCard key={skill.name} skill={skill} skillSources={this.state.skillMapping[skill]} delay={i + 1} />
+                            <SkillCard key={skill} skill={skill} skillSources={this.state.skillMapping[skill]} delay={i + 1} />
                         ))}
                     </div>
                 </div>
