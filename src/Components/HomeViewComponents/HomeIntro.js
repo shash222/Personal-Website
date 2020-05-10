@@ -12,8 +12,8 @@ export default class HomeIntro extends Component {
         return (
             <section className="homePageSectionContainer" id="homeIntroSection">
                 <div id="introSection" className="sectionContent">
-                    <h2 id="name" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">Salman Hashmi</h2>
-                    <p id="title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">Software Engineer</p>
+                    <h1 id="name" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">Salman Hashmi</h1>
+                    <h1 id="title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">Software Engineer</h1>
                     <div id="homeResourcesContainer">
                         <a className="homeResource" rel="noopener noreferrer" target="_blank" href="https://github.com/shash222" id="homeGitHubLink">
                             <FontAwesomeIcon icon={faGithub} size="lg" />

@@ -5,25 +5,47 @@
     left: 0;
 }
 
-
-
 #experiencesContainer {
     position: relative;
     text-align: left;
     padding-left: 12%;
-    /* border: 2px solid black; */
+    /* height: 100%; */
 }
 
-/* #experiencesContainer::after {
-    content: "";
-    margin-top: 10%;
-    height: 90%;
-    background-color: yellow;
+#allExperiencesLink {
+    font-size: x-large;
+    /* margin-bottom: 10vh; */
+}
+
+#allExperiencesLinkContainer {
     border: 1px solid white;
-    width: 10px;
-} */
+    padding: 10px;
+    display: inline;
+    animation: revertAllExperiencesLinkAnimation .5s forwards;
+}
 
+#allExperiencesLinkContainer:hover {
+    animation: invertAllExperiencesLinkAnimation .5s forwards;
+}
 
-.sectionContent {
-    /* border: 1px solid black; */
+@keyframes invertAllExperiencesLinkAnimation {
+    from {
+        filter: invert(0%);
+        background-color: transparent;
+    }
+    to {
+        filter: invert(100%);
+        background-color: black;
+    }
+}
+
+@keyframes revertAllExperiencesLinkAnimation {
+    from {
+        background-color: black;
+        filter: invert(100%);
+    }
+    to {
+        background-color: transparent;
+        filter: invert(0%);
+    }
 }

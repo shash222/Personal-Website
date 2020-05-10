@@ -11,7 +11,7 @@ export default class ProjectCard extends Component {
                     </div>
                     <div className="back">
                         <p className="projectDescription">{this.props.projectDetail.description}</p>
-                        <a href={this.props.projectDetail.href} className="projectLink">More</a>
+                        {/* <a href={this.props.projectDetail.href} className="projectLink">More</a> */}
                     </div>
                 </div>
             </div>

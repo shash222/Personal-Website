@@ -55,23 +55,27 @@ h2 {
 }
 
 .navigationArrowContainer.up {
-    top: 5vh;
+    top: 3vh;
 }
 
 .navigationArrowContainer.down {
-    bottom: 5vh;
+    bottom: 3vh;
 }
 
 /* .navigationArrowContainer.down.homeIntroPosition {
     animation: arrowHomeIntroTransition 1s forwards;
 } */
 
-.navigationArrowContainer.down {
-    /* animation: arrowHomeIntroTransition 1s forwards; */
+.homeNavigationArrowContainer.down {
+    animation: arrowHomeIntroTransition 1s forwards;
 }
 
-.navigationArrowContainer.down:not(.homeIntroPosition) {
-    /* animation: arrowDefaultPositionTransition 1s forwards; */
+.homeNavigationArrowContainer.up {
+    animation: arrowDefaultPositionTransition 1s forwards;
+}
+
+.homeNavigationArrowContainer.down:not(.homeIntroPosition) {
+    animation: arrowDefaultPositionTransition 1s forwards;
 }
 
 #upArrow {
@@ -102,18 +106,18 @@ h2 {
 
 @keyframes arrowDefaultPositionTransition {
     0% {
-        margin-left: -5vw;
+        margin-left: 0vw;
     }
     100% {
-        margin-left: 0;
+        margin-left: 5vw;
     }
 }
 
 @keyframes arrowHomeIntroTransition {
     0% {
-        margin-left: 0;
+        margin-left: 5vw;
     }
     100% {
-        margin-left: -5vw;
+        margin-left: 0;
     }
 }

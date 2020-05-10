@@ -1,21 +1,27 @@
 #topNavBarContainer {
-    padding-top: 3vh;
-    width: 50%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 100vw;
     position: fixed;
+    z-index: 1;
+    background-color: rgb(0, 0, 0, .1);
     right: 0;
-    z-index: 5;
 }
 
 #topNavBarItems {
+    width: 30%;
+    margin-right: 5%;
+    margin-left: auto;
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #topNavBarItems a {
     color: white;
     text-decoration: none;
     font-size: larger;
+    text-shadow: 2px 2px 2px black;
 }
 
 #topNavBarItems a:hover {

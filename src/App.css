@@ -8,6 +8,10 @@ html {
     scroll-behavior: smooth;
 }
 
+h1 {
+    text-shadow: 5px 5px 5px black;
+}
+
 section {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
@@ -32,6 +36,7 @@ section {
     position: absolute;
     z-index: 2;
     color: white;
+    text-shadow: 2px 2px 2px black;
 }
 
 .navigationArrowContainer.fixed {
@@ -39,7 +44,9 @@ section {
 }
 
 .fa-chevron-left, .fa-chevron-right, .fa-chevron-up, .fa-chevron-down {
-    animation: arrowPulse 1.5s infinite;
+    animation: arrowPulse 2s infinite;
+    filter: drop-shadow(2px 2px 2px black);
+    /* text-shadow: 2px 2px 2px black; */
 }
 
 .viewNavigationArrowContainer {
@@ -65,15 +72,15 @@ section {
     width: 120px;
     margin: 0;
     text-align: center;
-    /* animation: arrowPulse 1s infinite; */
+    animation: viewNamePulse 2s infinite;
 }
 
 #rightRouterNavigationArrowContainer>p {
-    transform: rotate(-90deg) translateY(-5.5vw);
+    transform: rotate(-90deg) translateY(-4.5vw);
 }
 
 #leftRouterNavigationArrowContainer>p {
-    transform: rotate(90deg) translateY(1.5vw);
+    transform: rotate(90deg) translateY(1vw);
 }
 
 #scrollToTopButtonWrapper>button:hover {
@@ -102,19 +109,28 @@ section {
 
 @keyframes arrowPulse {
     0% {
-        opacity: 0;
+        opacity: .2;
         transform: scale(1);
-        /* transform: scale(1) rotate(-135deg); */
     }
     50% {
         opacity: 1;
         transform: scale(1.3);
-        /* transform: scale(1.3) rotate(-135deg); */
     }
     100% {
-        opacity: 0;
+        opacity: .2;
         transform: scale(1);
-        /* transform: scale(1) rotate(-135deg); */
+    }
+}
+
+@keyframes viewNamePulse {
+    0% {
+        opacity: .2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
     }
 }
 

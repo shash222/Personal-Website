@@ -53,11 +53,11 @@
     animation: removeBackgroundAnimation .5s forwards;
 }
 
-.homeResource + .homeResource {
+.homeResource+.homeResource {
     margin-left: 5%;
 }
 
-.homeResource > p {
+.homeResource>p {
     font-size: 25px;
 }
 
@@ -65,20 +65,20 @@
     animation: addBackgroundAnimation .5s forwards;
 }
 
-.homeResource > p {
+.homeResource>p {
     margin-right: auto;
 }
 
-.homeResource > svg{
+.homeResource>svg {
     margin-left: auto;
 }
 
-.homeResource > p, .homeResource > svg{
+.homeResource>p, .homeResource>svg {
     animation: revertResourceAnimation .5s forwards;
     /* animation-fill-mode: ; */
 }
 
-.homeResource:hover > p, .homeResource:hover > svg{
+.homeResource:hover>p, .homeResource:hover>svg {
     animation: invertResourceAnimation .5s both;
     /* filter: invert(100%); */
 }
@@ -86,11 +86,11 @@
 [data-aos="rotate"] {
     transform: rotate(-720deg);
     transition-property: transform;
-  }
+}
 
 [data-aos="rotate"].aos-animate {
     transform: rotate(0deg);
-  }
+}
 
 @keyframes pulse {
     0% {
@@ -106,7 +106,7 @@
 }
 
 @keyframes invertResourceAnimation {
-    0% {        
+    0% {
         filter: invert(0%);
     }
     100% {
@@ -115,7 +115,7 @@
 }
 
 @keyframes revertResourceAnimation {
-    0% {        
+    0% {
         filter: invert(100%);
     }
     100% {
@@ -124,21 +124,19 @@
 }
 
 @keyframes addBackgroundAnimation {
-    0% {        
+    0% {
         background-color: transparent;
     }
     100% {
         background-color: white;
     }
 }
-
 
 @keyframes removeBackgroundAnimation {
-    0% {        
+    0% {
         background-color: white;
     }
     100% {
         background-color: transparent;
     }
 }
-

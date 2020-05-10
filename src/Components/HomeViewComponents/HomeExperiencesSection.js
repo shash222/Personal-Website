@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import ExperienceItem from './ExperienceItem.js';
+import { NavLink } from 'react-router-dom';
 import experiences from '../../constants/Experiences.json';
 import '../../styles/HomeViewStyles/HomeExperiencesSection.css';
 
@@ -17,6 +18,9 @@ export default class HomeExperiencesSection extends Component {
                         }).map((exp, i) => (
                             <ExperienceItem key={exp.company + i} experience={exp} />
                         ))}
+                    </div>
+                    <div id="allExperiencesLinkContainer">
+                        <NavLink to="/experience"><span id="allExperiencesLink">More Experiences</span></NavLink>
                     </div>
                 </div>
             </section>

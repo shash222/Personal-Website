@@ -42,7 +42,7 @@ export default class HomeView extends Component {
         var nextSectionId = "";
         var prevSectionId = "";
         if (newSectionNumber === 0) {
-            // document.querySelector('.navigationArrowContainer.down').classList.add("homeIntroPosition")
+            document.querySelector('.navigationArrowContainer.down').classList.add("homeIntroPosition")
         } else {
             document.querySelector('.navigationArrowContainer.down').classList.remove("homeIntroPosition")
         }
@@ -70,7 +70,7 @@ export default class HomeView extends Component {
     render() {
         return (
             <div id="homeView" className="view">
-                <div className="navigationArrowContainer viewNavigationArrowContainer up fixed">
+                <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer up fixed">
                     <Link
                         activeClass="active"
                         to={this.state.prevSectionId}
@@ -88,7 +88,7 @@ export default class HomeView extends Component {
                 <HomeExperiencesSection />
                 <HomeProjectsSection />
                 <HomeSkillsSection />
-                <div className="navigationArrowContainer viewNavigationArrowContainer down fixed">
+                <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer down fixed">
                     <Link
                         activeClass="active"
                         to={this.state.nextSectionId}
