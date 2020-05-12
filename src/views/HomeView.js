@@ -8,6 +8,8 @@ import HomeExperiencesSection from '../components/HomeViewComponents/HomeExperie
 import HomeSkillsSection from '../components/HomeViewComponents/HomeSkillsSection.js'
 import HomeProjectsSection from '../components/HomeViewComponents/HomeProjectsSection.js'
 import HomeViewNavBar from '../components/HomeViewComponents/HomeViewNavBar.js';
+import HomeNonTechSkillsSection from '../components/HomeViewComponents/HomeNonTechSkillsSection';
+import HomeTechSkillsSection from '../components/HomeViewComponents/HomeTechSkillsSection';
 import homeViewSections from '../constants/HomeViewLinks.json'
 import { Link } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -87,7 +89,9 @@ export default class HomeView extends Component {
                 <HomeEducationSection />
                 <HomeExperiencesSection />
                 <HomeProjectsSection />
-                <HomeSkillsSection />
+                <HomeTechSkillsSection />
+                <HomeNonTechSkillsSection />
+                {/* <HomeSkillsSection /> */}
                 <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer down fixed">
                     <Link
                         activeClass="active"

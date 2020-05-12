@@ -21,8 +21,12 @@
             "referenceId": "homeProjectsSection"
         },
         {
-            "linkText": "Skills",
-            "referenceId": "homeSkillsSection"
+            "linkText": "Technical Skills",
+            "referenceId": "homeTechSkillsSection"
+        },
+        {
+            "linkText": "Non-Technical Skills",
+            "referenceId": "homeNonTechSkillsSection"
         }
     ]
 }

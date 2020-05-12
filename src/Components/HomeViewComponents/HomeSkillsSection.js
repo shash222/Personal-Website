@@ -1,11 +1,14 @@
 import React from 'react';
 import { Component } from 'react';
 import SkillCard from './SkillCard.js'
-// import skillDetails from '../../constants/Skills.json'
 import '../../styles/HomeViewStyles/HomeSkillsSection.css'
 import experiences from '../../constants/Experiences.json'
 import projects from '../../constants/Projects.json'
 import education from '../../constants/Education.json'
+import techSkills from '../../constants/TechSkills.json'
+import nonTechSkills from '../../constants/NonTechSkills.json'
+import TechSkillsChart from './TechSkillsChart.js'
+import barChartColors from '../../constants/BarChartColors.json'
 
 export default class HomeSkillsSection extends Component {
 
@@ -99,12 +102,21 @@ export default class HomeSkillsSection extends Component {
             <section id="homeSkillsSection" className="homePageSectionContainer">
                 <div className="sectionContent">
                     <h2>Skills</h2>
+                    <div id="techSkillsContainer">
+                        {Object.keys(techSkills).map((skillCategory, i) => (
+                            <TechSkillsChart key={skillCategory} skillCategory={skillCategory} skillCategoryDetails={techSkills[skillCategory]} color={barChartColors[i]} />
+                        ))}
+
+                    </div>
                     <div id="skillsContainer">
                         {/* {skillDetails.map((skill, i) => (
                             <SkillCard key={skill.name} skillDetail={skill} delay={i + 1} />
                         ))} */}
-                        {Object.keys(this.state.skillMapping).map((skill, i) => (
+                        {/* {Object.keys(this.state.skillMapping).map((skill, i) => (
                             <SkillCard key={skill} skill={skill} skillSources={this.state.skillMapping[skill]} delay={i + 1} />
+                        ))} */}
+                        {nonTechSkills.map((skill, i) => (
+                            <SkillCard key={skill.skill} skill={skill.skill} skillSources={skill.experience} delay={i + 1} />
                         ))}
                     </div>
                 </div>
