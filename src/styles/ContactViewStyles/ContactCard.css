@@ -1,9 +1,10 @@
-.contactCardWrapper {
+.contactCardContainer {
     margin: auto;
     width: 30%;
     min-width: 500px;
     height: 120px;
-    background-color: aliceblue;
+    background-color: #005e6c;
+    box-shadow: 15px 15px 15px black;
     /* margin-bottom: 50px; */
 }
 
@@ -30,6 +31,15 @@
     height: 100%;
 }
 
+.contactCard > a {
+    color: white;
+    text-decoration: none;
+}
+
+.contactCard > a:visited {
+    color: white;
+}
+
 .contactCard > a:last-child {
     margin: auto;
     text-decoration: none;
@@ -40,4 +50,3 @@
     /* color: red; */
     text-decoration: underline;
 }
-

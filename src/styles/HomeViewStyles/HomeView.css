@@ -37,10 +37,15 @@ html {
 h2 {
     top: 0;
     font-size: 40px;
+    text-transform: uppercase;
 }
 
 .sectionContent {
     position: relative;
+}
+
+.sectionContent>h2 {
+    color: black;
 }
 
 .sectionContent>div {

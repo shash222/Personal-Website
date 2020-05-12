@@ -1,3 +1,9 @@
+.experienceContainer {
+    border: 1px solid #29b0ac;
+    padding: 10px;
+
+}
+
 .experienceContent {
     background-color: rgb(255, 255, 255, .3);
     position: relative;
@@ -13,7 +19,7 @@
     width: 11%;
     border-top: 2px dashed white;
     position: absolute;
-    left: -12%;
+    left: calc(-11% - 20px);
     top: 50%;
 }
 

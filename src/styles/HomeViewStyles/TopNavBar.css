@@ -9,7 +9,7 @@
 }
 
 #topNavBarItems {
-    width: 30%;
+    width: 33%;
     margin-right: 5%;
     margin-left: auto;
     list-style: none;
@@ -20,8 +20,10 @@
 #topNavBarItems a {
     color: white;
     text-decoration: none;
-    font-size: larger;
+    font-size: x-large;
     text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 #topNavBarItems a:hover {

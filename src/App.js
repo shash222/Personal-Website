@@ -179,7 +179,6 @@ const AnimatedSwitch = withRouter(({ location, history, ...props }) => (
       onEnter={() => props.handleViewChange()}
       timeout={{ enter: 1200, exit: 1200 }}
       classNames={
-        console.log(props.topNavLinks.indexOf(location.pathname), props.beforeViewChangeIndex, props.topNavLinks.indexOf(location.pathname) < props.beforeViewChangeIndex),
         props.topNavLinks.indexOf(location.pathname) < props.beforeViewChangeIndex
           ? "slide-left"
           : "slide-right"
