@@ -1,0 +1,16 @@
+#aboutMeSectionContainer {
+    padding-top: 5vh;
+}
+
+#detailedAboutMeContainer {
+    width: 60vw;
+    margin: auto;
+}
+
+#aboutMeCardsContainer {
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5%;
+}

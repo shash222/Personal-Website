@@ -5,6 +5,11 @@
         "path": "/"
     },
     {
+        "linkText": "About Me",
+        "referenceId": "",
+        "path": "/about"
+    },
+    {
         "linkText": "Experience",
         "referenceId": "",
         "path": "/experience"

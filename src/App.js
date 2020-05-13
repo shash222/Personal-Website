@@ -4,6 +4,7 @@ import HomeView from './views/HomeView.js';
 import ProjectsView from './views/ProjectsView.js';
 import ExperienceView from './views/ExperienceView.js'
 import ContactView from './views/ContactView.js'
+import AboutMeView from './views/AboutMeView.js'
 import { BrowserRouter as Router, Route, Switch, withRouter, NavLink } from 'react-router-dom';
 import './App.css'
 import TopNavBar from './components/HomeViewComponents/TopNavBar.js';
@@ -188,6 +189,7 @@ const AnimatedSwitch = withRouter(({ location, history, ...props }) => (
         <Route path="/projects" exact component={ProjectsView} />
         <Route path="/experience" exact component={ExperienceView} />
         <Route path="/contact" exact component={ContactView} />
+        <Route path="/about" exact component={AboutMeView} />
 
       </Switch>
     </CSSTransition>

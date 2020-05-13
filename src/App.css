@@ -15,6 +15,7 @@ h1 {
 section {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
+    height: 100vh;
 }
 
 #scrollToTopButtonWrapper {

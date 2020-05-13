@@ -1,0 +1,29 @@
+.aboutMeCardContainer {
+    height: 30vh;
+    width: 45%;
+    background-color: #67973f;
+    text-align: left;
+    box-shadow: 10px 10px 10px black;
+    margin-bottom: 3%;
+}
+
+.aboutMeCardContent>p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.aboutMeCardQuestionWrapper {
+    background-color: rgb(0, 0, 0, .2);
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutMeCardQuestion {
+    padding: 2% 4%;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}

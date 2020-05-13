@@ -1,0 +1,27 @@
+[
+    {
+        "question": "How did you become interested in technology?",
+        "answer": "I became interested in technology at a very young age. I built my first computer when I was in the sixth grade, and loved every aspect of the process. I continued to research more about the impact that technology had over the next several years and, by the time I was in high school, knew that that is what I wanted to work with when I grew up.",
+        "display": true
+    },
+    {
+        "question": "What do you look for in a company or position?",
+        "answer": "More than anything, I want to work amongst a cross-functional team that is on the cutting edge of technology. I want to be in a position that is challenging and exciting, where I am continuously learning and growing from my experiences, and giving back to the community at large.",
+        "display": true
+    },
+    {
+        "question": "Where do you see yourself in 10 years?",
+        "answer": "In 10 years, I want to be in a management position where I am able to work with the bigger picture. I want to grow technology to new heights, but also be able to enable and mentor those with less experience, and grow them into brilliant and innovative minds.",
+        "display": true
+    },
+    {
+        "question": "What is the personal project that you are the most proud of?",
+        "answer": "I am most proud of my Spellcheck and Autocomplete project. Although it is not the  flashiest project I have worked on, it exposed me to several new technologies and concepts such as tries, servlets, APIs, JSP and AJAX.",
+        "display": false
+    },
+    {
+        "question": "What is the personal project that you are the most proud of?",
+        "answer": "I am most proud of the RUDestination project that I am currently working on. With Rutgers being a massive school with 5 sub-campuses that require bus transportation to get between them, it becomes overwhelming trying to get from class to class. Not only am I able to put my technical and design skills to the test, but also provide new and transfer students peace of mind while trying to navigate through the campuses.",
+        "display": true
+    }
+]
