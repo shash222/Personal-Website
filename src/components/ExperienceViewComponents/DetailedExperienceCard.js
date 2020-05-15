@@ -6,7 +6,6 @@ export default class DetailedExperienceCard extends Component {
         return (
             <div className="detailedExperienceCardContainer">
                 <div className="detailedExperienceCardHeader">
-                    <p className="detailedExperienceCardCompanyLogo">Logo</p>
                     <h3 className="detailedExperienceCardCompanyName">{this.props.experience.company}</h3>
                     <p className="detailedExperienceCardCompanyRole">{this.props.experience.position}</p>
                 </div>

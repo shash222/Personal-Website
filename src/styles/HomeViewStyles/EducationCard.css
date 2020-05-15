@@ -13,12 +13,18 @@
     display: flex;
 }
 
+.schoolHeader>* {
+}
+
 .schoolName {
     display: inline-block;
     font-size: 2vw;
     text-decoration: underline;
     margin-left: 0;
     margin-right: 0;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
 }
 
 .educationContent {
@@ -28,12 +34,14 @@
 .educationDescription {
     text-align: left;
     font-size: 1.25vw;
+    color: black;
 }
 
 .enrolledDates {
     font-size: 1.5vw;
     margin-right: 0;
     margin-left: auto;
+    color: black;
 }
 
 .schoolLocation { 
@@ -41,4 +49,6 @@
     margin-right: auto;
     text-decoration: none;
     font-size: 1.5vw;
+    font-weight: bold;
+    color: black;
 }

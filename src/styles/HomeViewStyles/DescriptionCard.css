@@ -9,12 +9,13 @@
     position: relative;
 }
 
+
 .descriptionCardText {
     position: absolute;
     text-align: center;
     top: 50%;
     left: 50%;
-    z-index: 5;
+    z-index: 1;
 }
 
 .hexagonTriangleTop {
@@ -33,7 +34,6 @@
     float: left;
     width: 60px;
     height: 104px;
-    background-color: #6C6;
 }
 
 .hexagonTriangleBottom {
@@ -44,7 +44,9 @@
 }
 
 .hexagon {
-    background-color: #04c2c9;
+    /*background-color: #04c2c9;*/
+    background-color: #29b0ac;
+    /*background-color: #209794;*/
     display: inline-block;
     height: 100%;
     width: calc(100% * 0.57735);
@@ -72,14 +74,15 @@
     position: absolute;
     top: 40%;
     z-index: 1;
-    font-size: 1.25vw;
+    font-size: 1.15vw;
     width: 100%;
+    text-transform: uppercase;
     /* text-align: center; */
 }
 
 .descriptionWordText {
     margin-top: 15px;
-    font-size: large;
+    font-size: larger;
     margin-left: -15%;
     width: 130%;
 }

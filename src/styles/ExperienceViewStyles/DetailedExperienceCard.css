@@ -1,5 +1,5 @@
 .detailedExperienceCardContainer {
-    background-color: rgba(9, 146, 170, 0.8);
+    background-color: #29b0ac;
     width: 60%;
     margin: auto;
     text-align: left;
@@ -17,6 +17,7 @@
 
 .detailedExperienceCardHeader {
     border-bottom: .5px solid gray;
+    text-transform: uppercase;
     /* justify-content: space-evenly; */
 }
 
@@ -38,12 +39,18 @@
 }
 
 .detailedExperienceCardHeader > .detailedExperienceCardCompanyName{
-    margin: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-right: auto;
+    font-size: 1.25vw;
+    text-align: center;
 }
 
 .detailedExperienceCardHeader > .detailedExperienceCardCompanyRole{
     margin-left: auto;
     margin-right: 5%;
+    margin-top: auto;
+    text-align: right;
 }
 
 .detailedExperienceCardFooter > .detailedExperienceCardCompanyWorkDuration{

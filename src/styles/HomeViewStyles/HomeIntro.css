@@ -29,11 +29,14 @@
     /* font-family: casanova; */
     /* margin-top: 20vh; */
     margin-bottom: 2vh;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 #title {
     font-size: 3vw;
     margin-bottom: 3vh;
+    font-weight: 650;
     /* font-family: casanova; */
 }
 
