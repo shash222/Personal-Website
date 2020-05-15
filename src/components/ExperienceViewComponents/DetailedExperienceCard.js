@@ -4,7 +4,7 @@ import '../../styles/ExperienceViewStyles/DetailedExperienceCard.css'
 export default class DetailedExperienceCard extends Component {
     render() {
         return (
-            <div className="detailedExperienceCardContainer">
+            <div className="detailedExperienceCardContainer" data-aos={this.props.count % 2 === 0 ? "fade-right" : "fade-left"} data-aos-duration="1000">
                 <div className="detailedExperienceCardHeader">
                     <h3 className="detailedExperienceCardCompanyName">{this.props.experience.company}</h3>
                     <p className="detailedExperienceCardCompanyRole">{this.props.experience.position}</p>

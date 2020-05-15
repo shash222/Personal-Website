@@ -11,7 +11,7 @@ export default class ExperienceSection extends Component {
                     <h2>Experience</h2>
                     <div id="detailedExperienceCardsContainer">
                         {experience.map((experience, i) => (
-                            <DetailedExperienceCard key={experience.company + i} experience={experience} />
+                            <DetailedExperienceCard key={experience.company + i} experience={experience} count={i} />
                         ))}
                     </div>
                 </div>

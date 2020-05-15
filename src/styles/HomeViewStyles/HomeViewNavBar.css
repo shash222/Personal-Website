@@ -1,42 +1,19 @@
+@import '../MutliViewStyles/Nav.css';
 #homeViewNavBarContainer {
     width: 15vw;
     left: -15vw;
-    position: fixed;
     display: flex;
     align-items: center;
-    background-color: rgb(0, 0, 0, .1);
-    z-index: 3;
     height: 100vh;
 }
 
 #homeViewNavBarItems {
     list-style: none;
-    display: flex;
-    flex-direction: column;
     padding: 0;
     margin: auto;
     text-align: center;
-    vertical-align: center;
 }
 
-#homeViewNavBarItems{
-    color: white;
-    text-decoration: none;
-    font-size: x-large;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-
-#homeViewNavBarItems li + li{
-    /* padding-top: 100px; */
-    padding-top: 10vh;
-}
-
-#homeViewNavBarItems a:hover {
-    color: green;
-}
-
-.navItem > .active {
-    text-decoration: underline;
-    /* border-bottom: 1px solid #333; */
+#homeViewNavBarItems li+li {
+    margin-top: 7vh;
 }

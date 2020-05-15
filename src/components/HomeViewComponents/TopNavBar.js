@@ -10,7 +10,7 @@ export default class TopNavBar extends Component {
                 <ul id="topNavBarItems">
                     {navItems.map(item => (
                         <li key={item.linkText + "Link"} className="navItem">
-                            <NavLink to={item.path}>{item.linkText}</NavLink>
+                            <NavLink exact to={item.path}>{item.linkText}</NavLink>
                         </li>
                     ))}
                 </ul>

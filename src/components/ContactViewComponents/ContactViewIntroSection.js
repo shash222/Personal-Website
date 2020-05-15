@@ -8,7 +8,7 @@ export default class ContactViewIntroSection extends Component {
     render() {
         return (
             <section id="contactViewIntroSection">
-                <h1 data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500">Contact</h1>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">Contact</h1>
                 <div className="navigationArrowContainer navigationArrowContainer viewNavigationArrowContainer down">
                     <Link
                         activeClass="active"
