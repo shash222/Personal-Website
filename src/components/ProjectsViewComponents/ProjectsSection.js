@@ -10,20 +10,24 @@ export default class ProjectsSection extends Component {
         super(props)
         this.handleTagSelection = this.handleTagSelection.bind(this)
         this.state = {
-            skillMapping: {}
+            skillMapping: {},
+            statusMapping: {},
+            typeMapping: {}
         }
-        this.parseSkills = this.parseSkills.bind(this)
+        this.parseTags = this.parseTags.bind(this)
         this.updateDisplayedProjects = this.updateDisplayedProjects.bind(this)
         this.displayAllProjects = this.displayAllProjects.bind(this)
         this.changeItemsWithHideClassToDisplayNone = this.changeItemsWithHideClassToDisplayNone.bind(this)
     }
 
     componentDidMount() {
-        this.parseSkills()
+        this.parseTags()
     }
 
-    parseSkills() {
+    parseTags() {
         var skillMapping = {}
+        var statusMapping = {}
+        var typeMapping = {}
         projectDetails.forEach((project) => {
             // var skillSource = "Projects"
             project.technologies.forEach((technology) => {
@@ -33,8 +37,19 @@ export default class ProjectsSection extends Component {
                 //     skillMapping[technology][skillSource] = new Set()
                 skillMapping[technology].add(project.name)
             })
+            if (statusMapping[project.status] === undefined)
+                statusMapping[project.status] = new Set()
+            statusMapping[project.status].add(project.name)
+            if (typeMapping[project.type] === undefined)
+                typeMapping[project.type] = new Set()
+            typeMapping[project.type].add(project.name)
+
         })
-        this.setState({ skillMapping: skillMapping })
+        this.setState({
+            skillMapping: skillMapping,
+            statusMapping: statusMapping,
+            typeMapping: typeMapping
+        })
     }
 
     handleTagSelection(e) {
@@ -55,7 +70,15 @@ export default class ProjectsSection extends Component {
             var projectNamesOfProjectsToDisplay = new Set()
             for (let selectedTag of selectedTags) {
                 var selectedTagValue = selectedTag.getAttribute('data-tag-value')
-                var projectNamesCorrespondingToTag = this.state.skillMapping[selectedTagValue]
+                var projectNamesCorrespondingToTag;
+                if (this.state.skillMapping[selectedTagValue])
+                    projectNamesCorrespondingToTag = this.state.skillMapping[selectedTagValue]
+                else if (this.state.statusMapping[selectedTagValue])
+                    projectNamesCorrespondingToTag = this.state.statusMapping[selectedTagValue]
+                else if (this.state.typeMapping[selectedTagValue])
+                    projectNamesCorrespondingToTag = this.state.typeMapping[selectedTagValue]
+
+
                 projectNamesCorrespondingToTag.forEach((projectName) => {
                     projectNamesOfProjectsToDisplay.add(projectName)
                 })
@@ -114,29 +137,22 @@ export default class ProjectsSection extends Component {
                     <div id="allTagsContainer">
                         <p className="tagTitle">Skills:</p>
                         <div className="tagsContainer">
-                            {/* <span className="skillTag tag selectedTag" data-tag-value="all" onClick={this.displayAllProjects}>All</span> */}
                             {Object.keys(this.state.skillMapping).map((skill) => (
                                 <span className="skillTag tag" key={skill} data-tag-value={skill} onClick={this.handleTagSelection}>{skill}</span>
                             ))}
                         </div>
-                        {/* <div className="tagsContainer">
-                            <span className="tagTitle">Skills:</span>
-                            {skills.map((skill) => (
-                                <span className="skillTag tag" key={skill.name} data-tag-value={skill.name} onClick={this.handleTagSelection}>{skill.name}</span>
-                            ))}
-                        </div> */}
-                        {/* <div className="tagsContainer">
-                            <span className="tagTitle">Experiences:</span>
-                            {experiences.map((experience) => (
-                                <span className="experienceTag tag" key={experience.company} data-tag-value={experience.company} onClick={this.handleTagSelection}>{experience.company}</span>
+                        <p className="tagTitle">Type:</p>
+                        <div className="tagsContainer">
+                            {Object.keys(this.state.typeMapping).map((type) => (
+                                <span className="typeTag tag" key={type} data-tag-value={type} onClick={this.handleTagSelection}>{type}</span>
                             ))}
                         </div>
+                        <p className="tagTitle">Status:</p>
                         <div className="tagsContainer">
-                            <span className="tagTitle">Status:</span>
-                            <span className="statusTag tag" data-tag-value="In Progress" onClick={this.handleTagSelection}>In Progress</span>
-                            <span className="statusTag tag" data-tag-value="Completed" onClick={this.handleTagSelection}>Completed</span>
-                        </div> */}
-                        <input type="text" id="tagSearchBar" name="tagSearch" placeholder="Enter Skill, Experience or Status" />
+                            {Object.keys(this.state.statusMapping).map((status) => (
+                                <span className="statusTag tag" key={status} data-tag-value={status} onClick={this.handleTagSelection}>{status}</span>
+                            ))}
+                        </div>
                     </div>
                     <div id="detailedProjectCardsContainer">
                         {projectDetails.map((project, i) => (

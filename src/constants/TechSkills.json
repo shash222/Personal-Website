@@ -94,7 +94,7 @@
             "skillLevel": 3
         },
         {
-            "skill": "Linux",
+            "skill": "Linux/Unix",
             "color": "green",
             "skillLevel": 3
         },
@@ -107,6 +107,10 @@
             "skill": "MIPS Assembly",
             "color": "purple",
             "skillLevel": 2
+        },
+        {
+            "skill": "Git",
+            "skillLevel": 3
         }
     ]
 }

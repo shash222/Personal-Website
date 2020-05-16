@@ -1,8 +1,8 @@
 #projectsSectionContainer {
     padding-top: 2%;
-    margin-bottom: 10%;
     /* width: 80%; */
     margin: auto;
+    margin-bottom: 30vh;
     min-height: 100vh;
 }
 
@@ -28,7 +28,7 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .tagTitle {
@@ -50,12 +50,12 @@
 }
 
 .tag.selectedTag {
-    background-color: red;
+    background-color: #67973f;
 }
 
 .tag:hover {
     cursor: pointer;
-    background-color: red;
+    background-color: #67973f;
 }
 
 .detailedProjectCardContainer.hide {

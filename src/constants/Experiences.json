@@ -1,11 +1,11 @@
 [
     {
         "company": "Amazon.com, Inc",
-        "description": "Worked as part of an internal team in the Alexa Organization. Developed an email reminder system that followed up with developers on a consistent basis to update outdated feature launch status information using AWS and Java",
+        "description": "Worked as part of an internal team in the Alexa Organization. Developed an email reminder system that followed up with developers on a consistent basis to update outdated feature launch status information. System was developed using Java and utilized various AWS technologies. Emails were generated using Apache Velocity template engine.",
         "bullets": [
             "Designed and implemented reminder system that ensures thousands of feature launch statuses are up to date by alerting developers of outdated data on a weekly cadence, saving the Project Management team hours of manual labor a week.",
             "Reminder system aggregates all outdated data into a single spreadsheet and persists it to Amazon S3 for consumption by the Project Management team.",
-            "Provided an economic and scalable solution by utilizing Step Functions, Lambdas and other serverless AWStechnologies.",
+            "Provided an economic and scalable solution by utilizing Step Functions, Lambdas and other serverless AWS technologies.",
             "Presented project design to senior engineers and stakeholders for their sign off on implementation strategy and fulfillment of requirements."
         ],
         "skillsGained": [
@@ -18,22 +18,23 @@
             "Agile",
             "Communication",
             "Documentation",
-            "Leadership"
+            "Leadership",
+            "Git"
         ],
         "position": "Software Engineering Intern",
-        "startDate": "06/2019",
-        "endDate": "08/2019",
+        "startDate": "June 2019",
+        "endDate": "August 2019",
         "location": "Seattle, WA",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "relevant": true
     },
     {
         "company": "Rutgers University",
-        "description": "Worked alongside supervisors and fellow consultants to provide excellent customer service by assisting patrons in troubleshooting and configuring personal devices to comply with Rutgers University network and usage policies.",
+        "description": "Worked as part of cross-functional team for the Office of Information Technology at Rutgers University. Core responsibilites included lab maintenance, lab device troubleshooting and excellent customer service. Received ResNet Dispatch training which served as qualification to troubleshoot patron devices and residential networks in student housing. ",
         "bullets": [
-            "Configure patrons’ devices to comply with Rutgers University network and usage policies",
-            "Diagnose, troubleshoot and resolve a variety of network-related issues for thousands of students campus-wide",
-            "Ensure Rutgers network in residential buildings is up to standards by performing network surveys"
+            "Worked alongside supervisors and fellow consultants to provide excellent customer service to lab patrons.",
+            "Received training to assist patrons in troubleshooting and configuring devices in accordance with Rutgers  University network and usage policies.",
+            "Diagnosed, troubleshooted and resolved a variety of network-related issues for thousands of students campus-wide."
         ],
         "skillsGained": [
             "Troubleshooting",
@@ -42,7 +43,7 @@
             "Communication"
         ],
         "position": "OIT Residential Network Consultant",
-        "startDate": "08/2018",
+        "startDate": "August 2018",
         "endDate": "Present",
         "location": "Piscataway, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
@@ -50,10 +51,11 @@
     },
     {
         "company": "",
-        "description": "Instructed students in software development concepts including basic algorithms, object-oriented programming and data structures. Advised on career hunts, project ideas, relevant technologies and resources to take advantage of to develop deeper understanding of the sector.",
+        "description": "Instructed students in software development concepts including basic algorithms, object-oriented programming and data structures. Advised on career hunts, project ideas, relevant technologies and resources to take advantage of to develop deeper understanding of the field.",
         "bullets": [
-            "Conduct one on one tutoring sessions for multiple students in order to increase competency in programming and succeed in intense computer science courses",
-            "Instruct students in basic algorithms, object oriented programming and data structures"
+            "Conducted one on one tutoring sessions for multiple students in order to increase competency in fundamental software development concepts and succeed in intense computer science courses, resulting in an average incrase of one letter grade.",
+            "Advised students on new technologies to explore, projects to work on, resources to utilize and techniques to prepare for upcoming interviews.",
+            "Critiqued resumes to help underclassmen properly showcase their talent and abilities to potential employers, many of whom received internship offers."
         ],
         "skillsGained": [
             "Teaching",
@@ -64,7 +66,7 @@
             "Communication"
         ],
         "position": "Software Development Mentor",
-        "startDate": "09/2017",
+        "startDate": "September 2017",
         "endDate": "Present",
         "location": "Piscataway, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
@@ -74,9 +76,8 @@
         "company": "Raritan Inc.",
         "description": "Worked alongside team of IT professionals to improve staff productivity by troubleshooting, maintaining and upgrading corporate hardware and software in accordance with company policy.",
         "bullets": [
-            "Performed, tested and upgraded over 70% of corporate software and devices to increase work efficiency for all staff",
-            "Resolved technical difficulties quickly and thoroughly for all staff to prevent further delays in productivity",
-            "Utilized Docker to set up Apache HTTP web server container"
+            "Tested and upgraded over 70% of corporate software and devices to increase work efficiency for all staff.",
+            "Resolved technical difficulties quickly and thoroughly for all staff to prevent further delays in productivity."
         ],
         "skillsGained": [
             "Collaboration",
@@ -84,18 +85,18 @@
             "Communication"
         ],
         "position": "IT Summer Intern",
-        "startDate": "06/2018",
-        "endDate": "08/2018",
+        "startDate": "June 2018",
+        "endDate": "August 2018",
         "location": "location",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "relevant": false
     },
     {
         "company": "Best Buy",
-        "description": "",
+        "description": "Worked as part of Best Buy sales staff to assist customers in making informed purchases. Received training to ensure understanding of technical specifications and use cases of devices was met corporate standards.",
         "bullets": [
-            "Provided exceptional customer service to clients by assessing their computer- and network-related needs in order to suggest the perfect product for them",
-            "Tracked product inventory and organized products to drive up sales"
+            "Provided exceptional customer service to clients by assessing their computer- and network-related needs in order to assist them in making informed purchases.",
+            "Tracked product inventory and organized products to drive up sales."
         ],
         "skillsGained": [
             "Sales",
@@ -103,18 +104,18 @@
             "Collaboration"
         ],
         "position": "Computer Sales Associate",
-        "startDate": "06/2017",
-        "endDate": "12/2017",
+        "startDate": "June 2017",
+        "endDate": "December 2017",
         "location": "Iselin, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "relevant": false
     },
     {
         "company": "Rutgers University",
-        "description": "Worked as part of IT team to prepare and repair facility devices by reimaging hard drives and replacing hardware components and assuring computers met facility software standards .",
+        "description": "Worked as part of IT team to prepare and repair facility devices by reimaging hard drives and replacing hardware components and assuring computers met facility standards.",
         "bullets": [
-            "Imaged hard drives and performed low-level formats on flash drives and minor hardware repairs on facility computers",
-            "Assured computers were up to date to meet facility software standards and tested them for optimal performance"
+            "Imaged hard drives and performed low-level formats on flash drives and minor hardware repairs on facility computers.",
+            "Assured computers were up to date to meet facility software standards and tested them for optimal performance."
         ],
         "skillsGained": [
             "Troubleshooting",
@@ -122,38 +123,9 @@
             "Communication"
         ],
         "position": "Student Help Desk Assistant",
-        "startDate": "09/2016",
-        "endDate": "05/2017",
+        "startDate": "September 2016",
+        "endDate": "May 2017",
         "location": "Piscataway, NJ",
-        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
-        "relevant": false
-    },
-    {
-        "company": "Young Muslims",
-        "description": "Work alongside seasoned leadership to establish quality control framework in order to maintain consistency and quality of local chapters, regional events and leadership development.",
-        "bullets": [
-            "Established team of experienced and qualified leadership to spearhead quality control and development efforts in the region",
-            "Visit different chapters on a weekly basis with other members of Quality Control team in order to review operational status and quality and discuss findings amongst each other",
-            "Discuss strategies to improve different aspects of local chapter meetings and ",
-            "Advise local leadership on strengths, weaknesses and strategies to grow local chapter or improve events",
-            "Organize leadership training and development workshops to pipeline leadership into various roles"
-        ],
-        "skillsGained": [
-            "Collaboration",
-            "Communication",
-            "Leadership",
-            "Management",
-            "Project Management",
-            "Problem Solving",
-            "Decision Making",
-            "Analysis",
-            "Mentorship",
-            "Delegation"
-        ],
-        "position": "Quality Control Coordinator",
-        "startDate": "10/2019",
-        "endDate": "Present",
-        "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "relevant": false
     },
@@ -177,8 +149,63 @@
             "Delegation"
         ],
         "position": "Research Team Member",
-        "startDate": "02/2019",
+        "startDate": "February 2020",
         "endDate": "Present",
+        "location": "NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    },
+    {
+        "company": "Young Muslims",
+        "description": "Work alongside seasoned leadership to establish quality control framework in order to maintain consistency and quality of local chapters, regional events and leadership development.",
+        "bullets": [
+            "Established team of experienced and qualified leadership to spearhead quality control and development efforts in the region.",
+            "Visit different chapters on a weekly basis with other members of the Quality Control team in order to assess operational status and quality of leadership.",
+            "Discuss strategies to improve local chapter meetings and leadership development.",
+            "Advise local leadership on strengths, weaknesses and strategies to grow local chapter or improve events",
+            "Organize leadership training and development workshops to pipeline leadership into various roles in the organization on local, regional and national levels."
+        ],
+        "skillsGained": [
+            "Collaboration",
+            "Communication",
+            "Leadership",
+            "Management",
+            "Project Management",
+            "Problem Solving",
+            "Decision Making",
+            "Analysis",
+            "Mentorship",
+            "Delegation"
+        ],
+        "position": "Quality Control Coordinator",
+        "startDate": "October 2019",
+        "endDate": "Present",
+        "location": "NJ",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "relevant": false
+    },
+    {
+        "company": "Young Muslims",
+        "description": "Served as logistics lead for a national sub-conference that caters to the youth of America.",
+        "bullets": [
+            "Worked with sophisticated team in order to organize logistics for national conference that caters to over 5,000 attendees.",
+            "Developed crowd control strategies to handle large influx of attendees during keynote sessions.",
+            "Organized and implemented fundraising plan of attack in order to raise thousands of dollars in donations for the organization."
+        ],
+        "skillsGained": [
+            "Collaboration",
+            "Communication",
+            "Leadership",
+            "Management",
+            "Project Management",
+            "Problem Solving",
+            "Decision Making",
+            "Analysis",
+            "Delegation"
+        ],
+        "position": "Logistics chair",
+        "startDate": "December 2017",
+        "endDate": "December 2018",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "relevant": false
@@ -187,9 +214,9 @@
         "company": "Young Muslims",
         "description": "Coordinated team of cross-functional leaders to facilitate regional events and maintain and grow individual chapters through weekly status updates and quality control.",
         "bullets": [
-            "Supervised 5 chapters and oversee weekly operations",
-            "Pipelined upcoming coordinators through online and in person workshops for various chapters",
-            "Facilitated community events to enhance sense of unity on regional level"
+            "Facilitated the community and leadership development of northern New Jersey through community events, meetings and leadership development workshops.",
+            "Worked closely with struggling chapters to motivate and reinvigorate its leadership.",
+            "Spearheaded discussions amongst leadership regarding community growth, chapter issues and burnout-prevention."
         ],
         "skillsGained": [
             "Collaboration",
@@ -204,8 +231,8 @@
             "Delegation"
         ],
         "position": "Regional Coordinator",
-        "startDate": "12/2017",
-        "endDate": "12/2018",
+        "startDate": "December 2017",
+        "endDate": "December 2018",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "relevant": true
@@ -214,8 +241,10 @@
         "company": "Young Muslims",
         "description": "Managed team of 4-5 to coordinate weekly meetings and events for local youth group and provide a platform for mentorship and communal growth.",
         "bullets": [
-            "Planned weekly meetings and events tailored to building today’s youth into tomorrow’s leaders",
-            "Created a sense of community for high school and college students"
+            "Mentored team of high school students to develop effective and motivated individuals that strive to grow its community.",
+            "Planned weekly meetings and events tailored to building today’s youth into tomorrow’s leaders.",
+            "Devised metrics that served as the backbone for improvement on meeting quality.",
+            "Streamlined process for chapter logistics by assigning and rotating roles between team members in order to prevent burnout caused by redundant and mundane tasks."
         ],
         "skillsGained": [
             "Collaboration",
@@ -230,8 +259,8 @@
             "Delegation"
         ],
         "position": "Chapter Coordinator",
-        "startDate": "1/2016",
-        "endDate": "01/2017",
+        "startDate": "January 2016",
+        "endDate": "January 2017",
         "location": "Old Bridge, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "relevant": false
@@ -241,9 +270,8 @@
         "description": "Spearheaded high-school recruitment efforts to increase number of competitors in annual tournament. Students were able to compete in sports, spoken word, art and other secular and religious categories.",
         "bullets": [
             "Coordinated recruitment events among various high schools throughout New Jersey.",
-            "Ensured presenters are well-equipped with presentation skills to promote the organization effectively.",
-            "Managed communications between two national organizations YM and MIST on a regional level.",
-            "Coordinated recruitment events for MIST."
+            "Ensured tournament organizers are well-equipped with presentation skills to promote the organization effectively.",
+            "Facilitated conversations for partnership between two national organizations YM and MIST on a regional level."
         ],
         "skillsGained": [
             "Collaboration",
@@ -257,8 +285,8 @@
             "Delegation"
         ],
         "position": "Recruitment Chair",
-        "startDate": "1/2016",
-        "endDate": "01/2017",
+        "startDate": "January 2016",
+        "endDate": "January 2017",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "relevant": false
@@ -278,8 +306,8 @@
             "Collaboration"
         ],
         "position": "Volunteer EMT",
-        "startDate": "08/2015",
-        "endDate": "04/2017",
+        "startDate": "August 2015",
+        "endDate": "April 2017",
         "location": "Sayreville, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "relevant": false

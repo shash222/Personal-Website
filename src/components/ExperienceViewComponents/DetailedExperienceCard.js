@@ -17,7 +17,7 @@ export default class DetailedExperienceCard extends Component {
                             <li key={this.props.experience.company + "Bullet" + i} className="detailedExperienceCardBullet">{bullet}</li>
                         ))}
                     </ul>
-                    <p className="detailedExperienceCardTakeAway"><b>Key Takeaway: </b>{this.props.experience.takeAway}</p>
+                    {/* <p className="detailedExperienceCardTakeAway"><b>Key Takeaway: </b>{this.props.experience.takeAway}</p> */}
                     <p className="detailedExperienceCardSkills"><b>Skills: </b>{this.props.experience.skillsGained.join(", ")}</p>
                 </div>
                 <div className="detailedExperienceCardFooter">

@@ -5,7 +5,7 @@ import HomeIntro from '../components/HomeViewComponents/HomeIntro.js'
 import HomeAboutMe from '../components/HomeViewComponents/HomeAboutMe.js'
 import HomeEducationSection from '../components/HomeViewComponents/HomeEducationSection.js'
 import HomeExperiencesSection from '../components/HomeViewComponents/HomeExperiencesSection.js'
-import HomeSkillsSection from '../components/HomeViewComponents/HomeSkillsSection.js'
+// import HomeSkillsSection from '../components/HomeViewComponents/HomeSkillsSection.js'
 import HomeProjectsSection from '../components/HomeViewComponents/HomeProjectsSection.js'
 import HomeViewNavBar from '../components/HomeViewComponents/HomeViewNavBar.js';
 import HomeNonTechSkillsSection from '../components/HomeViewComponents/HomeNonTechSkillsSection';

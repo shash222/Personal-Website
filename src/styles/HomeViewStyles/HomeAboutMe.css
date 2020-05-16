@@ -16,6 +16,10 @@
     flex-direction: column;
 } */
 
+#aboutCountainer {
+    /* margin-top: 0; */
+}
+
 #aboutMeDescriptionContainer {
     padding-top: 15vh;
     position: relative;
@@ -31,7 +35,6 @@
     justify-content: space-evenly;
     flex-basis: 20%;
     margin: 0;
-    margin-top: 5vh;
 }
 
 .meImage {
@@ -61,4 +64,42 @@
     /* background-image: url(http://placekitten.com/240/240); */
     visibility: visible;
     transform: rotate(-60deg);
+}
+
+#moreAboutMeLink {
+    font-size: x-large;
+    /* margin-bottom: 10vh; */
+}
+
+#moreAboutMeLinkContainer {
+    border: 1px solid white;
+    padding: 10px;
+    display: inline;
+    animation: revertLinkAnimation .5s forwards;
+}
+
+#moreAboutMeLinkContainer:hover {
+    animation: invertLinkAnimation .5s forwards;
+}
+
+@keyframes invertLinkAnimation {
+    from {
+        filter: invert(0%);
+        background-color: transparent;
+    }
+    to {
+        filter: invert(100%);
+        background-color: black;
+    }
+}
+
+@keyframes revertLinkAnimation {
+    from {
+        background-color: black;
+        filter: invert(100%);
+    }
+    to {
+        background-color: transparent;
+        filter: invert(0%);
+    }
 }

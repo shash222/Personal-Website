@@ -91,12 +91,14 @@ export default class DetailedProjectCard extends Component {
             <div className="detailedProjectCardContainer" data-aos="zoom-in" data-aos-duration="1200" >
                 <div className="detailedProjectCard">
                     <h3 className="detailedProjectCardProjectName">{this.props.project.name}</h3>
-                    <p className="detailedProjectCardProjectDescription">
-                        {
-                            this.props.project.description
-                        }
-                    </p>
+                    <p className="detailedProjectCardProjectDescription">{this.props.project.description}</p>
                     <p className="skills"><b>Skills: </b>{this.props.project.technologies.join(", ")}</p>
+                    <p className="status"><b>Status: </b>
+                        {this.props.project.status === "Ongoing"
+                            ? <span className="ongoing">{this.props.project.status}</span>
+                            : this.props.project.status === "In Progress"
+                                ? <span className="inProgress">{this.props.project.status}</span>
+                                : <span className="completed">{this.props.project.status}</span>}</p>
                     <div className="detailedProjectCardClickablesContainer">
                         {this.props.project.sample
                             ? (

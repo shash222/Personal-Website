@@ -5,8 +5,13 @@
         "display": true
     },
     {
+        "question": "What motivates you?",
+        "answer": "What motivates me is the mission statement behind any organization, the end goal that it strives to attain. I am constantly trying to find ways in which I can give back, and technology has been that incredible platform for me. Once I am sold on an organization's or company's mission statement, there is little that can hold me back from trying my hardest and doing my best to be a part of its mission.",
+        "display": false
+    },
+    {
         "question": "What do you look for in a company or position?",
-        "answer": "More than anything, I want to work amongst a cross-functional team that is on the cutting edge of technology. I want to be in a position that is challenging and exciting, where I am continuously learning and growing from my experiences, and giving back to the community at large.",
+        "answer": "More than anything, I want to work as part of a cross-functional team that is on the cutting edge of technology. I want to be in a position that is challenging and exciting, where I am continuously learning and growing from my experiences, and giving back to the community at large.",
         "display": true
     },
     {
@@ -20,7 +25,7 @@
         "display": false
     },
     {
-        "question": "What is the personal project that you are the most proud of?",
+        "question": "What personal project are you the most proud of?",
         "answer": "I am most proud of the RUDestination project that I am currently working on. With Rutgers being a massive school with 5 sub-campuses that require bus transportation to get between them, it becomes overwhelming trying to get from class to class. Not only am I able to put my technical and design skills to the test, but also provide new and transfer students peace of mind while trying to navigate through the campuses.",
         "display": true
     }

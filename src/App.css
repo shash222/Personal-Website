@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-
+@import './styles/MultiViewStyles/Nav.css';
 body {
     background-color: #282c34;
     overflow-y: scroll;
 }
 
 * {
-
-    font-family: 'Source Sans Pro', sans-serif; 
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 html {
@@ -19,10 +18,29 @@ h1 {
     text-shadow: 5px 5px 5px black;
 }
 
+section>div>div:first-of-type {
+    margin-top: 5vh;
+}
+
+#introBackgroundContainer {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    background-image: url("./res/images/mountain3.jpg");
+    background-size: cover;
+    background-position: 10%;
+}
+
 section {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
     height: 100vh;
+    padding: 1px;
+}
+
+section>div {
+    margin-top: 10vh !important;
 }
 
 #scrollToTopButtonWrapper {
@@ -62,11 +80,11 @@ section {
 }
 
 #rightRouterNavigationArrowContainer {
-    right: 4vw;
+    right: 50px;
 }
 
 #leftRouterNavigationArrowContainer {
-    left: 4vw;
+    left: 50px;
 }
 
 .navigationArrowContainer:hover {
@@ -84,11 +102,11 @@ section {
 }
 
 #rightRouterNavigationArrowContainer>p {
-    transform: rotate(-90deg) translateY(-4vw) translateY(-10px);
+    transform: rotate(-90deg) translateY(-75px) translateY(-10px);
 }
 
 #leftRouterNavigationArrowContainer>p {
-    transform: rotate(90deg) translateY(1vw);
+    transform: rotate(90deg) translateY(15px);
 }
 
 #scrollToTopButtonWrapper>button:hover {
@@ -96,19 +114,19 @@ section {
 }
 
 .slide-right-enter {
-    animation: animateRightEntry 1s forwards;
+    animation: animateRightEntry .8s forwards;
 }
 
 .slide-right-exit {
-    animation: animateLeftExit 1s forwards;
+    animation: animateLeftExit .8s forwards;
 }
 
 .slide-left-enter {
-    animation: animateLeftEntry 1s forwards;
+    animation: animateLeftEntry .8s forwards;
 }
 
 .slide-left-exit {
-    animation: animateRightExit 1s forwards;
+    animation: animateRightExit .8s forwards;
 }
 
 [data-icon="arrow-circle-up"] {

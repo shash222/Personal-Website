@@ -2,7 +2,7 @@
     {
         "name": "salman.hashmi.site",
         "description": "My portfolio website showcasing my experience in work, class and personal projects. Devloped using ReactJS and Node.js with custom JavaScript and Animation on Scroll library animations. ",
-        "status": "In Progress",
+        "status": "Ongoing",
         "technologies": [
             "ReactJS",
             "Node.js"
@@ -36,7 +36,7 @@
     },
     {
         "name": "anas-anoshia.hashmi.site",
-        "description": "Responsive website designed to handle RSVPs for wedding. Developed using HTML, CSS, JavaScript, PHP and SQL. ",
+        "description": "Responsive website designed to handle RSVPs for wedding. Developed using HTML, CSS, JavaScript, PHP and SQL.  To view website, login with the following credentials:\nFirst Name: testFirst\nLast Name: testLast\nCity: testCity",
         "status": "Completed",
         "technologies": [
             "HTML",
@@ -55,7 +55,7 @@
     },
     {
         "name": "wedding.hashmi.site ",
-        "description": "Responsive website designed to handle RSVPs for wedding. Developed using ReactJS, Node.js and SQL using industry practices.",
+        "description": "Responsive website designed to handle RSVPs for wedding. Developed using ReactJS, Node.js and SQL. To view website, login with the following credentials:\nName: testName\nCity: testCity",
         "status": "Completed",
         "technologies": [
             "ReactJS",
@@ -74,7 +74,7 @@
         "name": "durbah.org",
         "description": "Responsive website designed to provide students relevant information information about upcoming seminars for the organization. Created functional admin panel which updates seminar information. Developed using ReactJS and Node.js.",
         "extendedDescription": "Responsive website designed to provide students relevant information information about upcoming seminars for the organization. Created functional admin panel which updates seminar information. Seminar information is exposed as REST API and fetched on the front-end. Developed using ReactJS and Node.js.",
-        "status": "Completed",
+        "status": "Ongoing",
         "technologies": [
             "ReactJS",
             "Node.js"
@@ -105,10 +105,13 @@
     },
     {
         "name": "Spellcheck and Autocomplete",
-        "description": "Performs real-time spellcheck and autocomplete operations against existing dictionary on text input. Sample can be seen on the projects page by searching for projects with certain tags. Developed in Java.",
+        "description": "Performs real-time spellcheck and autocomplete operations against existing dictionary on text input. Sample will soon be avilable on the projects page and will allow searching for projects tag and by name. Developed in Java.",
         "status": "Completed",
         "technologies": [
-            "Java"
+            "Java",
+            "Apache Tomcat",
+            "Servlet",
+            "AJAX"
         ],
         "type": "Personal",
         "featured": true,
@@ -196,7 +199,7 @@
     },
     {
         "name": "Photos Library",
-        "description": "Java application that stores and manages libraries of photos for multiple users. Application has admin and non-admin subsystems. Admin subsystems provides account creation, deletion and viewing of all users. Non-admin (typical user) subsystem allows user to add, remove, edit and search for photos by tag, as well as create and edit albums",
+        "description": "Java application that stores and manages libraries of photos for multiple users with admin and non-admin subsystems. Admin subsystems provides account creation, deletion and viewing of all users. Non-admin (typical user) subsystem allows user to add, remove, edit and search for photos by tag, as well as create and edit albums.",
         "status": "Completed",
         "technologies": [
             "Java",
@@ -228,7 +231,7 @@
     {
         "name": "Photos Library - Android",
         "description": "Simplified version of Photos Library Java application, but this time developed as an Android application. Application has the functionality of adding, removing and editing photos and albums for a single user. User can also search for photo by tag.",
-        "status": "In Progress",
+        "status": "Completed",
         "technologies": [
             "Java",
             "Android"
@@ -289,13 +292,13 @@
     {
         "name": "DOM Tree Modifier",
         "description": "Modifies DOM tree interpreted from file to add, remove or modify HTML tags.",
-        "status": "In Progress",
+        "status": "Completed",
         "technologies": [
             "Java"
         ],
-        "type": "",
+        "type": "Course",
         "featured": false,
-        "course": "",
+        "course": "Software Methodology",
         "sample": false,
         "sampleLink": "",
         "githubLink": "https://github.com/shash222/DataStructures_Assignments/tree/master/DOM%20Tree",
@@ -313,6 +316,23 @@
         "type": "Course",
         "featured": true,
         "course": "Software Engineering",
+        "sample": false,
+        "sampleLink": "",
+        "githubLink": "",
+        "href": "#"
+    },
+    {
+        "name": "Linux Administration",
+        "description": "Configure and maintain Virtual Private Server to host several static and dynamic websites. VPS is currently configured to run Java servlets and Node.js and PHP applications. VPS utilizes Nginx web server to serve as a reverse proxy to display the appropriate website.",
+        "status": "Ongoing",
+        "technologies": [
+            "Linux/Unix",
+            "Nginx",
+            "Apache Tomcat"
+        ],
+        "type": "Personal",
+        "featured": false,
+        "course": "",
         "sample": false,
         "sampleLink": "",
         "githubLink": "",

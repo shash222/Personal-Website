@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     /* border: 1px solid black; */
     /* height: 70vh; */
-    justify-content: space-evenly;
+    justify-content: center;
     height: fit-content;
     margin-bottom: 10vh;
 }

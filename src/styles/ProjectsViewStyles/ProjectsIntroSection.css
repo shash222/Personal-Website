@@ -4,13 +4,13 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-image: url('../../res/images/auroraBorealis.jpg');
-    background-size: cover;
+    /* background-image: url('../../res/images/auroraBorealis.jpg');
+    background-size: cover; */
     /* background-position: 10%; */
-    background-position: center bottom;
+    /* background-position: center bottom; */
 }
 
-#projectsViewIntroSection > h1 {
+#projectsViewIntroSection>h1 {
     font-size: 4vw;
 }
 

@@ -7,7 +7,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 export default class ExperienceViewIntroSection extends Component {
     render() {
         return (
-            <section id="experienceViewIntroSection">
+            <section id="experienceViewIntroSection" className="introSection">
                 <h1 data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500">Experience</h1>
                 <div className="experienceArrowContainer navigationArrowContainer viewNavigationArrowContainer down">
                     <Link

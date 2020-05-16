@@ -24,6 +24,7 @@ html {
 .sectionContent:not(#introSection) {
     padding-left: 10vw;
     width: 60%;
+    /* margin-top: 0; */
 }
 
 #introSection {
@@ -44,14 +45,9 @@ h2 {
     position: relative;
 }
 
-.sectionContent>h2 {
-    color: black;
-}
-
 .sectionContent>div {
     display: flex;
     flex-direction: column;
-    padding-top: 5vh;
     height: 70vh;
 }
 

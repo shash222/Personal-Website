@@ -7,7 +7,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 export default class ProjectsIntroSection extends Component {
     render() {
         return (
-            <section id="projectsViewIntroSection" className="projectsViewSection">
+            <section id="projectsViewIntroSection" className="projectsViewSection introSection">
                 <h1 data-aos="fade-in" data-aos-duration="1500" data-aos-delay="500">Projects</h1>
                 <div className="navigationArrowContainer navigationArrowContainer viewNavigationArrowContainer down">
                     <Link

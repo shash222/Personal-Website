@@ -9,7 +9,7 @@
     position: relative;
     text-align: left;
     padding-left: 12%;
-    /* height: 100%; */
+    margin-top: 0;
 }
 
 #allExperiencesLink {
@@ -18,7 +18,9 @@
 }
 
 #allExperiencesLinkContainer {
+    /* position: absolute; */
     border: 1px solid white;
+    height: fit-content;
     padding: 10px;
     display: inline;
     animation: revertAllExperiencesLinkAnimation .5s forwards;

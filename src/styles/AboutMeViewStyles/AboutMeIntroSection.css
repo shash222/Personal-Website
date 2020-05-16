@@ -1,8 +1,8 @@
 #aboutMeViewIntroSection {
     height: 100vh;
     width: 100vw;
-    background-image: url('../../res/images/rainier_reflection.jpg');
-    background-size: cover;
+    /* background-image: url('../../res/images/rainier_reflection.jpg');
+    background-size: cover; */
     display: flex;
     flex-direction: column;
     justify-content: center;

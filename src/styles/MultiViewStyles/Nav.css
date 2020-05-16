@@ -1,0 +1,42 @@
+nav {
+    position: fixed;
+    background-color: rgb(0, 0, 0, .2);
+    z-index: 1;
+}
+
+.navItem>a {
+    text-decoration: none;
+    font-size: x-large;
+    text-shadow: 5px 5px 5px black;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255, 1);
+    font-weight: 300;
+    filter: brightness(80%);
+    animation: revertNavLinks 1s forwards;
+}
+
+.navItem>.active {
+    text-decoration: underline;
+}
+
+.navItem:hover a {
+    animation: invertNavLinks 1s forwards;
+}
+
+@keyframes invertNavLinks {
+    front {
+        filter: brightness(80%);
+    }
+    to {
+        filter: brightness(150%);
+    }
+}
+
+@keyframes revertNavLinks {
+    from {
+        filter: brightness(150%);
+    }
+    to {
+        filter: brightness(80%);
+    }
+}

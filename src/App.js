@@ -40,6 +40,7 @@ export default class App extends Component {
       once: true
     });
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleScroll)
     this.addViewTransitionClass()
     // this.updateViewNavArrowLinks(0)
     this.handleScroll()
@@ -134,7 +135,7 @@ export default class App extends Component {
       (this.state.topNavLinks.length > 0)
         ?
         <div className="App">
-
+          <div id="introBackgroundContainer"></div>
           {/* onClick={(e) => this.handleViewNavigationArrowClick(e)} */}
           <Router>
             {(this.state.currentIndex !== 0)
@@ -144,8 +145,8 @@ export default class App extends Component {
                   <FontAwesomeIcon icon={faChevronLeft} size="lg" />
                 </div>
               </NavLink>
-
               : null}
+
             {(this.state.currentIndex !== this.state.topNavLinks.length - 1)
               ? <NavLink to={this.state.topNavLinks[this.state.nextIndex]}>
                 <div className="routerNavigationArrowContainer navigationArrowContainer fixed" id="rightRouterNavigationArrowContainer" onClick={(e) => this.handleViewNavigationArrowClick(e)}>
@@ -153,8 +154,8 @@ export default class App extends Component {
                   <FontAwesomeIcon icon={faChevronRight} size="lg" />
                 </div>
               </NavLink>
-
               : null}
+
             <TopNavBar />
 
             <AnimatedSwitch handleViewChange={this.handleViewChange} beforeViewChangeIndex={this.state.beforeViewChangeIndex} topNavLinks={this.state.topNavLinks} />
@@ -178,7 +179,7 @@ const AnimatedSwitch = withRouter(({ location, history, ...props }) => (
     <CSSTransition
       key={location.key}
       onEnter={() => props.handleViewChange()}
-      timeout={{ enter: 1200, exit: 1200 }}
+      timeout={{ enter: 800, exit: 800 }}
       classNames={
         props.topNavLinks.indexOf(location.pathname) < props.beforeViewChangeIndex
           ? "slide-left"
