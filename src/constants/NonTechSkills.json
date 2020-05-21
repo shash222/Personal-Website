@@ -1,6 +1,7 @@
 [
     {
         "skill": "Collaboration",
+        "category": "Management",
         "experience": [
             "Amazon.com, Inc.",
             "Rutgers University",
@@ -13,12 +14,14 @@
     },
     {
         "skill": "Agile",
+        "category": "Management",
         "experience": [
             "Amazon.com, Inc."
         ]
     },
     {
         "skill": "Communication",
+        "category": "Management",
         "experience": [
             "Amazon.com, Inc.",
             "Rutgers University",
@@ -31,29 +34,16 @@
         ]
     },
     {
-        "skill": "Documentation",
+        "skill": "Management",
+        "category": "Leadership",
         "experience": [
             "Amazon.com, Inc.",
             "Young Muslims"
         ]
     },
     {
-        "skill": "Troubleshooting",
-        "experience": [
-            "Rutgers University",
-            "Raritan Inc."
-        ]
-    },
-    {
-        "skill": "Leadership",
-        "experience": [
-            "Amazon.com, Inc.",
-            "Young Muslims",
-            "MIST"
-        ]
-    },
-    {
         "skill": "Customer Service",
+        "category": "Leadership",
         "experience": [
             "Rutgers University",
             "Best Buy",
@@ -62,12 +52,14 @@
     },
     {
         "skill": "Teaching",
+        "category": "Leadership",
         "experience": [
             "Software Development Mentor"
         ]
     },
     {
         "skill": "Analysis",
+        "category": "Leadership",
         "experience": [
             "Amazon.com, Inc.",
             "Rutgers University",
@@ -81,6 +73,7 @@
     },
     {
         "skill": "Problem Solving",
+        "category": "Leadership",
         "experience": [
             "Amazon.com, Inc.",
             "Young Muslims",
@@ -91,6 +84,7 @@
     },
     {
         "skill": "Mentorship",
+        "category": "Leadership",
         "experience": [
             "Young Muslims",
             "Software Development Mentor"
@@ -98,19 +92,14 @@
     },
     {
         "skill": "Sales",
+        "category": "Leadership",
         "experience": [
             "Best Buy"
         ]
     },
     {
-        "skill": "Management",
-        "experience": [
-            "Young Muslims",
-            "MIST"
-        ]
-    },
-    {
-        "skill": "Project Management",
+        "skill": " Project Management",
+        "category": "Management",
         "experience": [
             "Young Muslims",
             "MIST"
@@ -118,6 +107,7 @@
     },
     {
         "skill": "Decision Making",
+        "category": "Management",
         "experience": [
             "Amazon.com, Inc.",
             "Young Muslims",
@@ -128,6 +118,7 @@
     },
     {
         "skill": "Delegation",
+        "category": "Management",
         "experience": [
             "Young Muslims",
             "MIST"
