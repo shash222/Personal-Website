@@ -27,10 +27,9 @@ export default class HomeNonTechSkillsSection extends Component {
                     <h2>Non-Technical Skills</h2>
                     <div id="nonTechSkillsContainer">
                         {Object.keys(this.state.nonTechSkillCategoryMapping).map((skillCategory) => (
-                            // console.log(skillCategory, typeof (skillCategory))
                             [
-                                <h3>{skillCategory}:</h3>,
-                                <div id="nonTechSkillsCategoryContainer">
+                                <h3 key={skillCategory}>{skillCategory}:</h3>,
+                                <div key={skillCategory + "SkillContainer"} id="nonTechSkillsCategoryContainer">
                                     {this.state.nonTechSkillCategoryMapping[skillCategory].map((skill, i) => (
                                         <SkillCard key={skill.skill} skill={skill.skill} skillSources={skill.experience} delay={i + 1} />
                                     ))}

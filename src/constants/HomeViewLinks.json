@@ -5,8 +5,12 @@
             "referenceId": "homeIntroSection"
         },
         {
-            "linkText": "About Me",
-            "referenceId": "homeAboutMeSection"
+            "linkText": "Technical Skills",
+            "referenceId": "homeTechSkillsSection"
+        },
+        {
+            "linkText": "Non-Technical Skills",
+            "referenceId": "homeNonTechSkillsSection"
         },
         {
             "linkText": "Education",
@@ -19,14 +23,6 @@
         {
             "linkText": "Projects",
             "referenceId": "homeProjectsSection"
-        },
-        {
-            "linkText": "Technical Skills",
-            "referenceId": "homeTechSkillsSection"
-        },
-        {
-            "linkText": "Non-Technical Skills",
-            "referenceId": "homeNonTechSkillsSection"
         }
     ]
 }

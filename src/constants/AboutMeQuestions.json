@@ -17,6 +17,11 @@
     {
         "question": "Where do you see yourself in 10 years?",
         "answer": "In 10 years, I want to be in a management position where I am able to work with the bigger picture. I want to grow technology to new heights, but also be able to enable and mentor those with less experience, and grow them into brilliant and innovative minds.",
+        "display": false
+    },
+    {
+        "question": "Where do you see yourself in 5 years?",
+        "answer": "In 5 years, I would like to remain as an experienced individual contributor to the team and hope to have a few projects under my belt with exposure to a variety of new technologies. I want to take my team to new heights, not only in the software I produce, but also by enabling and mentoring those with less experience than I have.",
         "display": true
     },
     {
@@ -27,6 +32,11 @@
     {
         "question": "What personal project are you the most proud of?",
         "answer": "I am most proud of the RUDestination project that I am currently working on. With Rutgers being a massive school with 5 sub-campuses that require bus transportation to get between them, it becomes overwhelming trying to get from class to class. Not only am I able to put my technical and design skills to the test, but also provide new and transfer students peace of mind while trying to navigate through the campuses.",
+        "display": true
+    },
+    {
+        "question": "How did you utilize your time during the Covid-19 quarantine?",
+        "answer": "I used the time in quarantine to try to be as productive as possible. Aside from final projects and exams, I had finally gotten around to building a website to showcase my portfolio and experience. Additionally, I starting working towards the Google Cloud Platform certification and began developing RUDestination.",
         "display": true
     }
 ]

@@ -12,8 +12,11 @@ export default class HomeIntro extends Component {
         return (
             <section className="homePageSectionContainer introSection" id="homeIntroSection">
                 <div id="introSection" className="sectionContent">
-                    <h1 id="name" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">Salman Hashmi</h1>
-                    <h1 id="title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">Software Engineer</h1>
+                    <div id="descriptionContainer">
+                        <h1 id="name" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">Salman Hashmi</h1>
+                        <h1 id="title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">Software Engineer</h1>
+                        <p id="description" data-aos="fade-in" data-aos-duration="2500" data-aos-delay="600">Welcome to my portfolio site! My name is Salman Hashmi and I am a professional software engineer with a passion for making an impact. Feel free to explore my website to learn more about me, my experiences and projects I have worked on.</p>
+                    </div>
                     <div id="homeResourcesContainer">
                         <a className="homeResource" rel="noopener noreferrer" target="_blank" href="https://github.com/shash222" id="homeGitHubLink" data-aos="fade-in" data-aos-duration="2500" data-aos-delay="1000">
                             <FontAwesomeIcon icon={faGithub} size="lg" />

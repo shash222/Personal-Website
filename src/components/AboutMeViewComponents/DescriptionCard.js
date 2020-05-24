@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../styles/HomeViewStyles/DescriptionCard.css'
+import '../../styles/AboutMeViewStyles/DescriptionCard.css'
 
 export default class DescriptionCard extends Component {
     render() {
@@ -12,7 +12,6 @@ export default class DescriptionCard extends Component {
                         <p className="descriptionWord">{this.props.word.word}</p>
 
                     </div>
-                    <p className="descriptionWordText">{this.props.word.description}</p>
                 </div >
             </div >
         )

@@ -2,8 +2,7 @@
     padding-top: 2%;
     /* width: 80%; */
     margin: auto;
-    margin-bottom: 30vh;
-    min-height: 100vh;
+    margin-bottom: 100px;
 }
 
 #tagSearchBar {
@@ -65,10 +64,76 @@
     /* transition: all 1s; */
 }
 
+.iframeContainer {
+    width: 95vw;
+    position: fixed;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%) translateY(-40%);
+    height: 0;
+    opacity: 0;
+    background-color: white;
+    z-index: 5
+}
+
+.iframeContainer>.x {
+    position: absolute;
+    top: -4%;
+    left: 2%;
+    color: blue;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.iframeContainer>.x:hover {
+    cursor: pointer;
+}
+
+.iframeContainer.selected {
+    animation: showSample 1s forwards;
+}
+
+.iframeContainer.unselected {
+    animation: hideSample 1s forwards;
+}
+
+.sample {
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    /* width: 100vw; */
+}
+
 .detailedProjectCardContainer.show {
     /* display: block; */
     /* flex-grow: 1; */
     animation: showProject 3s forwards;
+}
+
+@keyframes showSample {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 80vh;
+    }
+}
+
+@keyframes hideSample {
+    0% {
+        /* display: block; */
+        height: 80vh;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
 }
 
 @keyframes showProject {

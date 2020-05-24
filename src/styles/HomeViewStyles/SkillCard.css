@@ -1,9 +1,10 @@
 .skillCardWrapper {
-    width: 250px;
-    height: 10vh;
-    min-width: 100px;
+    width: 6vw;
+    min-width: 200px;
+    height: 115px;
+    /* min-width: 100px; */
     margin-top: 2%;
-    margin-left: .2%;
+    margin-left: .25%;
     margin-right: .25%;
 }
 

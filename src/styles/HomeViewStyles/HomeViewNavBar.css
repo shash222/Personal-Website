@@ -15,5 +15,15 @@
 }
 
 #homeViewNavBarItems li+li {
-    margin-top: 7vh;
+    margin-top: 10vh;
+}
+
+#homeViewNavBarContainer.show {
+    left: 0;
+    transition: all .5s linear;
+}
+
+#homeViewNavBarContainer.hide {
+    left: -15vw;
+    transition: all 1s linear;
 }

@@ -30,7 +30,6 @@ export default class TechSkillChart extends Component {
         this.props.skillCategoryDetails.forEach((detail) => {
             chartData.push(['', detail.skillLevel, detail.skill, this.props.color])
         })
-        console.log(this.props.skillCategoryDetails.length, heightForBars, totalChartHeight)
         this.setState({
             chartHeight: totalChartHeight,
             chartData: chartData
@@ -41,8 +40,7 @@ export default class TechSkillChart extends Component {
         return (
             this.state.chartHeight === 0
                 ? null
-                : <div className="techSkillChartContainer" data-aos="zoom-in" data-aos-delay="250" data-aos-duration="1000">
-                    {console.log(this.state.chartHeight)}
+                : <div className="techSkillChartContainer" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1000">
                     <Chart
                         chartType="BarChart"
                         data={this.state.chartData}

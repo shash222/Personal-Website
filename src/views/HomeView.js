@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import '../styles/HomeViewStyles/HomeView.css'
 import HomeIntro from '../components/HomeViewComponents/HomeIntro.js'
-import HomeAboutMe from '../components/HomeViewComponents/HomeAboutMe.js'
+// import HomeAboutMe from '../components/HomeViewComponents/HomeAboutMe.js'
 import HomeEducationSection from '../components/HomeViewComponents/HomeEducationSection.js'
 import HomeExperiencesSection from '../components/HomeViewComponents/HomeExperiencesSection.js'
 // import HomeSkillsSection from '../components/HomeViewComponents/HomeSkillsSection.js'
@@ -80,18 +80,15 @@ export default class HomeView extends Component {
                         onSetActive={() => this.handleSectionChange(-1)}
                         duration={1000}>
                         <FontAwesomeIcon icon={faChevronUp} size="lg" />
-                        {/* <div id="upArrow" className="homeViewArrow"></div> */}
                     </Link>
                 </div>
                 <HomeViewNavBar handleSectionChange={this.handleSectionChange} currentSectionNumber={this.state.displayedSectionNumber} getCurrentSectionNumber={this.getSectionNumber} />
                 <HomeIntro />
-                <HomeAboutMe />
+                <HomeTechSkillsSection />
+                <HomeNonTechSkillsSection />
                 <HomeEducationSection />
                 <HomeExperiencesSection />
                 <HomeProjectsSection />
-                <HomeTechSkillsSection />
-                <HomeNonTechSkillsSection />
-                {/* <HomeSkillsSection /> */}
                 <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer down fixed">
                     <Link
                         activeClass="active"
@@ -100,7 +97,6 @@ export default class HomeView extends Component {
                         onSetActive={() => this.handleSectionChange(1)}
                         duration={1000}>
                         <FontAwesomeIcon icon={faChevronDown} size="lg" />
-                        {/* <div id="downArrow" className="homeViewArrow"></div> */}
                     </Link>
                 </div>
             </div>

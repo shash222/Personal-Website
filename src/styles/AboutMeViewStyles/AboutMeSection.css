@@ -10,3 +10,20 @@
     justify-content: space-around;
     margin-top: 5%;
 }
+
+#descriptionCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-basis: 20%;
+    margin: 0;
+}
+
+#faqHeading {
+    font-size: 2vw;
+}
+
+#aboutMeSectionContainer {
+    margin-bottom: 100px;
+}

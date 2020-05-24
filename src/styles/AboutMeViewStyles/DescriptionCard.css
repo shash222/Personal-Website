@@ -9,7 +9,6 @@
     position: relative;
 }
 
-
 .descriptionCardText {
     position: absolute;
     text-align: center;
@@ -65,6 +64,7 @@
 .hexagon::before {
     transform: rotateZ(60deg);
 }
+
 .hexagon::after {
     transform: rotateZ(-60deg);
 }
@@ -72,7 +72,7 @@
 .descriptionWord {
     /* height: 100%; */
     position: absolute;
-    top: 40%;
+    top: 30%;
     z-index: 1;
     font-size: 1.15vw;
     width: 100%;
@@ -85,4 +85,13 @@
     font-size: larger;
     margin-left: -15%;
     width: 130%;
+}
+
+[data-aos="rotate"] {
+    transform: rotate(-1080deg);
+    transition-property: transform;
+}
+
+[data-aos="rotate"].aos-animate {
+    transform: rotate(0deg);
 }

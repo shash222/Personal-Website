@@ -18,6 +18,10 @@ h1 {
     text-shadow: 5px 5px 5px black;
 }
 
+h1:not(#name) {
+    width: 50%;
+}
+
 section>div>div:first-of-type {
     margin-top: 5vh;
 }
@@ -27,16 +31,24 @@ section>div>div:first-of-type {
     width: 100vw;
     position: absolute;
     z-index: -1;
-    background-image: url("./res/images/mountain3.jpg");
-    background-size: cover;
-    background-position: 10%;
+    /* background-image: url("./res/images/mountain3.jpg"); */
+    /* background-image: url("./res/images/me_wedding_compressed_2.jpg"); */
+    /* background-size: 115%; */
+    /* background-position: 0 15%; */
+    background-image: url("./res/images/me_wedding_compressed_cropped_4.jpg");
+    background-size: 100%;
+    background-position: 0 15%;
 }
 
 section {
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
-    height: 100vh;
+    /* scroll-snap-align: start;
+    scroll-snap-stop: normal; */
+    /* height: 100vh; */
     padding: 1px;
+}
+
+.introSection {
+    height: 100vh;
 }
 
 section>div {
@@ -47,7 +59,7 @@ section>div {
     position: fixed;
     bottom: 3%;
     right: 5%;
-    animation: displayScrollToTopButtonAnimation 1s forwards;
+    animation: displayScrollToTopButtonAnimation 1.5s forwards;
 }
 
 #scrollToTopButtonWrapper>button {
@@ -114,19 +126,19 @@ section>div {
 }
 
 .slide-right-enter {
-    animation: animateRightEntry .8s forwards;
+    animation: animateRightEntry .75s forwards;
 }
 
 .slide-right-exit {
-    animation: animateLeftExit .8s forwards;
+    animation: animateLeftExit .75s forwards;
 }
 
 .slide-left-enter {
-    animation: animateLeftEntry .8s forwards;
+    animation: animateLeftEntry .75s forwards;
 }
 
 .slide-left-exit {
-    animation: animateRightExit .8s forwards;
+    animation: animateRightExit .75s forwards;
 }
 
 [data-icon="arrow-circle-up"] {

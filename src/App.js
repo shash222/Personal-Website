@@ -37,21 +37,21 @@ export default class App extends Component {
 
   componentDidMount() {
     AOS.init({
-      once: true
+      // once: true
     });
     window.addEventListener('scroll', this.handleScroll)
-    window.addEventListener('resize', this.handleScroll)
+    // window.addEventListener('resize', this.handleScroll)
     this.addViewTransitionClass()
     // this.updateViewNavArrowLinks(0)
     this.handleScroll()
   }
 
   handleViewChange() {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'auto'
-    })
+    // window.scrollTo({
+    //   top: 0,
+    //   left: 0,
+    //   behavior: 'auto'
+    // })
     this.updateViewNavArrowLinks(0)
   }
 
@@ -113,8 +113,17 @@ export default class App extends Component {
   }
 
   scrollToTop() {
+    // console.log("Scrolling")
     window.scrollTo(0, 0)
   }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+
 
   handleScroll() {
     var scrollToTopButtonWrapper = document.getElementById("scrollToTopButtonWrapper")
@@ -158,7 +167,7 @@ export default class App extends Component {
 
             <TopNavBar />
 
-            <AnimatedSwitch handleViewChange={this.handleViewChange} beforeViewChangeIndex={this.state.beforeViewChangeIndex} topNavLinks={this.state.topNavLinks} />
+            <AnimatedSwitch handleViewChange={this.handleViewChange} scrollToTop={this.scrollToTop} beforeViewChangeIndex={this.state.beforeViewChangeIndex} topNavLinks={this.state.topNavLinks} />
           </Router>
 
           <div id="scrollToTopButtonWrapper">
@@ -178,8 +187,17 @@ const AnimatedSwitch = withRouter(({ location, history, ...props }) => (
   <TransitionGroup>
     <CSSTransition
       key={location.key}
-      onEnter={() => props.handleViewChange()}
-      timeout={{ enter: 800, exit: 800 }}
+
+      // onExit={node => {
+      //   node.style.position = "fixed";
+      //   node.style.top = 0 + "px";
+      // }}
+      // onExited={() => }
+      onEntering={() => props.handleViewChange()
+      }
+      onEnter={() => props.scrollToTop()}
+      timeout={1250}
+      // mountOnEnter={false}
       classNames={
         props.topNavLinks.indexOf(location.pathname) < props.beforeViewChangeIndex
           ? "slide-left"

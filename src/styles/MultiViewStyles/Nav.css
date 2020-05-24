@@ -12,18 +12,20 @@ nav {
     color: rgb(255, 255, 255, 1);
     font-weight: 300;
     filter: brightness(80%);
-    animation: revertNavLinks 1s forwards;
+    animation: dimNavLinks 1s forwards;
 }
 
 .navItem>.active {
     text-decoration: underline;
+    animation: brightenNavLinks 1s forwards;
+    /* filter: brightness(150%); */
 }
 
-.navItem:hover a {
-    animation: invertNavLinks 1s forwards;
+.navItem:hover a:not(.active) {
+    animation: brightenNavLinks 1s forwards;
 }
 
-@keyframes invertNavLinks {
+@keyframes brightenNavLinks {
     front {
         filter: brightness(80%);
     }
@@ -32,7 +34,7 @@ nav {
     }
 }
 
-@keyframes revertNavLinks {
+@keyframes dimNavLinks {
     from {
         filter: brightness(150%);
     }

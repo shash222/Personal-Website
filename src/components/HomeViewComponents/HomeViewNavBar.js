@@ -30,15 +30,30 @@ export default class HomeViewNavBar extends Component {
     }
 
     animateHomeViewNavBar() {
+
         const height = window.innerHeight;
         const scrollPosition = window.scrollY;
-        var newLeftPosition = "0vw";
         const elem = document.getElementById("homeViewNavBarContainer");
-        if (scrollPosition < height) {
-            newLeftPosition = (scrollPosition / height * elem.offsetWidth - elem.offsetWidth) + "px";
+        console.log(scrollPosition)
+        if (scrollPosition > height) {
+            elem.classList.add("show")
+            elem.classList.remove("hide")
+        } else {
+            elem.classList.add("hide")
+            elem.classList.remove("show")
         }
-        elem.style.left = newLeftPosition;
-        // this.forceUpdate()
+
+        // --------------------  commented out because this was buggy
+        // nav display portion by scroll position
+        // const height = window.innerHeight;
+        // const scrollPosition = window.scrollY;
+        // var newLeftPosition = "0vw";
+        // const elem = document.getElementById("homeViewNavBarContainer");
+        // console.log(scrollPosition, newLeftPosition)
+        // if (scrollPosition < height) {
+        //     newLeftPosition = (scrollPosition / height * elem.offsetWidth - elem.offsetWidth) + "px";
+        // }
+        // elem.style.left = newLeftPosition;
     }
 
 
@@ -53,7 +68,7 @@ export default class HomeViewNavBar extends Component {
                                 activeClass="active"
                                 to={item.referenceId}
                                 spy={true}
-                                duration={1000}>
+                                duration={500}>
                                 {item.linkText}
                             </Link>
                         </li>
