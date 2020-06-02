@@ -11,4 +11,10 @@
 #techSkillsContainer {
     padding-top: 0;
     margin: auto;
+    margin-top: 0;
+}
+
+svg {
+    margin-top: 0;
+    padding-top: 0;
 }

@@ -23,10 +23,11 @@ export default class TechSkillChart extends Component {
                 role: 'style'
             }
         ])
-        var baseHeight = 34
+        // var baseHeight = 34
         // Allows space for each bar to be 25 pixels tall
         var heightForBars = this.props.skillCategoryDetails.length * 45
-        var totalChartHeight = baseHeight + heightForBars
+        // var totalChartHeight = baseHeight + heightForBars
+        var totalChartHeight = heightForBars
         this.props.skillCategoryDetails.forEach((detail) => {
             chartData.push(['', detail.skillLevel, detail.skill, this.props.color])
         })

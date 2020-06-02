@@ -84,18 +84,15 @@ export default class ProjectsSection extends Component {
                 })
             }
             for (let container of detailedProjectCardContainers) {
+                container.classList.add("hide")
+                container.classList.remove("show")
                 var projectName = container.getElementsByClassName("detailedProjectCardProjectName")[0].innerHTML
                 if (projectNamesOfProjectsToDisplay.has(projectName)) {
                     container.classList.add("aos-animate")
-                    if (container.classList.contains("hide")) {
-                        container.style.display = "block"
+                    container.style.display = "block"
 
-                        container.classList.add("show")
-                        container.classList.remove("hide")
-                    }
-                } else {
-                    container.classList.add("hide")
-                    container.classList.remove("show")
+                    container.classList.add("show")
+                    container.classList.remove("hide")
                 }
             }
             setTimeout(this.changeItemsWithHideClassToDisplayNone, 1000)
@@ -141,14 +138,14 @@ export default class ProjectsSection extends Component {
                                 <span className="skillTag tag" key={skill} data-tag-value={skill} onClick={this.handleTagSelection}>{skill}</span>
                             ))}
                         </div>
-                        <p className="tagTitle">Type:</p>
                         <div className="tagsContainer">
+                            <p className="tagTitle">Type:</p>
                             {Object.keys(this.state.typeMapping).map((type) => (
                                 <span className="typeTag tag" key={type} data-tag-value={type} onClick={this.handleTagSelection}>{type}</span>
                             ))}
                         </div>
-                        <p className="tagTitle">Status:</p>
                         <div className="tagsContainer">
+                            <p className="tagTitle">Status:</p>
                             {Object.keys(this.state.statusMapping).map((status) => (
                                 <span className="statusTag tag" key={status} data-tag-value={status} onClick={this.handleTagSelection}>{status}</span>
                             ))}

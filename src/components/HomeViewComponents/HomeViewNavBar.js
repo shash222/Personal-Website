@@ -34,7 +34,6 @@ export default class HomeViewNavBar extends Component {
         const height = window.innerHeight;
         const scrollPosition = window.scrollY;
         const elem = document.getElementById("homeViewNavBarContainer");
-        console.log(scrollPosition)
         if (scrollPosition > height) {
             elem.classList.add("show")
             elem.classList.remove("hide")

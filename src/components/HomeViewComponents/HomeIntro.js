@@ -4,10 +4,19 @@ import '../../styles/HomeViewStyles/HomeIntro.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-
-
+import resume from '../../res/Salman_Hashmi_Resume.pdf'
 
 export default class HomeIntro extends Component {
+    componentDidMount() {
+        // console.log(fs)
+
+        // fs.readdir(__dirname, (err, files) => {
+        //     files.forEach(file => {
+        //         console.log(file);
+        //     });
+        // });
+    }
+
     render() {
         return (
             <section className="homePageSectionContainer introSection" id="homeIntroSection">
@@ -26,7 +35,7 @@ export default class HomeIntro extends Component {
                             <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
                             <p>LinkedIn</p>
                         </a>
-                        <a className="homeResource" href="../../res/resume.pdf" id="homeResumeLink" download data-aos="fade-in" data-aos-duration="2500" data-aos-delay="1000">
+                        <a className="homeResource" href={resume} id="homeResumeLink" download data-aos="fade-in" data-aos-duration="2500" data-aos-delay="1000">
                             <FontAwesomeIcon icon={faDownload} size="lg" />
                             <p>Resume</p>
                         </a>

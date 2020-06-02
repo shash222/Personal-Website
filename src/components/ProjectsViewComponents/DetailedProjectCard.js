@@ -88,7 +88,7 @@ export default class DetailedProjectCard extends Component {
 
     render() {
         return (
-            <div className="detailedProjectCardContainer" data-aos="zoom-in" data-aos-duration="1200" >
+            <div className="detailedProjectCardContainer" data-aos="zoom-in" data-aos-duration="1200" data-aos-once="true">
                 <div className="detailedProjectCard">
                     <h3 className="detailedProjectCardProjectName">{this.props.project.name}</h3>
                     <p className="detailedProjectCardProjectDescription">{this.props.project.description}</p>

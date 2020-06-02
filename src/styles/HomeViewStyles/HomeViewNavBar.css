@@ -25,5 +25,5 @@
 
 #homeViewNavBarContainer.hide {
     left: -15vw;
-    transition: all 1s linear;
+    transition: all .5s linear;
 }
