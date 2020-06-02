@@ -117,7 +117,7 @@
 
 @keyframes addBackgroundAnimation {
     0% {
-        background-color: transparent;
+        /* background-color: transparent; */
     }
     100% {
         background-color: white;
@@ -129,6 +129,6 @@
         background-color: white;
     }
     100% {
-        background-color: transparent;
+        /* background-color: transparent; */
     }
 }

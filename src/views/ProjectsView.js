@@ -7,7 +7,7 @@ export default class ProjectsView extends Component {
     render() {
         return (
             <div id="projectsView" className="view">
-                <ProjectsIntroSection />
+                <ProjectsIntroSection handleSectionNavigationArrowClick={this.props.handleSectionNavigationArrowClick} />
                 <ProjectsSection />
             </div>
         );

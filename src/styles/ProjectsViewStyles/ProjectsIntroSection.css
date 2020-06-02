@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    -ms-flex-direction: column;
     /* background-image: url('../../res/images/auroraBorealis.jpg');
     background-size: cover; */
     /* background-position: 10%; */

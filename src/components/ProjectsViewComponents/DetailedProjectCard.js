@@ -14,7 +14,11 @@ export default class DetailedProjectCard extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('click', (e) => this.handleClick(e))
+        window.addEventListener('click', this.handleClick)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('click', this.handleClick)
     }
 
     handleClick(e) {
@@ -28,7 +32,7 @@ export default class DetailedProjectCard extends Component {
         for (let button of buttons) {
             // var sampleNode = this.getSampleNode(button.parentNode.parentNode)
             // if (button !== e.target) {
-            if (button.classList.contains("active")) {
+            if (button !== undefined && button.classList.contains("active")) {
                 button.classList.remove("active")
                 openSampleNode.classList.remove("selected")
                 openSampleNode.classList.add("unselected")
@@ -64,7 +68,7 @@ export default class DetailedProjectCard extends Component {
 
     handleViewButtonClick(e, sampleNode) {
         var iframeContainer = document.getElementsByClassName("iframeContainer")[0];
-        if (e.target.classList.contains("active")) {
+        if (sampleNode !== undefined && e.target.classList.contains("active")) {
             e.target.classList.remove("active")
             // iframeContainer.classList.remove("selected")
             // iframeContainer.classList.add("unselected")
@@ -88,7 +92,7 @@ export default class DetailedProjectCard extends Component {
 
     render() {
         return (
-            <div className="detailedProjectCardContainer" data-aos="zoom-in" data-aos-duration="1200" >
+            <div className="detailedProjectCardContainer" data-aos="zoom-in" data-aos-duration="1200" data-aos-once="true">
                 <div className="detailedProjectCard">
                     <h3 className="detailedProjectCardProjectName">{this.props.project.name}</h3>
                     <p className="detailedProjectCardProjectDescription">{this.props.project.description}</p>

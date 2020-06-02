@@ -7,7 +7,7 @@ export default class AboutMeView extends Component {
     render() {
         return (
             <div id="aboutMeView" className="view">
-                <AboutMeIntro />
+                <AboutMeIntro handleSectionNavigationArrowClick={this.props.handleSectionNavigationArrowClick} />
                 <AboutMeSection />
             </div>
         );

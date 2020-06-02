@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ContactViewIntroSection from '../components/ContactViewComponents/ContactViewIntroSection.js'
 import ContactSection from '../components/ContactViewComponents/ContactSection.js'
 import '../styles/ContactViewStyles/ContactView.css'
 
 export default class ContactView extends Component {
     render() {
-        return(
+        return (
             <div id="contactView" className="view">
-                <ContactViewIntroSection />
+                <ContactViewIntroSection handleSectionNavigationArrowClick={this.props.handleSectionNavigationArrowClick} />
                 <ContactSection />
             </div>
         )

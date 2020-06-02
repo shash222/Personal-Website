@@ -19,6 +19,7 @@
 .sectionContent:not(#introSection) {
     padding-left: 10vw;
     width: 60%;
+    min-width: 850px;
 }
 
 .navItem>a {

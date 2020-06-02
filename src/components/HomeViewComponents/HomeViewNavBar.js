@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../../styles/HomeViewStyles/HomeViewNavBar.css';
 import navItems from '../../constants/HomeViewLinks.json'
-import { Link } from 'react-scroll'
 
 export default class HomeViewNavBar extends Component {
 
@@ -9,10 +8,12 @@ export default class HomeViewNavBar extends Component {
         super(props);
         this.handleScroll = this.handleScroll.bind(this);
         this.animateHomeViewNavBar = this.animateHomeViewNavBar.bind(this);
+        this.setHomeViewNavLinkToActive = this.setHomeViewNavLinkToActive.bind(this);
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
+        this.setHomeViewNavLinkToActive();
     }
 
     componentWillUnmount() {
@@ -23,10 +24,21 @@ export default class HomeViewNavBar extends Component {
         this.animateHomeViewNavBar()
         const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
         const scrollValue = window.scrollY;
-        if (scrollValue % vh === 0) {
-            const newSectionNumber = Math.round(scrollValue / vh)
+        const newSectionNumber = Math.round(scrollValue / vh)
+        if (newSectionNumber !== this.props.currentSectionNumber) {
+            // if (scrollValue % vh === 0) {
+            this.setHomeViewNavLinkToActive(newSectionNumber);
             this.props.handleSectionChange(newSectionNumber - this.props.currentSectionNumber)
         }
+    }
+
+    setHomeViewNavLinkToActive(newSectionNumber) {
+        var homeNavBarLinks = document.querySelectorAll("#homeViewNavBarItems .navItem>button");
+        [].forEach.call(homeNavBarLinks, (link) => {
+            link.classList.remove("active")
+        })
+        if (newSectionNumber > 0 && newSectionNumber <= homeNavBarLinks.length)
+            homeNavBarLinks[newSectionNumber - 1].classList.add('active')
     }
 
     animateHomeViewNavBar() {
@@ -34,8 +46,7 @@ export default class HomeViewNavBar extends Component {
         const height = window.innerHeight;
         const scrollPosition = window.scrollY;
         const elem = document.getElementById("homeViewNavBarContainer");
-        console.log(scrollPosition)
-        if (scrollPosition > height) {
+        if (scrollPosition >= height / 2) {
             elem.classList.add("show")
             elem.classList.remove("hide")
         } else {
@@ -49,7 +60,6 @@ export default class HomeViewNavBar extends Component {
         // const scrollPosition = window.scrollY;
         // var newLeftPosition = "0vw";
         // const elem = document.getElementById("homeViewNavBarContainer");
-        // console.log(scrollPosition, newLeftPosition)
         // if (scrollPosition < height) {
         //     newLeftPosition = (scrollPosition / height * elem.offsetWidth - elem.offsetWidth) + "px";
         // }
@@ -62,15 +72,9 @@ export default class HomeViewNavBar extends Component {
         return (
             <nav id="homeViewNavBarContainer" >
                 <ul id="homeViewNavBarItems">
-                    {navItems.sections.slice(1).map(item => (
-                        <li key={item.referenceId + "Link"} className="navItem">
-                            <Link
-                                activeClass="active"
-                                to={item.referenceId}
-                                spy={true}
-                                duration={500}>
-                                {item.linkText}
-                            </Link>
+                    {navItems.sections.slice(1).map((item, i) => (
+                        <li key={item.referenceId + "Link"} className="navItem" onClick={() => this.props.handleSectionNavigationArrowClick(i + 1)}>
+                            <button className="homeViewNavBarLink">{item.linkText}</button>
                         </li>
                     ))}
 

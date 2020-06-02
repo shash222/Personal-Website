@@ -2,110 +2,90 @@
     "Front-End": [
         {
             "skill": "HTML",
-            "color": "blue",
             "skillLevel": 3
         },
         {
             "skill": "CSS",
-            "color": "red",
             "skillLevel": 3
         },
         {
             "skill": "JavaScript",
-            "color": "green",
             "skillLevel": 3
         },
         {
             "skill": "ReactJS",
-            "color": "purple",
             "skillLevel": 3
         },
         {
             "skill": "jQuery",
-            "color": "purple",
             "skillLevel": 2
         },
         {
             "skill": "JavaFX",
-            "color": "yellow",
             "skillLevel": 2
         }
     ],
     "Programming Languages": [
         {
             "skill": "Java",
-            "color": "blue",
             "skillLevel": 4
         },
         {
             "skill": "Node.js",
-            "color": "green",
             "skillLevel": 3
         },
         {
             "skill": "PHP",
-            "color": "red",
             "skillLevel": 2
         },
         {
             "skill": "C",
-            "color": "orange",
             "skillLevel": 3
         },
         {
             "skill": "Python",
-            "color": "purple",
             "skillLevel": 3
         },
         {
             "skill": "MATLAB",
-            "color": "yellow",
             "skillLevel": 2
         }
     ],
     "Mobile Development": [
         {
             "skill": "React Native",
-            "color": "blue",
             "skillLevel": 2
         },
         {
             "skill": "Android",
-            "color": "green",
             "skillLevel": 2
         }
     ],
     "Database Languages": [
         {
             "skill": "SQL",
-            "color": "blue",
             "skillLevel": 3
         },
         {
             "skill": "MongoDB",
-            "color": "green",
             "skillLevel": 2
         }
     ],
     "Other Tech Skills": [
         {
             "skill": "Unit & Integration Testing",
-            "color": "blue",
             "skillLevel": 3
         },
         {
             "skill": "Linux/Unix",
-            "color": "green",
             "skillLevel": 3
         },
         {
             "skill": "AWS",
-            "color": "red",
             "skillLevel": 2
         },
         {
             "skill": "MIPS Assembly",
-            "color": "purple",
             "skillLevel": 2
         },
         {

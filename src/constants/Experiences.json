@@ -26,6 +26,7 @@
         "endDate": "August 2019",
         "location": "Seattle, WA",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": true
     },
     {
@@ -33,7 +34,7 @@
         "description": "Worked as part of cross-functional team for the Office of Information Technology at Rutgers University. Core responsibilites included lab maintenance, lab device troubleshooting and excellent customer service. Received ResNet Dispatch training which served as qualification to troubleshoot patron devices and residential networks in student housing. ",
         "bullets": [
             "Worked alongside supervisors and fellow consultants to provide excellent customer service to lab patrons.",
-            "Received training to assist patrons in troubleshooting and configuring devices in accordance with Rutgers  University network and usage policies.",
+            "Received training to assist patrons in troubleshooting and configuring devices in accordance with Rutgers University network and usage policies.",
             "Diagnosed, troubleshooted and resolved a variety of network-related issues for thousands of students campus-wide."
         ],
         "skillsGained": [
@@ -47,15 +48,16 @@
         "endDate": "Present",
         "location": "Piscataway, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": true
     },
     {
         "company": "",
         "description": "Instructed students in software development concepts including basic algorithms, object-oriented programming and data structures. Advised on career hunts, project ideas, relevant technologies and resources to take advantage of to develop deeper understanding of the field.",
         "bullets": [
-            "Conducted one on one tutoring sessions for multiple students in order to increase competency in fundamental software development concepts and succeed in intense computer science courses, resulting in an average incrase of one letter grade.",
+            "Conducted one on one tutoring sessions for multiple students in order to increase competency in fundamental software development concepts and succeed in intense computer science courses, resulting in an average increase of one letter grade.",
             "Advised students on new technologies to explore, projects to work on, resources to utilize and techniques to prepare for upcoming interviews.",
-            "Critiqued resumes to help underclassmen properly showcase their talent and abilities to potential employers, many of whom received internship offers."
+            "Critiqued resumes to help underclassmen properly showcase their talent and abilities to potential employers, with an 80% success rate of receiving internship offers."
         ],
         "skillsGained": [
             "Teaching",
@@ -70,6 +72,7 @@
         "endDate": "Present",
         "location": "Piscataway, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": true
     },
     {
@@ -89,6 +92,7 @@
         "endDate": "August 2018",
         "location": "location",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": false
     },
     {
@@ -108,6 +112,7 @@
         "endDate": "December 2017",
         "location": "Iselin, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": false
     },
     {
@@ -127,6 +132,7 @@
         "endDate": "May 2017",
         "location": "Piscataway, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": false
     },
     {
@@ -153,6 +159,7 @@
         "endDate": "Present",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -182,6 +189,7 @@
         "endDate": "Present",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -208,6 +216,7 @@
         "endDate": "December 2018",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -235,6 +244,7 @@
         "endDate": "December 2018",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": true
     },
     {
@@ -263,6 +273,7 @@
         "endDate": "January 2017",
         "location": "Old Bridge, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -289,6 +300,7 @@
         "endDate": "January 2017",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -310,6 +322,7 @@
         "endDate": "April 2017",
         "location": "Sayreville, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     }
 ]

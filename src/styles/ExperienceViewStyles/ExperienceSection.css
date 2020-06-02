@@ -3,3 +3,30 @@
     /* width: 80%; */
     /* margin: auto; */
 }
+
+#experienceViewNavBar {
+    all: unset;
+}
+
+#experienceViewNavItems {
+    list-style-type: none;
+    display: flex;
+    width: 30%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.experienceViewNavItem>button {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.experienceTypeHeading {
+    font-size: 35px;
+    text-align: left;
+    margin-left: 20%;
+    font-weight: normal;
+}

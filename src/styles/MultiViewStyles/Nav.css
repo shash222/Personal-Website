@@ -4,7 +4,7 @@ nav {
     z-index: 1;
 }
 
-.navItem>a {
+.navItem>a, .navItem>button {
     text-decoration: none;
     font-size: x-large;
     text-shadow: 5px 5px 5px black;
@@ -12,7 +12,7 @@ nav {
     color: rgb(255, 255, 255, 1);
     font-weight: 300;
     filter: brightness(80%);
-    animation: dimNavLinks 1s forwards;
+    animation: dimNavLinks .5s forwards;
 }
 
 .navItem>.active {
@@ -21,7 +21,8 @@ nav {
     /* filter: brightness(150%); */
 }
 
-.navItem:hover a:not(.active) {
+.navItem:hover a:not(.active), .navItem:hover button:not(.active) {
+    cursor: pointer;
     animation: brightenNavLinks 1s forwards;
 }
 
