@@ -9,6 +9,7 @@ export default class HomeViewNavBar extends Component {
         super(props);
         this.handleScroll = this.handleScroll.bind(this);
         this.animateHomeViewNavBar = this.animateHomeViewNavBar.bind(this);
+        this.setHomeViewNavLinkToActive = this.setHomeViewNavLinkToActive.bind(this)
     }
 
     componentDidMount() {
@@ -20,13 +21,30 @@ export default class HomeViewNavBar extends Component {
     }
 
     handleScroll() {
-        this.animateHomeViewNavBar()
         const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
         const scrollValue = window.scrollY;
         if (scrollValue % vh === 0) {
-            const newSectionNumber = Math.round(scrollValue / vh)
-            this.props.handleSectionChange(newSectionNumber - this.props.currentSectionNumber)
+            // const newSectionNumber = Math.round(scrollValue / vh)
+            // this.props.handleSectionChange(newSectionNumber - this.props.currentSectionNumber)
         }
+        const newSectionNumber = Math.round(scrollValue / vh)
+        // console.log(newSectionNumber, this.props.currentSectionNumber)
+        // if (newSectionNumber !== this.props.currentSectionNumber) {
+        //     console.log("Animating")
+        this.animateHomeViewNavBar()
+        this.setHomeViewNavLinkToActive();
+        if (newSectionNumber !== this.props.currentSectionNumber)
+            this.props.handleSectionChange(newSectionNumber - this.props.currentSectionNumber)
+        // }
+    }
+
+    setHomeViewNavLinkToActive() {
+        var homeNavBarLinks = document.querySelectorAll("#homeViewNavBarItems .navItem>a");
+        [].forEach.call(homeNavBarLinks, (link) => {
+            link.classList.remove("active")
+        })
+        if (this.props.currentSectionNumber > 0)
+            homeNavBarLinks[this.props.currentSectionNumber - 1].classList.add('active')
     }
 
     animateHomeViewNavBar() {
@@ -66,7 +84,8 @@ export default class HomeViewNavBar extends Component {
                             <Link
                                 activeClass="active"
                                 to={item.referenceId}
-                                spy={true}
+                                // spy={true}
+                                smooth={true}
                                 duration={500}>
                                 {item.linkText}
                             </Link>

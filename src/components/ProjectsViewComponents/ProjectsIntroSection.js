@@ -14,7 +14,8 @@ export default class ProjectsIntroSection extends Component {
                         activeClass="active"
                         to="projectsSectionContainer"
                         spy={true}
-                        duration={1000}>
+                        smooth={true}
+                        duration={500}>
                         <FontAwesomeIcon icon={faChevronDown} size="lg" />
                         {/* <div id="downArrow" className="projectViewArrow"></div> */}
                     </Link>

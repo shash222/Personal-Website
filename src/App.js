@@ -36,9 +36,9 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    AOS.init({
-      // once: true
-    });
+    // AOS.init({
+    //   // once: true
+    // });
     window.addEventListener('scroll', this.handleScroll)
     // window.addEventListener('resize', this.handleScroll)
     this.addViewTransitionClass()
@@ -114,13 +114,16 @@ export default class App extends Component {
 
   scrollToTop() {
     // console.log("Scrolling")
-    window.scrollTo(0, 0)
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0);
-    }
+    // if (this.props.location !== prevProps.location) {
+    //   window.scrollTo(0, 0);
+    // }
   }
 
 
@@ -171,11 +174,10 @@ export default class App extends Component {
           </Router>
 
           <div id="scrollToTopButtonWrapper">
-            <button onClick={() => window.scrollTo(0, 0)}>
+            <button onClick={() => this.scrollToTop()}>
               <FontAwesomeIcon icon={faArrowCircleUp} size="4x" />
             </button>
           </div>
-
         </div >
         : null
     );
@@ -213,6 +215,4 @@ const AnimatedSwitch = withRouter(({ location, history, ...props }) => (
       </Switch>
     </CSSTransition>
   </TransitionGroup >
-
 ))
-

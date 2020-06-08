@@ -14,7 +14,8 @@ export default class ExperienceViewIntroSection extends Component {
                         activeClass="active"
                         to="experienceSectionContainer"
                         spy={true}
-                        duration={1000}>
+                        smooth={true}
+                        duration={500}>
                         <FontAwesomeIcon icon={faChevronDown} size="lg" />
                         {/* <div id="downArrow" className="experienceViewArrow"></div> */}
                     </Link>

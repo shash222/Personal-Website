@@ -13,9 +13,9 @@ export default class HomeTechSkillsSection extends Component {
                 <div className="sectionContent">
                     <h2>Technical Skills</h2>
                     <div id="techSkillsContainer">
-                        {Object.keys(techSkills).map((skillCategory, i) => (
+                        {/* {Object.keys(techSkills).map((skillCategory, i) => (
                             <TechSkillsChart key={skillCategory} skillCategory={skillCategory} skillCategoryDetails={techSkills[skillCategory]} color={barChartColors[i]} />
-                        ))}
+                        ))} */}
 
                     </div>
                 </div>

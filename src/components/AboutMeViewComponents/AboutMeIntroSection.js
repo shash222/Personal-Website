@@ -14,7 +14,8 @@ export default class AboutMeIntroSection extends Component {
                         activeClass="active"
                         to="aboutMeSectionContainer"
                         spy={true}
-                        duration={1000}>
+                        smooth={true}
+                        duration={500}>
                         <FontAwesomeIcon icon={faChevronDown} size="lg" />
                         {/* <div id="downArrow" className="contactViewArrow"></div> */}
                     </Link>

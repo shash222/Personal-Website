@@ -28,7 +28,8 @@ export default class HomeView extends Component {
     }
 
     componentDidMount() {
-        this.handleSectionChange(0)
+        // this.handleSectionChange(0)
+        // window.addEventListener('scroll', this.setHomeViewNavLinkToActive)
     }
 
     getSectionNumber() {
@@ -38,35 +39,46 @@ export default class HomeView extends Component {
     }
 
     handleSectionChange(incrementValue) {
+        // Number of section being scrolled to
         var newSectionNumber = this.state.displayedSectionNumber + incrementValue
         var prevSection = homeViewSections.sections[newSectionNumber - 1];
         var nextSection = homeViewSections.sections[newSectionNumber + 1];
+
+        // ID of section below current section to assign "to" property to in Link component
         var nextSectionId = "";
+
+        // ID of section above current section to assign "to" property to in Link component
         var prevSectionId = "";
+        var downArrowContainer = document.querySelector('.navigationArrowContainer.down')
+        var upArrowContainer = document.querySelector('.navigationArrowContainer.up')
+
+        // Repositions down arrow if intro section is displayed
         if (newSectionNumber === 0) {
-            document.querySelector('.navigationArrowContainer.down').classList.add("homeIntroPosition")
+            downArrowContainer.classList.add("homeIntroPosition")
         } else {
-            document.querySelector('.navigationArrowContainer.down').classList.remove("homeIntroPosition")
+            downArrowContainer.classList.remove("homeIntroPosition")
         }
+
+        // Displays up arrow if any section other than the first one is displayed
         if (newSectionNumber > 0) {
             prevSectionId = prevSection.referenceId
-            document.querySelector('.navigationArrowContainer.up').style.visibility = "initial"
+            upArrowContainer.style.visibility = "initial"
         } else {
-            document.querySelector('.navigationArrowContainer.up').style.visibility = "hidden"
+            upArrowContainer.style.visibility = "hidden"
         }
+
+        // Displays down arrow if any section other than the last  one is displayed
         if (newSectionNumber < homeViewSections.sections.length - 1) {
             nextSectionId = nextSection.referenceId;
-            document.querySelector('.navigationArrowContainer.down').style.visibility = "initial"
+            downArrowContainer.style.visibility = "initial"
         } else {
-            document.querySelector('.navigationArrowContainer.down').style.visibility = "hidden"
+            downArrowContainer.style.visibility = "hidden"
         }
         this.setState({
             displayedSectionNumber: newSectionNumber,
             prevSectionId: prevSectionId,
             nextSectionId: nextSectionId
         })
-
-
     }
 
     render() {
@@ -76,8 +88,9 @@ export default class HomeView extends Component {
                     <Link
                         activeClass="active"
                         to={this.state.prevSectionId}
-                        spy={true}
-                        onSetActive={() => this.handleSectionChange(-1)}
+                        // spy={true}
+                        // onSetActive={() => this.handleSectionChange(-1)}
+                        smooth={true}
                         duration={1000}>
                         <FontAwesomeIcon icon={faChevronUp} size="lg" />
                     </Link>
@@ -89,12 +102,31 @@ export default class HomeView extends Component {
                 <HomeEducationSection />
                 <HomeExperiencesSection />
                 <HomeProjectsSection />
+                {/* <section id="div0" className="sectionDiv homeIntro">
+                    <h1>div0</h1>
+                </section>
+                <section id="div1" className="sectionDiv">
+                    <h1>div1</h1>
+                </section>
+                <section id="div2" className="sectionDiv">
+                    <h1>div2</h1>
+                </section>
+                <section id="div3" className="sectionDiv">
+                    <h1>div3</h1>
+                </section>
+                <section id="div4" className="sectionDiv">
+                    <h1>div4</h1>
+                </section>
+                <section id="div5" className="sectionDiv">
+                    <h1>div5</h1>
+                </section> */}
                 <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer down fixed">
                     <Link
                         activeClass="active"
                         to={this.state.nextSectionId}
-                        spy={true}
-                        onSetActive={() => this.handleSectionChange(1)}
+                        // spy={true}
+                        // onSetActive={() => this.handleSectionChange(1)}
+                        smooth={true}
                         duration={1000}>
                         <FontAwesomeIcon icon={faChevronDown} size="lg" />
                     </Link>
