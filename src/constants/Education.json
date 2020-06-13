@@ -12,7 +12,7 @@
             },
             {
                 "courseName": "Software Methodology",
-                "courseDescription": "Gained an understanding of software development principals and practices including version control, object-oriented programming, software design, documentation, GUI, mobile app development and multithreading.",
+                "courseDescription": "Gained an understanding of software development principals and practices including version control, OOP, software design, GUI, app development and multithreading.",
                 "technologies": [
                     "Java",
                     "JavaFX",
@@ -57,7 +57,7 @@
             },
             {
                 "courseName": "Intro to Computer Systems",
-                "courseDescription": "Investigated and implemented Operating System concepts including mutlicore architecture, CPU management, thread synchronization, CPU scheduling and more through C programming.",
+                "courseDescription": "Investigated and implemented Operating System concepts including mutlicore architecture, CPU management, thread synchronization, CPU scheduling and more in C.",
                 "technologies": [
                     "C",
                     "Linux"
@@ -65,7 +65,7 @@
             },
             {
                 "courseName": "Intro to Computer Science",
-                "courseDescription": "Gained fundamental understanding in programming concepts including, but not limited to, problem  analysis and  design, object oriented programming, recursion and runtime complexity in Java.",
+                "courseDescription": "Gained understanding in fundamental programming concepts including problem  analysis and design, OOP, recursion and runtime complexity in Java.",
                 "technologies": [
                     "Java"
                 ]
@@ -79,7 +79,7 @@
             },
             {
                 "courseName": "Computer Architecture and Assembly Language",
-                "courseDescription": "Presented topics on computer architecture to highlight lifecycle of the processor by exploring computer arithmetic hardware, memory hierarchy, microprocessor pipeline and MIPS Assembly Language",
+                "courseDescription": "Presented topics on computer architecture by exploring arithmetic hardware, memory hierarchy, microprocessor pipeline and MIPS Assembly Language.",
                 "technologies": [
                     "C",
                     "MIPS Assembly"

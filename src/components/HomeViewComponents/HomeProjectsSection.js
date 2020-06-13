@@ -10,7 +10,7 @@ export default class HomeProjectsSection extends Component {
         return (
             <section id="homeProjectsSection" className="homePageSectionContainer">
                 <div className="sectionContent" id="projectsSectionContent">
-                    <h2>Projects</h2>
+                    <h2>Featured Projects</h2>
                     <div id="projectsContainer">
                         {projectDetails.filter((project) => {
                             return project.featured;

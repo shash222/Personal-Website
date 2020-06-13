@@ -26,6 +26,7 @@
         "endDate": "August 2019",
         "location": "Seattle, WA",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": true
     },
     {
@@ -47,6 +48,7 @@
         "endDate": "Present",
         "location": "Piscataway, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": true
     },
     {
@@ -70,6 +72,7 @@
         "endDate": "Present",
         "location": "Piscataway, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": true
     },
     {
@@ -89,6 +92,7 @@
         "endDate": "August 2018",
         "location": "location",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": false
     },
     {
@@ -108,6 +112,7 @@
         "endDate": "December 2017",
         "location": "Iselin, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": false
     },
     {
@@ -127,6 +132,7 @@
         "endDate": "May 2017",
         "location": "Piscataway, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
         "relevant": false
     },
     {
@@ -153,6 +159,7 @@
         "endDate": "Present",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -182,6 +189,7 @@
         "endDate": "Present",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -208,6 +216,7 @@
         "endDate": "December 2018",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -235,6 +244,7 @@
         "endDate": "December 2018",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": true
     },
     {
@@ -263,6 +273,7 @@
         "endDate": "January 2017",
         "location": "Old Bridge, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -289,6 +300,7 @@
         "endDate": "January 2017",
         "location": "NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     },
     {
@@ -310,6 +322,7 @@
         "endDate": "April 2017",
         "location": "Sayreville, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Volunteer/Leadership",
         "relevant": false
     }
 ]

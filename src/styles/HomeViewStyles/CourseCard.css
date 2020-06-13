@@ -7,7 +7,7 @@
 
 .courseCardWrapper {
     width: 24%;
-    height: 14vh;
+    height: 12vh;
     margin: .5%;
 }
 
@@ -19,4 +19,9 @@
     /* font-size: .8vw;  */
     font-size: 1.5vh;
     background-color: #89ac60;
+}
+
+
+.courseName {
+    font-size: 20px;
 }

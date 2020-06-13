@@ -7,15 +7,6 @@ import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import resume from '../../res/Salman_Hashmi_Resume.pdf'
 
 export default class HomeIntro extends Component {
-    componentDidMount() {
-        // console.log(fs)
-
-        // fs.readdir(__dirname, (err, files) => {
-        //     files.forEach(file => {
-        //         console.log(file);
-        //     });
-        // });
-    }
 
     render() {
         return (

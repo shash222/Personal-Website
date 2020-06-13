@@ -4,15 +4,61 @@ import '../../styles/ExperienceViewStyles/ExperienceSection.css'
 import experience from '../../constants/Experiences.json'
 
 export default class ExperienceSection extends Component {
+    state = {
+        parsedExperiences: {}
+    }
+
+    componentDidMount() {
+        var parsedExperiences = {}
+        experience.forEach((experience, i) => {
+            if (!parsedExperiences[experience.type]) {
+                parsedExperiences[experience.type] = []
+            }
+            parsedExperiences[experience.type].push(experience)
+        })
+        this.setState({ parsedExperiences: parsedExperiences })
+    }
+
+    scrollToPosition(position) {
+        window.scrollTo({
+            top: position,
+            behavior: 'smooth'
+        })
+    }
+
+    scrollToElement(id) {
+        this.scrollToPosition(document.getElementById(id).offsetTop - 100)
+    }
+
     render() {
         return (
             <section id="experienceSectionContainer" className="experienceViewSection">
                 <div id="detailedExperienceContainer">
                     <h2>Experience</h2>
+                    <nav id="experienceViewNavBar">
+                        <ul id="experienceViewNavItems">
+                            {Object.keys(this.state.parsedExperiences).map((type) => (
+                                <li key={type + "NavItem"} className="experienceViewNavItem navItem">
+                                    {/* <a href={`#${type}Heading`}>{type}</a> */}
+                                    <button onClick={() => this.scrollToElement(`${type}Heading`)}>{type}</button>
+                                    {/* <button onClick={() => window.scrollTo({ top: newSectionScrollPosition, behavior: 'smooth' })}>{type}</button> */}
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
                     <div id="detailedExperienceCardsContainer">
-                        {experience.map((experience, i) => (
+                        {Object.keys(this.state.parsedExperiences).map((type) => ([
+                            <h3 key={type + "Heading"} id={type + "Heading"} className="experienceTypeHeading">{type}</h3>,
+                            this.state.parsedExperiences[type].map((experience, i) => (
+                                <DetailedExperienceCard key={experience.company + i} experience={experience} count={i} />
+                            ))
+                        ]))}
+                        {/* {experience.map((experience, i) => (
                             <DetailedExperienceCard key={experience.company + i} experience={experience} count={i} />
-                        ))}
+                        ))} */}
+                        {/* {experience.map((experience, i) => (
+                            <DetailedExperienceCard key={experience.company + i} experience={experience} count={i} />
+                        ))} */}
                     </div>
                 </div>
             </section>

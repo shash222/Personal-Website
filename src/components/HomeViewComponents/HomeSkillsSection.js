@@ -65,35 +65,6 @@ export default class HomeSkillsSection extends Component {
             })
         })
         this.setState({ skillMapping: skillMapping })
-        // experiences.forEach((exp) => {
-        //     exp.skillsGained.forEach((skill) => {
-        //         if (skillMapping[skill] === undefined)
-        //             skillMapping[skill] = new Set()
-        //         skillMapping[skill].add(exp.company)
-        //     })
-        // })
-        // projects.forEach((project) => {
-        //     project.technologies.forEach((technology) => {
-        //         if (skillMapping[technology] === undefined)
-        //             skillMapping[technology] = new Set()
-        //         skillMapping[technology].add(project.name)
-        //     })
-        // })
-        // education.forEach((education) => {
-        //     education.relevantCourses.forEach((course) => {
-        //         if (course.technologies) {
-        //             course.technologies.forEach((technology) => {
-        //                 if (skillMapping[technology] === undefined)
-        //                     skillMapping[technology] = new Set()
-        //                 skillMapping[technology].add(course.courseName)
-        //             })
-        //         }
-
-        //     })
-        // })
-        // Object.keys(skillMapping).map((skill, i) => {
-        //     console.log(skill, skillMapping[skill])
-        // })
     }
 
 

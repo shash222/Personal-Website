@@ -27,3 +27,11 @@
     left: -15vw;
     transition: all .5s linear;
 }
+
+.homeViewNavBarLink {
+    all: unset;
+}
+
+.homeViewNavBarLink:hover {
+    cursor: pointer;
+}

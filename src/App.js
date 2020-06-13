@@ -15,7 +15,6 @@ import { faArrowCircleUp, faChevronRight, faChevronLeft } from '@fortawesome/fre
 import topNavLinksDetails from './constants/TopLinks.json'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -24,35 +23,31 @@ export default class App extends Component {
     this.state = {
       topNavLinks: [""],
       beforeViewChangeIndex: 0,
+      // The following 3 states refer to View Indices
       previousIndex: 0,
       currentIndex: 0,
-      nextIndex: 0
+      nextIndex: 0,
+      // The following states refer to section indices within View
+      currentSectionIndex: 0
     }
     this.addViewTransitionClass = this.addViewTransitionClass.bind(this)
-    this.handleViewNavigationArrowClick = this.handleViewNavigationArrowClick.bind(this)
+    this.handleSectionNavigationArrowClick = this.handleSectionNavigationArrowClick.bind(this)
     this.updateViewNavArrowLinks = this.updateViewNavArrowLinks.bind(this)
     this.handleViewChange = this.handleViewChange.bind(this)
     this.getViewNavArrowText = this.getViewNavArrowText.bind(this)
   }
 
   componentDidMount() {
-    AOS.init({
-      // once: true
-    });
+    AOS.init();
     window.addEventListener('scroll', this.handleScroll)
-    // window.addEventListener('resize', this.handleScroll)
     this.addViewTransitionClass()
     // this.updateViewNavArrowLinks(0)
     this.handleScroll()
   }
 
   handleViewChange() {
-    // window.scrollTo({
-    //   top: 0,
-    //   left: 0,
-    //   behavior: 'auto'
-    // })
     this.updateViewNavArrowLinks(0)
+    this.setState({ currentSectionIndex: 0 })
   }
 
   updateViewNavArrowLinks(viewIncrement) {
@@ -90,18 +85,10 @@ export default class App extends Component {
 
   }
 
-  handleViewNavigationArrowClick(e) {
-    var viewNavArrowContainer =
-      e.target.parentNode.tagName.toLowerCase().localeCompare("div") === 0
-        ? e.target.parentNode
-        : e.target.parentNode.parentNode
-    var viewIncrement =
-      (viewNavArrowContainer.id.localeCompare("leftRouterNavigationArrowContainer") === 0)
-        ? -1
-        : 1
-    this.updateViewNavArrowLinks(viewIncrement)
-    // useHistory().push("/experience")
+  handleSectionNavigationArrowClick(newSectionIndex) {
+    const newSectionScrollPosition = window.innerHeight * newSectionIndex;
 
+    window.scrollTo({ top: newSectionScrollPosition, behavior: 'smooth' })
   }
 
   getViewNavArrowText(index) {
@@ -113,17 +100,12 @@ export default class App extends Component {
   }
 
   scrollToTop() {
-    // console.log("Scrolling")
-    window.scrollTo(0, 0)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+
+    })
   }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0);
-    }
-  }
-
-
 
   handleScroll() {
     var scrollToTopButtonWrapper = document.getElementById("scrollToTopButtonWrapper")
@@ -145,11 +127,10 @@ export default class App extends Component {
         ?
         <div className="App">
           <div id="introBackgroundContainer"></div>
-          {/* onClick={(e) => this.handleViewNavigationArrowClick(e)} */}
           <Router>
             {(this.state.currentIndex !== 0)
               ? <NavLink to={this.state.topNavLinks[this.state.previousIndex]}>
-                <div className="routerNavigationArrowContainer navigationArrowContainer fixed" id="leftRouterNavigationArrowContainer" onClick={(e) => this.handleViewChange()}>
+                <div className="routerNavigationArrowContainer navigationArrowContainer fixed" id="leftRouterNavigationArrowContainer" onClick={() => this.handleViewChange()}>
                   <p>{this.getViewNavArrowText(this.state.previousIndex)}</p>
                   <FontAwesomeIcon icon={faChevronLeft} size="lg" />
                 </div>
@@ -158,7 +139,7 @@ export default class App extends Component {
 
             {(this.state.currentIndex !== this.state.topNavLinks.length - 1)
               ? <NavLink to={this.state.topNavLinks[this.state.nextIndex]}>
-                <div className="routerNavigationArrowContainer navigationArrowContainer fixed" id="rightRouterNavigationArrowContainer" onClick={(e) => this.handleViewNavigationArrowClick(e)}>
+                <div className="routerNavigationArrowContainer navigationArrowContainer fixed" id="rightRouterNavigationArrowContainer" onClick={() => this.handleViewChange()}>
                   <p>{this.getViewNavArrowText(this.state.nextIndex)}</p>
                   <FontAwesomeIcon icon={faChevronRight} size="lg" />
                 </div>
@@ -167,13 +148,21 @@ export default class App extends Component {
 
             <TopNavBar />
 
-            <AnimatedSwitch handleViewChange={this.handleViewChange} scrollToTop={this.scrollToTop} beforeViewChangeIndex={this.state.beforeViewChangeIndex} topNavLinks={this.state.topNavLinks} />
+            <AnimatedSwitch handleViewChange={this.handleViewChange} scrollToTop={this.scrollToTop} beforeViewChangeIndex={this.state.beforeViewChangeIndex} topNavLinks={this.state.topNavLinks}
+              handleSectionNavigationArrowClick={this.handleSectionNavigationArrowClick} />
           </Router>
 
           <div id="scrollToTopButtonWrapper">
-            <button onClick={() => window.scrollTo(0, 0)}>
+            {/* <Link
+              to="aboutMeSectionContainer"
+              smooth={true}
+              duration={500}>
+              <FontAwesomeIcon icon={faArrowCircleUp} size="4x" />
+            </Link> */}
+            <button onClick={() => this.scrollToTop()}>
               <FontAwesomeIcon icon={faArrowCircleUp} size="4x" />
             </button>
+
           </div>
 
         </div >
@@ -193,9 +182,11 @@ const AnimatedSwitch = withRouter(({ location, history, ...props }) => (
       //   node.style.top = 0 + "px";
       // }}
       // onExited={() => }
-      onEntering={() => props.handleViewChange()
-      }
-      onEnter={() => props.scrollToTop()}
+      onEntering={() => {
+        props.handleViewChange();
+        props.scrollToTop();
+      }}
+      // onEntered={() => props.scrollToTop()}
       timeout={1250}
       // mountOnEnter={false}
       classNames={
@@ -204,11 +195,17 @@ const AnimatedSwitch = withRouter(({ location, history, ...props }) => (
           : "slide-right"
       }>
       <Switch location={location}>
-        <Route path="/" exact component={HomeView} />
-        <Route path="/projects" exact component={ProjectsView} />
-        <Route path="/experience" exact component={ExperienceView} />
-        <Route path="/contact" exact component={ContactView} />
-        <Route path="/about" exact component={AboutMeView} />
+        {/* handleSectionNavigationArrowClick */}
+        {/* <Route path="/" exact component={HomeView} /> */}
+        {/* <Route path="/about" exact component={AboutMeView} /> */}
+        {/* <Route path="/experience" exact component={ExperienceView} /> */}
+        {/* <Route path="/projects" exact component={ProjectsView} /> */}
+        {/* <Route path="/contact" exact component={ContactView} /> */}
+        <Route path="/" exact render={() => <HomeView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} />} />
+        <Route path="/about" exact render={() => <AboutMeView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} />} />
+        <Route path="/experience" exact render={() => <ExperienceView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} />} />
+        <Route path="/projects" exact render={() => <ProjectsView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} />} />
+        <Route path="/contact" exact render={() => <ContactView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} />} />
 
       </Switch>
     </CSSTransition>

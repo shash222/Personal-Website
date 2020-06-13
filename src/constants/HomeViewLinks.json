@@ -17,11 +17,11 @@
             "referenceId": "homeEducationSection"
         },
         {
-            "linkText": "Experience",
+            "linkText": "Relevant Experience",
             "referenceId": "homeExperiencesSection"
         },
         {
-            "linkText": "Projects",
+            "linkText": "Featured Projects",
             "referenceId": "homeProjectsSection"
         }
     ]

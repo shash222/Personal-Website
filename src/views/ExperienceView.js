@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ExperienceViewIntroSection from '../components/ExperienceViewComponents/ExperienceViewIntroSection.js'
 import ExperienceSection from '../components/ExperienceViewComponents/ExperienceSection.js'
 import '../styles/ExperienceViewStyles/ExperienceView.css'
 
 export default class ExperienceView extends Component {
     render() {
-        return(
+        return (
             <div id="experienceView" className="view">
-                <ExperienceViewIntroSection />
-                <ExperienceSection />
+                <ExperienceViewIntroSection handleSectionNavigationArrowClick={this.props.handleSectionNavigationArrowClick} />
+                <ExperienceSection handleSectionNavigationArrowClick={this.props.handleSectionNavigationArrowClick} />
             </div>
         )
     }

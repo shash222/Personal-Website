@@ -2,16 +2,13 @@ import React from 'react';
 import { Component } from 'react';
 import '../styles/HomeViewStyles/HomeView.css'
 import HomeIntro from '../components/HomeViewComponents/HomeIntro.js'
-// import HomeAboutMe from '../components/HomeViewComponents/HomeAboutMe.js'
 import HomeEducationSection from '../components/HomeViewComponents/HomeEducationSection.js'
 import HomeExperiencesSection from '../components/HomeViewComponents/HomeExperiencesSection.js'
-// import HomeSkillsSection from '../components/HomeViewComponents/HomeSkillsSection.js'
 import HomeProjectsSection from '../components/HomeViewComponents/HomeProjectsSection.js'
 import HomeViewNavBar from '../components/HomeViewComponents/HomeViewNavBar.js';
 import HomeNonTechSkillsSection from '../components/HomeViewComponents/HomeNonTechSkillsSection';
 import HomeTechSkillsSection from '../components/HomeViewComponents/HomeTechSkillsSection';
 import homeViewSections from '../constants/HomeViewLinks.json'
-import { Link } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -48,7 +45,7 @@ export default class HomeView extends Component {
         } else {
             document.querySelector('.navigationArrowContainer.down').classList.remove("homeIntroPosition")
         }
-        if (newSectionNumber > 0) {
+        if (newSectionNumber > 0 && prevSection) {
             prevSectionId = prevSection.referenceId
             document.querySelector('.navigationArrowContainer.up').style.visibility = "initial"
         } else {
@@ -72,32 +69,18 @@ export default class HomeView extends Component {
     render() {
         return (
             <div id="homeView" className="view">
-                <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer up fixed">
-                    <Link
-                        activeClass="active"
-                        to={this.state.prevSectionId}
-                        spy={true}
-                        onSetActive={() => this.handleSectionChange(-1)}
-                        duration={1000}>
-                        <FontAwesomeIcon icon={faChevronUp} size="lg" />
-                    </Link>
+                <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer up fixed" onClick={() => this.props.handleSectionNavigationArrowClick(this.state.displayedSectionNumber - 1)}>
+                    <FontAwesomeIcon icon={faChevronUp} size="lg" />
                 </div>
-                <HomeViewNavBar handleSectionChange={this.handleSectionChange} currentSectionNumber={this.state.displayedSectionNumber} getCurrentSectionNumber={this.getSectionNumber} />
+                <HomeViewNavBar handleSectionChange={this.handleSectionChange} currentSectionNumber={this.state.displayedSectionNumber} getCurrentSectionNumber={this.getSectionNumber} handleSectionNavigationArrowClick={this.props.handleSectionNavigationArrowClick} />
                 <HomeIntro />
                 <HomeTechSkillsSection />
                 <HomeNonTechSkillsSection />
                 <HomeEducationSection />
                 <HomeExperiencesSection />
                 <HomeProjectsSection />
-                <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer down fixed">
-                    <Link
-                        activeClass="active"
-                        to={this.state.nextSectionId}
-                        spy={true}
-                        onSetActive={() => this.handleSectionChange(1)}
-                        duration={1000}>
-                        <FontAwesomeIcon icon={faChevronDown} size="lg" />
-                    </Link>
+                <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer down fixed" onClick={() => this.props.handleSectionNavigationArrowClick(this.state.displayedSectionNumber + 1)}>
+                    <FontAwesomeIcon icon={faChevronDown} size="lg" />
                 </div>
             </div>
         );
