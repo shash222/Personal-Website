@@ -11,17 +11,26 @@
     margin: .5%;
 }
 
-.courseCard > .front {
+.courseCard>.front {
     font-size: 1vw;
 }
 
-.courseCard > .back {
+.courseCard>.back {
     /* font-size: .8vw;  */
     font-size: 1.5vh;
     background-color: #89ac60;
 }
 
-
 .courseName {
     font-size: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+    .courseCardWrapper {
+        height: 50px;
+        width: 30%;
+    }
+    .courseName {
+        font-size: 12px;
+    }
 }

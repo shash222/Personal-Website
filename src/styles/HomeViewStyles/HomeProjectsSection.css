@@ -3,6 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 10vh;
+    height: 60vh;
     /* border: 1px solid black; */
     /* height: 70vh; */
 }
@@ -42,5 +43,13 @@
     to {
         background-color: transparent;
         filter: invert(0%);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #projectsContainer {
+        height: initial;
+        margin-top: unset;
+        margin-bottom: 20px;
     }
 }

@@ -35,7 +35,7 @@
         "href": "#"
     },
     {
-        "name": "anas-anoshia.hashmi.site",
+        "name": "demo.weddingPHP.hashmi.site",
         "description": "Responsive website designed to handle RSVPs for wedding. Developed using HTML, CSS, JavaScript, PHP and SQL.  To view website, login with the following credentials:\nFirst Name: testFirst\nLast Name: testLast\nCity: testCity",
         "status": "Completed",
         "technologies": [
@@ -49,12 +49,12 @@
         "featured": false,
         "course": "",
         "sample": true,
-        "sampleLink": "https://anas-anoshia.hashmi.site",
-        "githubLink": "https://github.com/shash222/Wedding_RSVP_Website",
+        "sampleLink": "https://demo.weddingPHP.hashmi.site",
+        "githubLink": "https://github.com/shash222/Demo_Wedding_RSVP_Website",
         "href": "#"
     },
     {
-        "name": "wedding.hashmi.site ",
+        "name": "demo.wedding.hashmi.site ",
         "description": "Responsive website designed to handle RSVPs for wedding. Developed using ReactJS, Node.js and SQL. To view website, login with the following credentials:\nName: testName\nCity: testCity",
         "status": "Completed",
         "technologies": [
@@ -66,8 +66,8 @@
         "featured": true,
         "course": "",
         "sample": true,
-        "sampleLink": "https://wedding.hashmi.site",
-        "githubLink": "https://github.com/shash222/Wedding_RSVP_React",
+        "sampleLink": "https://demo.wedding.hashmi.site",
+        "githubLink": "https://github.com/shash222/Demo_Wedding_RSVP_React",
         "href": "#"
     },
     {

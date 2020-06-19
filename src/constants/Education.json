@@ -4,6 +4,8 @@
         "location": "New Brunswick, NJ",
         "startDate": "September 2016",
         "graduationDate": "May 2020",
+        "abbreviatedStartDate": "09/2016",
+        "abbreviatedGraduationDate": "09/2016",
         "description": "B.S. in Computer Engineering and Computer Science",
         "relevantCourses": [
             {

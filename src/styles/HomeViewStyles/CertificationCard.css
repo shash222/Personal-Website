@@ -10,12 +10,12 @@
     margin: .5%;
 }
 
-.certificationCard > .front {
+.certificationCard>.front {
     flex-direction: column;
     background-color: #67973f;
 }
 
-.certificationCard > .back {
+.certificationCard>.back {
     background-color: #89ac60;
 }
 
@@ -30,4 +30,24 @@
     font-size: 22px;
     margin-bottom: 0;
     /* font-weight: bold; */
+}
+
+@media screen and (max-width: 1300px) {
+    .certificationCardWrapper {
+        height: 75px;
+        width: 30%;
+    }
+    .certificationCard .certificationPlatform {
+        font-size: 12px;
+    }
+    .certificationCard .certification {
+        font-size: 12px;
+        font-weight: lighter;
+        font-style: italic;
+        margin: 0;
+    }
+    .certificationStatus {
+        margin-top: 0;
+        font-size: 10px;
+    }
 }

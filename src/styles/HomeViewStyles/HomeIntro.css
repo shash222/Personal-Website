@@ -132,3 +132,37 @@
         /* background-color: transparent; */
     }
 }
+
+@media screen and (max-width: 1300px) {
+    #introSection {
+        padding-right: unset;
+        top: 20%;
+    }
+    #description {
+        font-size: 20px;
+        width: 100%;
+    }
+    #name {
+        font-size: 50px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    #title {
+        font-size: 30px !important;
+        margin-bottom: 15px;
+        font-weight: 650;
+    }
+    #homeResourcesContainer {
+        margin-top: 50px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .homeResource {
+        margin-top: 10px;
+        width: 40%;
+    }
+    .homeResource+.homeResource {
+        margin-left: auto;
+    }
+}

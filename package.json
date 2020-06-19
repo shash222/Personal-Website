@@ -13,6 +13,7 @@
     "aos": "^2.3.4",
     "chart.js": "^2.9.3",
     "chartjs-plugin-datalabels": "^0.7.0",
+    "chartjs-plugin-deferred": "^1.0.1",
     "core-js": "^3.6.5",
     "fetch": "^1.1.0",
     "list-react-files": "^0.2.0",

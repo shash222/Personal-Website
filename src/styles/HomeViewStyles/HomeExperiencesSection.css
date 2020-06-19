@@ -51,3 +51,14 @@
         filter: invert(0%);
     }
 }
+
+@media screen and (max-width: 1300px) {
+    #verticalBar {
+        display: none;
+    }
+    #experiencesContainer {
+        padding-left: unset;
+        margin-top: unset;
+        margin-bottom: 20px;
+    }
+}

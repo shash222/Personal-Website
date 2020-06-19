@@ -17,3 +17,5 @@ svg {
     margin-top: 0;
     padding-top: 0;
 }
+
+@media screen and (max-width: 1300px) {}

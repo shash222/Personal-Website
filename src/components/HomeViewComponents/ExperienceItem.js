@@ -11,8 +11,8 @@ export default class ExperienceItem extends Component {
                     <div className="connectingLine"></div>
                     {/* <p style={{float:"right"}}>tests</p> */}
                     <h3>{this.props.experience.position}
-                        {(this.props.experience.company.length > 0) 
-                            ?<span className="companyName"> @ {this.props.experience.company}</span>
+                        {(this.props.experience.company.length > 0)
+                            ? <span><span className="atSymbol">@</span><span className="companyName"> {this.props.experience.company}</span></span>
                             : null
                         }
                     </h3>

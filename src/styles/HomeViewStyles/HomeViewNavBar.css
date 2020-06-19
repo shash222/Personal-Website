@@ -35,3 +35,23 @@
 .homeViewNavBarLink:hover {
     cursor: pointer;
 }
+
+@media screen and (max-width: 1300px) {
+    #homeViewNavBarContainer {
+        /* display: none; */
+        width: 50vw;
+        left: -50vw;
+        display: flex;
+        align-items: center;
+        height: 105vh;
+        background-color: rgb(0, 0, 0, .8);
+    }
+    #homeViewNavBarContainer.show {
+        left: 0;
+        transition: all .5s linear;
+    }
+    #homeViewNavBarContainer.hide {
+        left: -50vw;
+        transition: all .5s linear;
+    }
+}

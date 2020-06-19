@@ -1,7 +1,6 @@
 .experienceContainer {
     border: 1px solid #29b0ac;
     padding: 10px;
-
 }
 
 .experienceContent {
@@ -26,4 +25,28 @@
 .experienceContent * {
     text-align: justify;
     padding: 2px 1px 2px 1px;
+}
+
+@media screen and (max-width: 1300px) {
+    .connectingLine {
+        display: none;
+    }
+    .experienceContainer {
+        margin: 5px;
+        /* border: unset; */
+        /* padding: unset; */
+    }
+    .experienceContent * {
+        padding: unset;
+    }
+    .experienceContent>h3 {
+        font-size: 18px;
+        height: 50px;
+    }
+    .atSymbol {
+        display: none;
+    }
+    .companyName {
+        display: block;
+    }
 }

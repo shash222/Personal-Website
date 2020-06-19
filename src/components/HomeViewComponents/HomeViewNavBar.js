@@ -9,11 +9,17 @@ export default class HomeViewNavBar extends Component {
         this.handleScroll = this.handleScroll.bind(this);
         this.animateHomeViewNavBar = this.animateHomeViewNavBar.bind(this);
         this.setHomeViewNavLinkToActive = this.setHomeViewNavLinkToActive.bind(this);
+        this.scrollToPosition = this.scrollToPosition.bind(this);
+        this.scrollToElement = this.scrollToElement.bind(this);
+        this.handleHomeViewNavLinkClick = this.handleHomeViewNavLinkClick.bind(this);
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-        this.setHomeViewNavLinkToActive();
+        // Only add scrolll event if not mobile/tablet
+        if (!window.matchMedia('(max-width: 1300px)').matches) {
+            window.addEventListener('scroll', this.handleScroll);
+            this.setHomeViewNavLinkToActive();
+        }
     }
 
     componentWillUnmount() {
@@ -65,15 +71,37 @@ export default class HomeViewNavBar extends Component {
         // }
         // elem.style.left = newLeftPosition;
     }
+    scrollToPosition(position) {
+        window.scrollTo({
+            top: position,
+            behavior: 'smooth'
+        })
+    }
+
+    scrollToElement(id) {
+        this.scrollToPosition(document.getElementById(id).offsetTop + .05 * window.innerHeight)
+    }
 
 
+    handleHomeViewNavLinkClick(referenceId, index) {
+        // Mobile/Tablet
+        if (window.matchMedia('(max-width: 1300px)').matches) {
+            this.scrollToElement(referenceId)
+            this.props.closeNavBar();
+        }
+        // Desktop/Laptop
+        else {
+            this.props.handleSectionNavigationArrowClick(index)
+        }
+
+    }
 
     render() {
         return (
             <nav id="homeViewNavBarContainer" >
                 <ul id="homeViewNavBarItems">
                     {navItems.sections.slice(1).map((item, i) => (
-                        <li key={item.referenceId + "Link"} className="navItem" onClick={() => this.props.handleSectionNavigationArrowClick(i + 1)}>
+                        <li key={item.referenceId + "Link"} className="navItem" onClick={() => this.handleHomeViewNavLinkClick(item.referenceId, i + 1)}>
                             <button className="homeViewNavBarLink">{item.linkText}</button>
                         </li>
                     ))}

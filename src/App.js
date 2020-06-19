@@ -11,7 +11,7 @@ import TopNavBar from './components/HomeViewComponents/TopNavBar.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowCircleUp, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleUp, faChevronRight, faChevronLeft, faTimes, faHome, faBars } from '@fortawesome/free-solid-svg-icons'
 import topNavLinksDetails from './constants/TopLinks.json'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -28,13 +28,17 @@ export default class App extends Component {
       currentIndex: 0,
       nextIndex: 0,
       // The following states refer to section indices within View
-      currentSectionIndex: 0
+      currentSectionIndex: 0,
+      isHomeNavBarOpen: false
     }
     this.addViewTransitionClass = this.addViewTransitionClass.bind(this)
     this.handleSectionNavigationArrowClick = this.handleSectionNavigationArrowClick.bind(this)
     this.updateViewNavArrowLinks = this.updateViewNavArrowLinks.bind(this)
     this.handleViewChange = this.handleViewChange.bind(this)
     this.getViewNavArrowText = this.getViewNavArrowText.bind(this)
+    this.displayTopLeftButtons = this.displayTopLeftButtons.bind(this);
+    this.openHomeNavBar = this.openHomeNavBar.bind(this)
+    this.closeHomeNavBar = this.closeHomeNavBar.bind(this)
   }
 
   componentDidMount() {
@@ -43,6 +47,38 @@ export default class App extends Component {
     this.addViewTransitionClass()
     // this.updateViewNavArrowLinks(0)
     this.handleScroll()
+
+  }
+
+  componentDidUpdate() {
+    this.displayTopLeftButtons()
+  }
+
+  openHomeNavBar() {
+    document.getElementById("homeViewNavBarContainer").classList.add('show')
+    document.getElementById("homeViewNavBarContainer").classList.remove('hide')
+    document.getElementsByClassName('fa-times')[0].style.display = "block";
+    document.getElementsByClassName('fa-bars')[0].style.display = "none";
+    // this.setState({ isHomeNavBarOpen: true })
+  }
+
+  closeHomeNavBar() {
+    document.getElementById("homeViewNavBarContainer").classList.add('hide')
+    document.getElementById("homeViewNavBarContainer").classList.remove('show')
+    document.getElementsByClassName('fa-times')[0].style.display = "none";
+    document.getElementsByClassName('fa-bars')[0].style.display = "block";
+    // this.setState({ isHomeNavBarOpen: false })
+  }
+
+  displayTopLeftButtons() {
+    if (window.location.pathname === "/") {
+      document.getElementsByClassName('fa-home')[0].style.display = "none";
+      document.getElementsByClassName('fa-bars')[0].style.display = "block";
+    } else {
+      document.getElementsByClassName('fa-home')[0].style.display = "block";
+      document.getElementsByClassName('fa-bars')[0].style.display = "none";
+    }
+    document.getElementsByClassName('fa-times')[0].style.display = "none";
   }
 
   handleViewChange() {
@@ -128,6 +164,11 @@ export default class App extends Component {
         <div className="App">
           <div id="introBackgroundContainer"></div>
           <Router>
+            <div id="topLeftIcon">
+              <span id="hamburgerMenuButton" onClick={this.openHomeNavBar}><FontAwesomeIcon icon={faBars} color='white' size="2x" /></span>
+              <span id="closeMenuButton" onClick={this.closeHomeNavBar}><FontAwesomeIcon icon={faTimes} color='white' size="2x" /></span>
+              <span id="homeButton"><NavLink exact to={"/"}><FontAwesomeIcon icon={faHome} color='white' size="2x" /></NavLink></span>
+            </div>
             {(this.state.currentIndex !== 0)
               ? <NavLink to={this.state.topNavLinks[this.state.previousIndex]}>
                 <div className="routerNavigationArrowContainer navigationArrowContainer fixed" id="leftRouterNavigationArrowContainer" onClick={() => this.handleViewChange()}>
@@ -149,7 +190,7 @@ export default class App extends Component {
             <TopNavBar />
 
             <AnimatedSwitch handleViewChange={this.handleViewChange} scrollToTop={this.scrollToTop} beforeViewChangeIndex={this.state.beforeViewChangeIndex} topNavLinks={this.state.topNavLinks}
-              handleSectionNavigationArrowClick={this.handleSectionNavigationArrowClick} />
+              handleSectionNavigationArrowClick={this.handleSectionNavigationArrowClick} closeHomeNavBar={this.closeHomeNavBar} />
           </Router>
 
           <div id="scrollToTopButtonWrapper">
@@ -201,7 +242,7 @@ const AnimatedSwitch = withRouter(({ location, history, ...props }) => (
         {/* <Route path="/experience" exact component={ExperienceView} /> */}
         {/* <Route path="/projects" exact component={ProjectsView} /> */}
         {/* <Route path="/contact" exact component={ContactView} /> */}
-        <Route path="/" exact render={() => <HomeView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} />} />
+        <Route path="/" exact render={() => <HomeView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} closeHomeNavBar={props.closeHomeNavBar} />} />
         <Route path="/about" exact render={() => <AboutMeView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} />} />
         <Route path="/experience" exact render={() => <ExperienceView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} />} />
         <Route path="/projects" exact render={() => <ProjectsView handleSectionNavigationArrowClick={props.handleSectionNavigationArrowClick} />} />

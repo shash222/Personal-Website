@@ -74,3 +74,17 @@
     text-align: center;
     transform: translateX(-50%);
 }
+
+@media screen and (max-width: 1300px) {
+    .skillCardWrapper {
+        width: 150px;
+        min-width: unset;
+        height: 50px;
+    }
+    .skillName {
+        font-size: 20px;
+    }
+    .cardWrapper:hover>.card {
+        transform: unset;
+    }
+}

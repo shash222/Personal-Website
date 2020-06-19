@@ -1,3 +1,9 @@
 #educationContainer {
     height: fit-content
 }
+
+@media screen and (max-width: 1300px) {
+    #educationContainer {
+        width: 100vw;
+    }
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import { VictoryChart, VictoryBar, VictoryAxis, VictoryContainer, VictoryLabel } from 'victory';
 import { HorizontalBar } from 'react-chartjs-2';
 import 'chartjs-plugin-datalabels';
+import 'chartjs-plugin-deferred';
 import '../../styles/HomeViewStyles/TechSkillsChart.css';
 
 export default class TechSkillChart extends Component {
@@ -61,7 +62,6 @@ export default class TechSkillChart extends Component {
             for (var i = detail.skill.length; i <= maxLength; i++) {
                 skillString += " "
             }
-            console.log(skillString, skillString.length)
             labels.push(`${skillString}`)
             data.push(detail.skillLevel);
             backgroundColors.push(this.props.color);
@@ -95,6 +95,10 @@ export default class TechSkillChart extends Component {
                         // width={100}
                         height={this.state.chartHeight}
                         options={{
+                            animation: {
+                                easing: "linear",
+                                duration: 1000
+                            },
                             layout: {
                             },
                             legend: {
@@ -109,22 +113,29 @@ export default class TechSkillChart extends Component {
                                 fontColor: 'white'
                             },
                             plugins: {
+
                                 datalabels: {
                                     display: false,
                                     // labels: {
 
                                     // },
-                                    padding: 50,
-                                    textShadowColor: 'red',
-                                    color: 'orange',
+                                    padding: {
+                                        // right: 10
+                                    },
+                                    // textShadowColor: 'red',
+                                    // color: 'orange',
                                     anchor: 'end',
-                                    align: 'top',
+                                    offset: 100,
+                                    // align: 'end',
+                                    // align: 'top',
                                     // formatter: Math.round,
                                     font: {
                                         weight: 'bold'
                                     }
+                                },
+                                deferred: {
+                                    delay: 1000
                                 }
-
                             },
                             scales: {
                                 xAxes: [{

@@ -8,15 +8,15 @@
     height: 90%;
 }
 
-
 .schoolHeader {
     display: flex;
+    flex-direction: row;
 }
 
 .schoolName {
     display: inline-block;
     font-size: 2vw;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
@@ -29,23 +29,41 @@
 }
 
 .educationDescription {
-    text-align: left;
-    font-size: 1.25vw;
     color: black;
+    margin-left: 0;
 }
 
 .enrolledDates {
-    font-size: 1.5vw;
     margin-right: 0;
     margin-left: auto;
     color: black;
 }
 
-.schoolLocation { 
-    margin-left: 0;
-    margin-right: auto;
+.schoolLocation {
+    margin-right: 0;
+    margin-left: auto;
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     font-weight: bold;
     color: black;
+}
+
+.schoolHeaderSubText {
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1300px) {
+    .schoolName {
+        font-size: 20px;
+    }
+    .schoolLocation {
+        font-size: 15px
+    }
+    .schoolHeaderSubText {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+    }
 }

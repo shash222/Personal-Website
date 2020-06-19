@@ -22,10 +22,28 @@ export default class HomeView extends Component {
         }
         this.getSectionNumber = this.getSectionNumber.bind(this)
         this.handleSectionChange = this.handleSectionChange.bind(this)
+        this.openHomeNavBar = this.openHomeNavBar.bind(this);
+        this.closeHomeNavBar = this.closeHomeNavBar.bind(this);
     }
 
     componentDidMount() {
         this.handleSectionChange(0)
+    }
+
+    openHomeNavBar() {
+        document.getElementById("homeViewNavBarContainer").classList.add('show')
+        document.getElementById("homeViewNavBarContainer").classList.remove('hide')
+        document.getElementsByClassName('fa-times')[0].style.display = "block";
+        document.getElementsByClassName('fa-bars')[0].style.display = "none";
+        // this.setState({ isHomeNavBarOpen: true })
+    }
+
+    closeHomeNavBar() {
+        document.getElementById("homeViewNavBarContainer").classList.add('hide')
+        document.getElementById("homeViewNavBarContainer").classList.remove('show')
+        document.getElementsByClassName('fa-times')[0].style.display = "none";
+        document.getElementsByClassName('fa-bars')[0].style.display = "block";
+        // this.setState({ isHomeNavBarOpen: false })
     }
 
     getSectionNumber() {
@@ -72,7 +90,7 @@ export default class HomeView extends Component {
                 <div className="homeNavigationArrowContainer navigationArrowContainer viewNavigationArrowContainer up fixed" onClick={() => this.props.handleSectionNavigationArrowClick(this.state.displayedSectionNumber - 1)}>
                     <FontAwesomeIcon icon={faChevronUp} size="lg" />
                 </div>
-                <HomeViewNavBar handleSectionChange={this.handleSectionChange} currentSectionNumber={this.state.displayedSectionNumber} getCurrentSectionNumber={this.getSectionNumber} handleSectionNavigationArrowClick={this.props.handleSectionNavigationArrowClick} />
+                <HomeViewNavBar handleSectionChange={this.handleSectionChange} currentSectionNumber={this.state.displayedSectionNumber} getCurrentSectionNumber={this.getSectionNumber} handleSectionNavigationArrowClick={this.props.handleSectionNavigationArrowClick} closeNavBar={this.closeHomeNavBar} />
                 <HomeIntro />
                 <HomeTechSkillsSection />
                 <HomeNonTechSkillsSection />
