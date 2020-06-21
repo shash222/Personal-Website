@@ -95,3 +95,20 @@
 [data-aos="rotate"].aos-animate {
     transform: rotate(0deg);
 }
+
+@media screen and (max-device-width: 1300px) {
+    .descriptionCardWrapper {
+        width: 25vw;
+        height: 25vw;
+        margin: 10px;
+    }
+    .descriptionWord {
+        height: 100%;
+        top: 0%;
+        margin: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 15px;
+    }
+}

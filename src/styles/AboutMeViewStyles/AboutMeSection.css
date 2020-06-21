@@ -27,3 +27,12 @@
 #aboutMeSectionContainer {
     margin-bottom: 100px;
 }
+
+@media screen and (max-device-width: 1300px) {
+    #detailedAboutMeContainer {
+        width: 100vw;
+    }
+    #faqHeading {
+        font-size: 30px;
+    }
+}

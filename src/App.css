@@ -225,30 +225,18 @@ section>div {
     .routerNavigationArrowContainer {
         display: none;
     }
-    .introSection {
-        /* background-color: yellowgreen; */
-    }
     #introBackgroundContainer {
-        /* position: absolute;
-        top: 0; */
         top: 5%;
         height: 30%;
         width: 60%;
         left: 20%;
         background-image: url("./res/images/me_wedding_mobile.jpg");
         background-repeat: no-repeat;
-        /* background-size: 250%; */
         background-size: 150%;
         background-position: 50% 0%;
         border-radius: 100%;
         z-index: 1;
     }
-    /* #introBackgroundContainer {
-        background-image: url("./res/images/me_wedding_mobile.jpg");
-        background-repeat: no-repeat;
-        background-size: 250%;
-        background-position: 50% 25%;
-    } */
     #topLeftIcon {
         z-index: 5;
         display: block;
@@ -261,5 +249,6 @@ section>div {
     }
     h1 {
         width: 100% !important;
+        font-size: 50px !important;
     }
 }

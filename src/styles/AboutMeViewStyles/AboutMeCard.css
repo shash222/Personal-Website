@@ -27,3 +27,10 @@
     font-weight: bold;
     color: black;
 }
+
+@media screen and (max-device-width: 1300px) {
+    .aboutMeCardContainer {
+        width: 80%;
+        height: 40vh;
+    }
+}
