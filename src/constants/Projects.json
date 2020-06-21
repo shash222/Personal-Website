@@ -4,8 +4,8 @@
         "description": "My portfolio website showcasing my experience in work, class and personal projects. Devloped using ReactJS and Node.js with custom JavaScript and Animation on Scroll library animations. ",
         "status": "Ongoing",
         "technologies": [
-            "ReactJS",
-            "Node.js"
+            "CSS",
+            "ReactJS"
         ],
         "type": "Personal",
         "featured": false,
@@ -58,6 +58,7 @@
         "description": "Responsive website designed to handle RSVPs for wedding. Developed using ReactJS, Node.js and SQL. To view website, login with the following credentials:\nName: testName\nCity: testCity",
         "status": "Completed",
         "technologies": [
+            "CSS",
             "ReactJS",
             "Node.js",
             "SQL"
@@ -76,6 +77,7 @@
         "extendedDescription": "Responsive website designed to provide students relevant information information about upcoming seminars for the organization. Created functional admin panel which updates seminar information. Seminar information is exposed as REST API and fetched on the front-end. Developed using ReactJS and Node.js.",
         "status": "Ongoing",
         "technologies": [
+            "CSS",
             "ReactJS",
             "Node.js"
         ],

@@ -94,24 +94,32 @@ export default class DetailedProjectCard extends Component {
         return (
             <div className="detailedProjectCardContainer" data-aos="zoom-in" data-aos-duration="1200" data-aos-once="true">
                 <div className="detailedProjectCard">
-                    <h3 className="detailedProjectCardProjectName">{this.props.project.name}</h3>
-                    <p className="detailedProjectCardProjectDescription">{this.props.project.description}</p>
-                    <p className="skills"><b>Skills: </b>{this.props.project.technologies.join(", ")}</p>
-                    <p className="status"><b>Status: </b>
-                        {this.props.project.status === "Ongoing"
-                            ? <span className="ongoing">{this.props.project.status}</span>
-                            : this.props.project.status === "In Progress"
-                                ? <span className="inProgress">{this.props.project.status}</span>
-                                : <span className="completed">{this.props.project.status}</span>}</p>
+                    <div className="detailedProjectCardInfo">
+                        <h3 className="detailedProjectCardProjectName">{this.props.project.name}</h3>
+                        <p className="detailedProjectCardProjectDescription">{this.props.project.description}</p>
+                        <p className="skills"><b>Skills: </b>{this.props.project.technologies.join(", ")}</p>
+                        <p className="status"><b>Status: </b>
+                            {this.props.project.status === "Ongoing"
+                                ? <span className="ongoing">{this.props.project.status}</span>
+                                : this.props.project.status === "In Progress"
+                                    ? <span className="inProgress">{this.props.project.status}</span>
+                                    : <span className="completed">{this.props.project.status}</span>}</p>
+
+                    </div>
                     <div className="detailedProjectCardClickablesContainer">
                         {this.props.project.sample
                             ? (
                                 [<a key={this.props.project.name + "SiteLink"} target="_blank" rel="noopener noreferrer"
                                     href={this.props.project.sampleLink}>Visit Website</a>,
-                                <button key={this.props.project.name + "SampleButton"} onClick={this.handleClick} data-sample-url={this.props.project.sampleLink}>View Sample</button>]
+                                // (!window.matchMedia('(max-width: 1300px)').matches)
+                                // Desktop Version
+                                <button key={this.props.project.name + "SampleButton"} onClick={this.handleClick} data-sample-url={this.props.project.sampleLink}>View Sample</button>
+                                    // Mobile Version
+                                ]
                             )
                             : null}
                         {this.props.project.githubLink
+                            // If github link included and desktop version
                             ? <a target="_blank" rel="noopener noreferrer"
                                 href={this.props.project.githubLink}>View on GitHub</a>
                             : null}
