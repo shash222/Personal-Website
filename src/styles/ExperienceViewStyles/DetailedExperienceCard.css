@@ -15,12 +15,6 @@
     padding-bottom: 2%;
 }
 
-.detailedExperienceCardHeader {
-    border-bottom: .5px solid gray;
-    text-transform: uppercase;
-    /* justify-content: space-evenly; */
-}
-
 .detailedExperienceCardBody {
     padding-left: 2.5%;
     padding-right: 2.5%;
@@ -33,12 +27,18 @@
     /* justify-content: space-evenly; */
 }
 
-.detailedExperienceCardHeader > .detailedExperienceCardCompanyLogo{
+.detailedExperienceCardHeader>.detailedExperienceCardCompanyLogo {
     margin-left: 5%;
     margin-right: auto;
 }
 
-.detailedExperienceCardHeader > .detailedExperienceCardCompanyName{
+.detailedExperienceCardHeader {
+    border-bottom: .5px solid gray;
+    text-transform: uppercase;
+    /* justify-content: space-evenly; */
+}
+
+.detailedExperienceCardHeader>.detailedExperienceCardCompanyName {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-right: auto;
@@ -46,19 +46,52 @@
     text-align: center;
 }
 
-.detailedExperienceCardHeader > .detailedExperienceCardCompanyRole{
+.detailedExperienceCardHeader>.detailedExperienceCardCompanyRole {
     margin-left: auto;
     margin-right: 5%;
     margin-top: auto;
     text-align: right;
 }
 
-.detailedExperienceCardFooter > .detailedExperienceCardCompanyWorkDuration{
+.detailedExperienceCardFooter>.detailedExperienceCardCompanyWorkDuration {
     margin-left: 2.5%;
     /* margin-right: auto; */
 }
 
-.detailedExperienceCardFooter > .detailedExperienceCardCompanyWorkLocation{
+.detailedExperienceCardFooter>.detailedExperienceCardCompanyWorkLocation {
     margin-left: auto;
     margin-right: 2.5%;
+}
+
+@media screen and (max-width: 1300px) {
+    .experienceTypeHeading {
+        text-align: center !important;
+        margin-left: 0 !important;
+    }
+    .detailedExperienceCardContainer {
+        width: 100%;
+        margin: auto;
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+        /* padding: 2%; */
+        margin-bottom: 5%;
+    }
+    .detailedExperienceCardHeader {
+        border-bottom: .5px solid gray;
+        text-transform: uppercase;
+        /* justify-content: space-evenly; */
+        text-align: center;
+        flex-direction: column;
+    }
+    .detailedExperienceCardHeader>.detailedExperienceCardCompanyName {
+        margin: unset;
+        transform: translateX(0%);
+        font-size: 20px;
+        text-align: center;
+    }
+    .detailedExperienceCardHeader>.detailedExperienceCardCompanyRole {
+        margin: unset;
+        text-align: center;
+    }
 }

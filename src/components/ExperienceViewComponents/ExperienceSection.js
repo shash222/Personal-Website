@@ -39,9 +39,7 @@ export default class ExperienceSection extends Component {
                         <ul id="experienceViewNavItems">
                             {Object.keys(this.state.parsedExperiences).map((type) => (
                                 <li key={type + "NavItem"} className="experienceViewNavItem navItem">
-                                    {/* <a href={`#${type}Heading`}>{type}</a> */}
                                     <button onClick={() => this.scrollToElement(`${type}Heading`)}>{type}</button>
-                                    {/* <button onClick={() => window.scrollTo({ top: newSectionScrollPosition, behavior: 'smooth' })}>{type}</button> */}
                                 </li>
                             ))}
                         </ul>
@@ -53,12 +51,6 @@ export default class ExperienceSection extends Component {
                                 <DetailedExperienceCard key={experience.company + i} experience={experience} count={i} />
                             ))
                         ]))}
-                        {/* {experience.map((experience, i) => (
-                            <DetailedExperienceCard key={experience.company + i} experience={experience} count={i} />
-                        ))} */}
-                        {/* {experience.map((experience, i) => (
-                            <DetailedExperienceCard key={experience.company + i} experience={experience} count={i} />
-                        ))} */}
                     </div>
                 </div>
             </section>
