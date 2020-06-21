@@ -27,7 +27,11 @@ export default class ExperienceSection extends Component {
     }
 
     scrollToElement(id) {
-        this.scrollToPosition(document.getElementById(id).offsetTop - 100)
+        (!window.matchMedia('(max-width: 1300px)').matches)
+            ? this.scrollToPosition(document.getElementById(id).offsetTop - 100)
+            : this.scrollToPosition(document.getElementById(id).offsetTop)
+
+
     }
 
     render() {

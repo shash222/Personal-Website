@@ -109,6 +109,7 @@ h2 {
         align-items: center;
     }
     .homePageSectionContainer h2 {
+        margin-top: 50px;
         font-size: 35px;
     }
 }

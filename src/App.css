@@ -251,4 +251,7 @@ section>div {
         width: 100% !important;
         font-size: 50px !important;
     }
+    section>div:not(#introSection) {
+        margin-top: unset !important;
+    }
 }

@@ -79,7 +79,7 @@ export default class HomeViewNavBar extends Component {
     }
 
     scrollToElement(id) {
-        this.scrollToPosition(document.getElementById(id).offsetTop + .05 * window.innerHeight)
+        this.scrollToPosition(document.getElementById(id).offsetTop)
     }
 
 
