@@ -27,26 +27,44 @@
     margin-left: 15px;
 }
 
-.contactDetailLogoContainer > img {
+.contactDetailLogoContainer>img {
     height: 100%;
 }
 
-.contactCard > a {
+.contactCard>a {
     color: white;
     text-decoration: none;
 }
 
-.contactCard > a:visited {
+.contactCard>a:visited {
     color: white;
 }
 
-.contactCard > a:last-child {
+.contactCard>a:last-child {
     margin: auto;
     text-decoration: none;
     font-size: 1.25vw;
 }
 
-.contactCard > a:last-child:hover {
+.contactCard>a:last-child:hover {
     /* color: red; */
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px) {
+    .contactCardContainer {
+        width: 90%;
+        height: 100px;
+        min-width: unset;
+    }
+    .contactDetailLogoContainer {
+        /* display: inline-block; */
+        height: 100%;
+        width: 80px;
+        background-size: 50%;
+        margin-left: 0px;
+    }
+    .contactCard>a:last-child {
+        font-size: 20px;
+    }
 }
