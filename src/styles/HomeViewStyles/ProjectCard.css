@@ -1,6 +1,6 @@
 .projectCardWrapper {
     width: 30%;
-    height: 40%;
+    height: 45%;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
@@ -19,10 +19,6 @@
     border-radius: 15px;
 }
 
-.projectCard:hover {
-    transform: rotateY(180deg);
-}
-
 .projectFront {
     position: absolute;
     width: 100%;
@@ -35,7 +31,15 @@
 }
 
 .projectName {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
+    padding: 10px;
+    border-bottom: 2px solid white;
+}
+
+.projectDescription {
+    /* margin-top: 5px; */
+    text-align: justify;
+    padding: 15px;
 }
 
 .projectCard>.back {
