@@ -17,7 +17,6 @@ export default class ProjectsSection extends Component {
         this.parseTags = this.parseTags.bind(this)
         this.updateDisplayedProjects = this.updateDisplayedProjects.bind(this)
         this.displayAllProjects = this.displayAllProjects.bind(this)
-        this.changeItemsWithHideClassToDisplayNone = this.changeItemsWithHideClassToDisplayNone.bind(this)
     }
 
     componentDidMount() {
@@ -86,23 +85,25 @@ export default class ProjectsSection extends Component {
             for (let container of detailedProjectCardContainers) {
                 container.classList.add("hide")
                 container.classList.remove("show")
-                var projectName = container.getElementsByClassName("detailedProjectCardProjectName")[0].innerHTML
-                if (projectNamesOfProjectsToDisplay.has(projectName)) {
-                    container.classList.add("aos-animate")
-                    container.style.display = "block"
-
-                    container.classList.add("show")
-                    container.classList.remove("hide")
-                }
             }
-            setTimeout(this.changeItemsWithHideClassToDisplayNone, 1000)
-        }
-    }
+            setTimeout(() => {
+                var containersToHide = document.getElementsByClassName("hide")
+                var detailedProjectCardContainers = document.getElementsByClassName("detailedProjectCardContainer");
+                for (let container of containersToHide) {
+                    container.style.display = "none"
+                }
+                for (let container of detailedProjectCardContainers) {
+                    var projectName = container.getElementsByClassName("detailedProjectCardProjectName")[0].innerHTML
+                    if (projectNamesOfProjectsToDisplay.has(projectName)) {
+                        container.classList.add("aos-animate")
+                        container.style.display = "block"
 
-    changeItemsWithHideClassToDisplayNone() {
-        var containersToHide = document.getElementsByClassName("hide")
-        for (let container of containersToHide) {
-            container.style.display = "none"
+                        container.classList.add("show")
+                        container.classList.remove("hide")
+                    }
+                }
+
+            }, 1000)
         }
     }
 
@@ -114,12 +115,18 @@ export default class ProjectsSection extends Component {
             selectedTag.classList.remove("selectedTag")
         }
         for (let container of detailedProjectCardContainers) {
-            if (container.classList.contains("hide")) {
-                container.style.display = "block"
-                container.classList.add("show")
-                container.classList.remove("hide")
-            }
+            container.classList.add("hide")
+            container.classList.remove("show")
         }
+        setTimeout(() => {
+            for (let container of detailedProjectCardContainers) {
+                if (container.classList.contains("hide")) {
+                    container.style.display = "block"
+                    container.classList.add("show")
+                    container.classList.remove("hide")
+                }
+            }
+        }, 1000)
     }
 
     render() {

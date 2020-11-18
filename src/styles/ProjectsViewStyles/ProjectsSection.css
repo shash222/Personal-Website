@@ -106,7 +106,7 @@
 .detailedProjectCardContainer.show {
     /* display: block; */
     /* flex-grow: 1; */
-    animation: showProject 3s forwards;
+    animation: showProject 1s forwards;
 }
 
 #detailedProjectCardsContainer {
