@@ -16,7 +16,7 @@ export default class HomeIntro extends Component {
                     <div id="descriptionContainer">
                         <h1 id="name" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">Salman Hashmi</h1>
                         <h1 id="title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">Software Engineer</h1>
-                        <p id="description" data-aos="fade-in" data-aos-duration="2500" data-aos-delay="600">Welcome to my portfolio site! My name is Salman Hashmi and I am a professional software engineer with a passion for making an impact. Feel free to explore my website to learn more about me, my experiences and projects I have worked on.</p>
+                        <p id="description" data-aos="fade-in" data-aos-duration="2500" data-aos-delay="600">Welcome to my portfolio site! My name is Salman Hashmi and I am a professional software engineer at SAP with a passion for making an impact. Feel free to explore my website to learn more about me, my experiences and projects I have worked on.</p>
                     </div>
                     <div id="homeResourcesContainer">
                         {(!window.matchMedia('(max-width: 1300px)').matches)

@@ -1,5 +1,31 @@
 [
     {
+        "company": "SAP",
+        "description": "Work alongside cross-functional team within SAP Ariba. Team develops an intuitive full-stack application to provide Guided Buying functionality on top of SAP Ariba's procurement-to-payment platform. Guided Buying allows employees of clients to purchase equipment through an online marketplace while abiding by corporate policies. Guided Buying also provides procurement teams ability to add, remove or modify policies for corporate expenditures.",
+        "bullets": [	
+	    "Work alongside a cross-functional team of developers, QA testers and managers to develop, test, debug and maintain features for SAP Ariba Guided Buying.",
+	    "Implement full-stack functionality using Spring Boot framework in Java and Angular to provide users ability to purchase equipment in accordance with employer policies and procurement teams to put those corporate policies in place."
+        ],
+        "skillsGained": [
+            "Java",
+            "AngularJS",
+            "Unit & Integration Testing",
+            "Collaboration",
+            "SQL",
+            "Linux",
+            "Agile",
+            "Communication",
+            "Git"
+        ],
+        "position": "Software Developer",
+        "startDate": "June 2020",
+        "endDate": "Present",
+        "location": "Palo Alto, CA",
+        "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
+        "type": "Work",
+        "relevant": true
+    },
+    {
         "company": "Amazon.com, Inc",
         "description": "Worked as part of an internal team in the Alexa Organization. Developed an email reminder system that followed up with developers on a consistent basis to update outdated feature launch status information. System was developed using Java and utilized various AWS technologies. Emails were generated using Apache Velocity template engine.",
         "bullets": [
@@ -45,11 +71,11 @@
         ],
         "position": "OIT Residential Network Consultant",
         "startDate": "August 2018",
-        "endDate": "Present",
+        "endDate": "May 2020",
         "location": "Piscataway, NJ",
         "takeAway": "Software Development is not just programming, it's building readable, maintainable and extensible code",
         "type": "Work",
-        "relevant": true
+        "relevant": false
     },
     {
         "company": "",
