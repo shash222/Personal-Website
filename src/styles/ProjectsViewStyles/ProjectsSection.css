@@ -119,6 +119,64 @@
     margin: auto;
 }
 
+#autocompleteContainer {
+    position: relative;
+    width: 200px;
+    margin: auto;
+}
+
+#autocompleteContainer>input {
+    width: 100%;
+    margin: 25px auto 50px auto;
+    height: 20px;
+}
+
+#autocompleteContainer>input:focus {
+    outline: none;
+}
+
+#autocompleteContainer>::-webkit-scrollbar {
+    width: 8px;
+}
+
+#autocompleteContainer>::-webkit-scrollbar-thumb {
+    background-color: #979696;
+    border-radius: 100px;
+    width: 10px;
+    background-clip: padding-box;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    z-index: -1;
+}
+
+#autocompleteResultsContainer {
+    position: absolute;
+    background-color: white;
+    color: black;
+    max-height: 150px;
+    overflow-y: scroll;
+    left: 50%;
+    transform: translateX(calc(-50% + 4px)) translateY(-50px);
+    width: calc(100% + 6px);
+    padding: 0;
+    margin-top: 1px;
+    list-style-type: none;
+    z-index: 100;
+}
+
+.autocompleteResult:hover {
+    background-color: #E7E3E2;
+    cursor: pointer;
+}
+
+.autocompleteResult {
+    all: unset;
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 100%;
+}
+
 @keyframes showSample {
     0% {
         height: 0;

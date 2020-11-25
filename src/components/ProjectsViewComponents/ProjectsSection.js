@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import projectDetails from '../../constants/Projects.json'
 import DetailedProjectCard from './/DetailedProjectCard.js'
 import '../../styles/ProjectsViewStyles/ProjectsSection.css'
-// import skills from '../../constants/Skills.json'
-// import experiences from '../../constants/Experiences.json'
 
 export default class ProjectsSection extends Component {
     constructor(props) {
@@ -12,11 +10,20 @@ export default class ProjectsSection extends Component {
         this.state = {
             skillMapping: {},
             statusMapping: {},
-            typeMapping: {}
+            typeMapping: {},
+            skills: new Set(),
+            types: new Set(),
+            statuses: new Set(),
+            autocompleteResults: [],
+            showAutocompleteResults: false,
+            hoveringOverAutocompleteResult: false
         }
         this.parseTags = this.parseTags.bind(this)
         this.updateDisplayedProjects = this.updateDisplayedProjects.bind(this)
         this.displayAllProjects = this.displayAllProjects.bind(this)
+        this.handleViewButtonClick = this.handleViewButtonClick.bind(this)
+        this.getDropdownValues = this.getDropdownValues.bind(this)
+        this.handleSampleDivs = this.handleSampleDivs.bind(this)
     }
 
     componentDidMount() {
@@ -27,15 +34,18 @@ export default class ProjectsSection extends Component {
         var skillMapping = {}
         var statusMapping = {}
         var typeMapping = {}
+        var skills = new Set();
+        var types = new Set();
+        var statuses = new Set();
         projectDetails.forEach((project) => {
-            // var skillSource = "Projects"
             project.technologies.forEach((technology) => {
+                skills.add(technology);
                 if (skillMapping[technology] === undefined)
                     skillMapping[technology] = new Set()
-                // if (skillMapping[technology][skillSource] === undefined)
-                //     skillMapping[technology][skillSource] = new Set()
                 skillMapping[technology].add(project.name)
             })
+            statuses.add(project.status)
+            types.add(project.type)
             if (statusMapping[project.status] === undefined)
                 statusMapping[project.status] = new Set()
             statusMapping[project.status].add(project.name)
@@ -47,7 +57,10 @@ export default class ProjectsSection extends Component {
         this.setState({
             skillMapping: skillMapping,
             statusMapping: statusMapping,
-            typeMapping: typeMapping
+            typeMapping: typeMapping,
+            skills: skills,
+            types: types,
+            statuses: statuses
         })
     }
 
@@ -69,15 +82,13 @@ export default class ProjectsSection extends Component {
             var projectNamesOfProjectsToDisplay = new Set()
             for (let selectedTag of selectedTags) {
                 var selectedTagValue = selectedTag.getAttribute('data-tag-value')
-                var projectNamesCorrespondingToTag;
+                var projectNamesCorrespondingToTag = [];
                 if (this.state.skillMapping[selectedTagValue])
                     projectNamesCorrespondingToTag = this.state.skillMapping[selectedTagValue]
                 else if (this.state.statusMapping[selectedTagValue])
                     projectNamesCorrespondingToTag = this.state.statusMapping[selectedTagValue]
                 else if (this.state.typeMapping[selectedTagValue])
                     projectNamesCorrespondingToTag = this.state.typeMapping[selectedTagValue]
-
-
                 projectNamesCorrespondingToTag.forEach((projectName) => {
                     projectNamesOfProjectsToDisplay.add(projectName)
                 })
@@ -129,11 +140,97 @@ export default class ProjectsSection extends Component {
         }, 1000)
     }
 
+    getDropdownValues(e) {
+        fetch(`http://hashmi.site:8080/SpellCheck/autocompleteBackup?words=${[...this.state.skills, ...this.state.statuses, ...this.state.types]}&search=${e.target.value}`).then((res) => {
+            return (res.json())
+        }).then((res) => {
+            let autocompleteResults = res.map((r) => {
+                return r.word
+            })
+
+            autocompleteResults = [...new Set(autocompleteResults)].sort((a, b) => {
+                return a.toLowerCase().localeCompare(b.toLowerCase());
+            });
+            this.setState({ autocompleteResults: autocompleteResults })
+
+        }).catch((e) => {
+            console.log("Ran into error");
+            console.log(e);
+        });
+    }
+
+    showAutocompleteResults(showAutocompleteResults, hoveringOverAutocompleteResult) {
+        if (!hoveringOverAutocompleteResult)
+            this.setState({ showAutocompleteResults: showAutocompleteResults, hoveringOverAutocompleteResult: hoveringOverAutocompleteResult })
+    }
+
+    handleAutocompleteResultHover(hoveringOverAutocompleteResult) {
+        if (this.state.hoveringOverAutocompleteResult !== hoveringOverAutocompleteResult)
+            this.setState({ hoveringOverAutocompleteResult: hoveringOverAutocompleteResult })
+    }
+
+    handleDropdownTagSelection(e) {
+        var tags = document.getElementsByClassName("tag");
+        Array.from(tags).forEach((tag) => {
+            if (tag.innerHTML === e.target.innerHTML) {
+                tag.classList.add("selectedTag")
+                this.updateDisplayedProjects()
+                this.showAutocompleteResults(false, false)
+                document.querySelector("#autocompleteContainer>input").value = ""
+                return;
+            }
+        })
+    }
+
+    handleSampleDivs(e) {
+        var buttons = document.getElementsByTagName("button")
+        var openSampleNode = document.getElementsByClassName("iframeContainer")[0];
+        // var openSampleNode = undefined
+        for (let button of buttons) {
+            // var sampleNode = this.getSampleNode(button.parentNode.parentNode)
+            // if (button !== e.target) {
+            if (button !== undefined && button.classList.contains("active")) {
+                button.classList.remove("active")
+                openSampleNode.classList.remove("selected")
+                openSampleNode.classList.add("unselected")
+            }
+            // }
+        }
+        if (e.target.tagName.toLowerCase() === "button") {
+            this.handleViewButtonClick(e, openSampleNode)
+        }
+
+    }
+
+    handleViewButtonClick(e, sampleNode) {
+        var iframeContainer = document.getElementsByClassName("iframeContainer")[0];
+        if (sampleNode !== undefined && e.target.classList.contains("active")) {
+            e.target.classList.remove("active")
+            // iframeContainer.classList.remove("selected")
+            // iframeContainer.classList.add("unselected")
+            sampleNode.classList.remove("selected")
+            sampleNode.classList.add("unselected")
+            window.setTimeout(() => {
+                if (e.targetNode)
+                    e.target.parentNode.scrollIntoView({ block: "center" })
+            }, 500)
+        } else {
+            e.target.classList.add("active")
+            // iframeContainer.classList.add("selected")
+            // iframeContainer.classList.remove("unselected")
+            sampleNode.classList.add("selected")
+            sampleNode.classList.remove("unselected")
+            window.setTimeout(() => { sampleNode.scrollIntoView({ block: "center" }) }, 500);
+        }
+        iframeContainer.classList.add("selected");
+        document.getElementsByClassName("sample")[0].src = e.target.getAttribute("data-sample-url")
+    }
+
     render() {
         return (
             <section id="projectsSectionContainer" className="projectsViewSection">
                 <div className="iframeContainer">
-                    <div className="x">X</div>
+                    <div className="x" onClick={this.handleSampleDivs}>X</div>
                     <iframe className="sample" title="sample"></iframe>
                 </div>
                 <div id="detailedProjectsContainer">
@@ -158,11 +255,20 @@ export default class ProjectsSection extends Component {
                             ))}
                         </div>
                     </div>
+                    <div id="autocompleteContainer">
+                        <input type="text" onKeyUp={(event) => this.getDropdownValues(event)} onFocus={() => this.showAutocompleteResults(true, this.state.hoveringOverAutocompleteResult)} onBlur={() => this.showAutocompleteResults(false, this.state.hoveringOverAutocompleteResult)} placeholder="Search for tags" autoComplete="off"></input>
+                        {this.state.showAutocompleteResults
+                            ? <div id="autocompleteResultsContainer">
+                                {this.state.autocompleteResults.map((r) => (
+                                    <button key={r + "DropdownItem"} className="autocompleteResult" onClick={(event) => this.handleDropdownTagSelection(event)} onMouseOver={() => this.handleAutocompleteResultHover(true)} onMouseOut={() => this.handleAutocompleteResultHover(false)}>{r}</button>
+                                ))}
+                            </div>
+                            : null}
+                    </div>
                     <div id="detailedProjectCardsContainer">
                         {projectDetails.map((project, i) => (
-                            <DetailedProjectCard key={project.name} delay={i} project={project} />
+                            <DetailedProjectCard key={project.name} delay={i} project={project} getDropdownValues={this.handleSampleDivs} />
                         ))}
-
                     </div>
                 </div>
             </section>
